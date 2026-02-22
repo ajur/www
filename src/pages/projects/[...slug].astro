@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const description =
+  project.data.description ??
+  project.body
+    ?.split("\n")
+    ?.find((line) => line.trim().length > 0) ??
+  "";
+---
+
+<BaseLayout title={project.data.title}>
+  <main class="flow" style="max-width: 60rem; margin: 12vh auto 4rem; padding: 0 1.5rem;">
+    <article class="flow">
+      <header class="flow" style="--flow-space: 0.75rem;">
+        <h1>{project.data.title}</h1>
+        {description && <p>{description}</p>}
+        <p>
+          <a href={project.data.link} rel="noopener noreferrer">Visit project</a>
+        </p>
+        {project.data.article && (
+          <p>
+            <a href={`/articles/${project.data.article}/`}>Read the article</a>
+          </p>
+        )}
+      </header>
+      <Image
+        src={project.data.thumbnail}
+        alt={`${project.data.title} thumbnail`}
+        loading="lazy"
+      />
+      <Content />
+    </article>
+  </main>
+</BaseLayout>

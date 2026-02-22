@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("art");
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { embed } = entry.data;
+const description =
+  entry.data.description ??
+  entry.body
+    ?.split("\n")
+    ?.find((line) => line.trim().length > 0) ??
+  "";
+
+const embedSrc =
+  embed?.type === "youtube"
+    ? `https://www.youtube.com/embed/${embed.id}`
+    : null;
+
+---
+
+<BaseLayout title={entry.data.title}>
+  <main class="flow" style="max-width: 60rem; margin: 12vh auto 4rem; padding: 0 1.5rem;">
+    <article class="flow">
+      <header class="flow" style="--flow-space: 0.75rem;">
+        <h1>{entry.data.title}</h1>
+        {description && <p>{description}</p>}
+        {entry.data.link && (
+          <p>
+            <a href={entry.data.link} rel="noopener noreferrer">View source</a>
+          </p>
+        )}
+        {entry.data.article && (
+          <p>
+            <a href={`/articles/${entry.data.article}/`}>Read the article</a>
+          </p>
+        )}
+      </header>
+      <Image
+        src={entry.data.thumbnail}
+        alt={`${entry.data.title} thumbnail`}
+        loading="lazy"
+      />
+      <Content />
+      {embedSrc && (
+        <section class="flow" style="--flow-space: 1rem;">
+          <h2>Media</h2>
+          <iframe
+            src={embedSrc}
+            title={`${entry.data.title} media`}
+            loading="lazy"
+            allow={
+              embed?.type === "youtube"
+                ? "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                : "autoplay"
+            }
+            allowfullscreen={embed?.type === "youtube"}
+            style={
+              embed?.type === "youtube"
+                ? "width: 100%; aspect-ratio: 16 / 9; border: 0;"
+                : "width: 100%; height: 166px; border: 0;"
+            }
+          />
+        </section>
+      )}
+    </article>
+  </main>
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+---
+
+<background-animator aria-hidden="true">
+  <div id="background-animator-container"></div>
+</background-animator>
+
+<script>
+  import "../visuals/requestIdleCallbackShim.js";
+  import { BackgroundAnimatorManager } from "../visuals/BackgroundAnimatorManager";
+
+  class BackgroundAnimator extends HTMLElement {
+		manager: BackgroundAnimatorManager;
+
+    constructor() {
+      super();
+      const container = this.querySelector("#background-animator-container")!;
+      this.manager = new BackgroundAnimatorManager(container);
+    }
+
+    disconnectedCallback() {
+      this.manager.destroy();
+    }
+
+    connectedCallback() {
+      window.requestIdleCallback(() => this.manager.start());
+    }
+  }
+
+  customElements.define("background-animator", BackgroundAnimator);
+</script>
+
+<style>
+  background-animator {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    display: block;
+    pointer-events: none;
+  }
+  #background-animator-container {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
+  }
+  #background-animator-container canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+</style>

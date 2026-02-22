@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("projects")).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+
+const getDescription = (project: typeof projects[number]) =>
+  project.data.description ??
+  project.body
+    ?.split("\n")
+    ?.find((line) => line.trim().length > 0) ??
+  "";
+---
+
+<BaseLayout title="Projects">
+  <main class="flow" style="max-width: 60rem; margin: 12vh auto 0; padding: 0 1.5rem;">
+    <h1>Projects</h1>
+    <p>Selected builds and experiments.</p>
+    <ul class="flow" style="list-style: none; padding: 0;">
+      {projects.map((project) => (
+        <li class="flow" style="--flow-space: 0.5rem;">
+          <a href={`/projects/${project.id}/`}>{project.data.title}</a>
+          {getDescription(project) && <p>{getDescription(project)}</p>}
+        </li>
+      ))}
+    </ul>
+  </main>
+</BaseLayout>

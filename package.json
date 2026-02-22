@@ -1,0 +1,20 @@
+{
+  "name": "ajur_v2",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "astro": "^5.17.1"
+  },
+  "devDependencies": {
+    "i": "^0.3.7",
+    "npm": "^11.10.1",
+    "vite-plugin-glsl": "^1.5.5"
+  }
+}

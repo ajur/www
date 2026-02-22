@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BackgroundAnimator from "../components/BackgroundAnimator.astro";
+---
+
+<BaseLayout title="Home">
+  <BackgroundAnimator />
+  <main>
+    <svg
+      width="44.953465"
+      height="150.24409"
+      clip-rule="evenodd"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      version="1.1"
+      viewBox="0 0 44.953465 150.24409"
+      xml:space="preserve"
+      id="svg1"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs id="defs1"></defs>
+      <path
+        d="M 6.9596848,76.243172 C 17.58014,46.578295 28.470893,20.04295 38.651058,1.3326909 34.843739,23.131899 27.401292,63.537807 24.167809,89.849512 23.230598,66.280337 19.174735,61.800653 1.3329092,55.712529 9.2983431,54.493826 39.071187,55.280458 43.620142,55.825608 40.976687,85.57054 33.329019,118.16544 25.034909,148.91078"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="4.343"
+        id="path1"
+        style="stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+      ></path>
+    </svg>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/articles/">Text</a></li>
+        <li><a href="/projects/">Code</a></li>
+        <li><a href="/art/">Misc</a></li>
+        <li><a href="/about/" data-astro-prefetch>Self</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <style>
+    :global(html),
+    :global(body) {
+      overflow: hidden;
+    }
+    :global(body) {
+      overscroll-behavior: none;
+    }
+
+		main {
+			height: 100svh;
+			display: flex;
+			padding: 1rem;
+			text-align: center;
+			flex-flow: column wrap;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			gap: 2rem;
+      position: relative;
+      z-index: 1;
+		}
+
+		svg {
+			height: 12rem;
+      width: auto;
+      color: var(--color-ink);
+      animation: logo-neon 5s ease-in-out infinite;
+		}
+
+		nav {
+			padding: 1rem;
+		}
+
+		nav ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.25rem;
+		}
+
+		nav a {
+			font-family: var(--font-mono);
+			text-transform: lowercase;
+			text-decoration: none;
+      letter-spacing: 0.1em;
+      filter: 
+        drop-shadow(-0.1em -0.1em 0.3rem var(--color-bg))
+        drop-shadow(0.1em 0.1em 0.3rem var(--color-bg))
+        drop-shadow(0.1em -0.1em 0.3rem var(--color-bg))
+        drop-shadow(-0.1em 0.1em 0.3rem var(--color-bg));
+		}
+		nav a:hover,
+		nav a:focus-visible {
+			color: var(--color-accent-strong);
+		}
+
+    @keyframes logo-neon {
+      0%,
+      100% {
+        filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.5));
+      }
+      50% {
+        filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 1));
+      }
+    }
+  </style>
+</BaseLayout>
+

@@ -1,0 +1,24 @@
+---
+import { getEntry } from "astro:content";
+
+const article = await getEntry("articles", Astro.props.id);
+
+---
+<header class="flow" style="--flow-space: 0.75rem;">
+  <p class="header--date">
+    {article?.data.date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    })}
+  </p>
+  <h1><slot /></h1>
+</header>
+
+<style>
+  .header--date {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+  }
+</style>

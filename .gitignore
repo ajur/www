@@ -1,1 +1,50 @@
-_site/
+# build output
+dist/
+# generated types
+.astro/
+
+# Vite / tooling caches (Astro uses Vite under the hood)
+.vite/
+.cache/
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# dependencies
+node_modules/
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# linters
+.eslintcache
+.stylelintcache
+
+# test coverage
+coverage/
+
+
+# environment variables
+.env
+.env.production
+.env.*.local
+
+# macOS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# jetbrains setting folder
+.idea/
+
+# VS Code workspace settings (keep the shareable ones)
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json

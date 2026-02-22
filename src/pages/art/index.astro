@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const entries = (await getCollection("art")).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+
+const getDescription = (entry: typeof entries[number]) =>
+  entry.data.description ??
+  entry.body
+    ?.split("\n")
+    ?.find((line) => line.trim().length > 0) ??
+  "";
+---
+
+<BaseLayout title="Art">
+  <main class="flow" style="max-width: 60rem; margin: 12vh auto 0; padding: 0 1.5rem;">
+    <h1>Art</h1>
+    <p>Studies, sound, and visual sketches.</p>
+    <ul class="flow" style="list-style: none; padding: 0;">
+      {entries.map((entry) => (
+        <li class="flow" style="--flow-space: 0.5rem;">
+          <a href={`/art/${entry.id}/`}>{entry.data.title}</a>
+          {getDescription(entry) && <p>{getDescription(entry)}</p>}
+        </li>
+      ))}
+    </ul>
+  </main>
+</BaseLayout>
