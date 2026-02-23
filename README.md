@@ -39,3 +39,4 @@ Version 2 of the site, created with [Astro](https://astro.build).
 - [Astro](https://astro.build) - as main static site builder. [Docs](https://docs.astro.build).
 - [vite-plugin-glsl](https://www.npmjs.com/package/vite-plugin-glsl) - to ease loading of shaders.
 - [webgl-noise](https://github.com/stegu/webgl-noise) - Simplex noise implementation in GLSL
+

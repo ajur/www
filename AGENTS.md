@@ -118,3 +118,4 @@ All interactive elements must:
 - Must build statically
 - Compatible with GitHub Pages
 - No server-side features
+
