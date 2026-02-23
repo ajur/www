@@ -1,0 +1,23 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const otherPages = (await getCollection("misc")).sort(
+  (a, b) => a.data.title.localeCompare(b.data.title)
+);
+
+---
+<BaseLayout title="Miscellaneous">
+  <main class="flow">
+    <h1>Misc</h1>
+    <p>Things I make outside of text and code.</p>
+    <ul class="flow" style="list-style: none; padding: 0;">
+      <li><a href="art/">Art</a> - Creative works and visual experiments.</li>
+      {otherPages.map((page) => (
+        <li>
+          <a href={`/misc/${page.id}/`}>{page.data.title}</a> - {page.data.description}
+        </li>
+      ))}
+    </ul>
+  </main>
+</BaseLayout>

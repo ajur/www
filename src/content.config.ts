@@ -22,6 +22,16 @@ const projects = defineCollection({
   })
 });
 
+const misc = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/misc" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.date().optional(),
+    tags: z.array(z.string()).default([]),
+  })
+});
+
 const art = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/art" }),
   schema: ({ image }) => z.object({
@@ -41,4 +51,4 @@ const art = defineCollection({
   })
 });
 
-export const collections = { articles, projects, art };
+export const collections = { articles, projects, art, misc };

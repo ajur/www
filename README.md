@@ -8,15 +8,17 @@ Version 2 of the site, created with [Astro](https://astro.build).
 /
 ├── public/
 ├── src/
-│   ├── pages/                 - astro pages sources
+│   ├── pages/                 - astro pages and url map
 │   ├── layouts/               - astro components used as layouts
 │   ├── components/            - astro components sources
 │   ├── styles/                - global css styles
 │   ├── visuals/               - source for landing page background animation
 │   ├── content/               - content collectors data
-│   │   ├── art/               - images / video / media embeds
+│   │   ├── misc/              - md article like subpages of other than art and music
+│   │   ├── music/             - music entries, embeds
+│   │   ├── art/               - images for gallery
 │   │   ├── articles/          - articles mdx files
-│   │   └── projects/          - sideproject mdx files
+│   │   └── projects/          - side projects mdx files
 │   └── content.config.ts      - content collectors config
 ├── astro.config.mjs
 └── package.json

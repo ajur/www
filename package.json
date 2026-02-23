@@ -13,6 +13,7 @@
     "astro": "^5.17.1"
   },
   "devDependencies": {
+    "@types/node": "^25.3.0",
     "i": "^0.3.7",
     "npm": "^11.10.1",
     "vite-plugin-glsl": "^1.5.5"

@@ -5,6 +5,11 @@
   "compilerOptions": {
     "types": [
       "vite-plugin-glsl/ext"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@layouts/*": ["./src/layouts/*"],
+      "@components/*": ["./src/components/*"],
+    }
   }
 }
