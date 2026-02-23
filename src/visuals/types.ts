@@ -6,10 +6,14 @@ export type BackgroundAnimationLoopParams = {
   dt: number; // Time delta in seconds since last frame
 }
 
+export type AnimationColors = "bg" | "ink" | "acc1" | "acc2";
+export type AnimationColorsMap = Record<AnimationColors, string>;
+
 export type BackgroundAnimation<TContext extends RenderingContext = RenderingContext> = {
   canvas: HTMLCanvasElement;
   ctx: TContext;
   resize?: () => void;
   loop: (params: BackgroundAnimationLoopParams) => void;
   destroy?: () => void;
+  setColors?: (colors: AnimationColorsMap) => void;
 }

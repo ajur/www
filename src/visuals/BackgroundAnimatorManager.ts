@@ -25,10 +25,12 @@ export class BackgroundAnimatorManager {
     this.animation = this.animationFactory(canvas);
     this.resizeHandler = () => this.resize(canvas);
     window.addEventListener("resize", this.resizeHandler, { passive: true });
+    window.addEventListener("themechanged", this.updateThemeColors, { passive: true });
     this.visualViewport = window.visualViewport ?? null;
     this.visualViewport?.addEventListener("resize", this.resizeHandler, { passive: true });
     this.visualViewport?.addEventListener("scroll", this.resizeHandler, { passive: true });
     this.resizeHandler();
+    this.updateThemeColors();
 
     let lastTime = performance.now();
     const loop = (time: number) => {
@@ -63,6 +65,8 @@ export class BackgroundAnimatorManager {
     this.visualViewport?.removeEventListener("resize", this.resizeHandler);
     this.visualViewport?.removeEventListener("scroll", this.resizeHandler);
     window.removeEventListener("mousemove", this.mouseMoveHandler);
+    window.removeEventListener("themechanged", this.updateThemeColors);
+
     this.animation = null;
     this.canvas = null;
     this.visualViewport = null;
@@ -80,5 +84,15 @@ export class BackgroundAnimatorManager {
     canvas.style.height = `${height}px`;
 
     this.animation?.resize?.();
+  }
+
+  updateThemeColors = () => {
+    const styles = getComputedStyle(document.documentElement);
+    this.animation?.setColors?.({
+      bg: styles.getPropertyValue("--color-bg").trim(),
+      ink: styles.getPropertyValue("--color-ink").trim(),
+      acc1: styles.getPropertyValue("--color-accent").trim(),
+      acc2: styles.getPropertyValue("--color-accent-strong").trim(),
+    });
   }
 }

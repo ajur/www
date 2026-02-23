@@ -6,12 +6,13 @@ uniform vec2 u_resolution;
 uniform float u_time;
 uniform float u_pixel_ratio;
 
+uniform vec4 c_bg;
+uniform vec4 c_ink;
+uniform vec4 c_acc1;
+uniform vec4 c_acc2;
+
 // demo code:
 float noiseVal(vec2 xy) { return 0.7 * snoise(vec3(xy, 0.1 * u_time)); }
-
-const vec3 COLOR_BG = vec3(0.0792, 0.0833, 0.1608);
-const vec3 COLOR_ACCENT = vec3(0.0, 0.4190, 0.66);
-const vec3 COLOR_ACCENT_STRONG = vec3(1.0, 0.3, 0.4633);
 
 vec3 noiseColor() {
   vec2 p = (gl_FragCoord.xy / u_resolution.y) * 2.0 - 1.0;
@@ -30,8 +31,8 @@ vec3 noiseColor() {
   float tUp = smoothstep(0.5, 1.0, t);
   float tDown = smoothstep(0.0, 0.5, t);
   return (t >= 0.5
-    ? mix(COLOR_BG, COLOR_ACCENT_STRONG, tUp)
-    : mix(COLOR_ACCENT, COLOR_BG, tDown));
+    ? mix(c_bg.rgb, c_acc2.rgb, tUp)
+    : mix(c_acc1.rgb, c_bg.rgb, tDown));
 }
 
 void main() {
@@ -48,8 +49,7 @@ void main() {
   float isDot = 1.0 - smoothstep(dotRadius, dotRadius + 1.0, distToCenter);
 
   // noise color for dots background
-  vec3 color = (isDot > 0.0) ? noiseColor() : COLOR_BG;
+  vec3 color = (isDot > 0.0) ? noiseColor() : c_bg.rgb;
 
   gl_FragColor = vec4(color, 1.0);
 }
-

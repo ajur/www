@@ -1,0 +1,73 @@
+---
+const { placement = "below" } = Astro.props;
+// placement: "below" | "above"
+---
+
+<theme-switcher data-placement={placement}>
+  <button aria-label="Switch theme">◐</button>
+</theme-switcher>
+
+<script>
+  class ThemeSwitcher extends HTMLElement {
+    #storageKey = "theme-preference";
+    #defaultTheme = "dark";
+    #symbols: Record<string, string> = {
+      auto: "◐",
+      light: "☀︎",
+      dark: "☾",
+    };
+
+    button: HTMLButtonElement;
+    currentTheme: string;
+    
+    constructor() {
+      super();
+      this.button = this.querySelector("button")!;
+      this.currentTheme = localStorage.getItem(this.#storageKey) ?? "auto";
+      this.updateButton();
+      this.button.addEventListener("click", () => this.toggleTheme());
+    }
+
+    updateButton() {
+      this.button.textContent = this.#symbols[this.currentTheme] || "◐";
+    }
+
+    toggleTheme() {
+      const themes = ["auto", "light", "dark"];
+      const currentIndex = themes.indexOf(this.currentTheme);
+      const nextIndex = (currentIndex + 1) % themes.length;
+      this.setTheme(themes[nextIndex]!);
+    }
+
+    setTheme(theme: string) {
+      this.currentTheme = theme;
+      localStorage.setItem(this.#storageKey, theme);
+      this.updateButton();
+      if (theme === "auto") {
+        const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        theme = darkQuery.matches ? "dark" : "light";
+      }
+      if (theme === this.#defaultTheme) {
+        document.documentElement.removeAttribute("data-theme");
+      } else {
+        document.documentElement.setAttribute("data-theme", theme);
+      }
+      window.dispatchEvent(new CustomEvent("themechanged", { detail: { theme } }));
+    }
+  }
+
+  customElements.define("theme-switcher", ThemeSwitcher);
+</script>
+
+<style>
+  theme-switcher {
+    display: inline-block;
+  }
+  theme-switcher button {
+    all: unset;
+    cursor: pointer;
+  }
+  theme-switcher button:hover {
+    color: var(--color-accent-strong);
+  }
+</style>

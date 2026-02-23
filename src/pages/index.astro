@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BackgroundAnimator from "../components/BackgroundAnimator.astro";
+import ThemeSwitcher from "../components/ThemeSwitcher.astro";
 ---
 
 <BaseLayout title="Home">
@@ -40,6 +41,10 @@ import BackgroundAnimator from "../components/BackgroundAnimator.astro";
         <li><a href="/art/">Misc</a></li>
         <li><a href="/about/" data-astro-prefetch>Self</a></li>
       </ul>
+
+      <div class="theme-switcher-wrap" aria-label="Theme">
+        <ThemeSwitcher placement="below" />
+      </div>
     </nav>
   </main>
 
@@ -77,6 +82,19 @@ import BackgroundAnimator from "../components/BackgroundAnimator.astro";
 			padding: 1rem;
 		}
 
+    .theme-switcher-wrap {
+      position: fixed;
+      top: calc(env(safe-area-inset-top, 0px) + 0.75rem);
+      right: calc(env(safe-area-inset-right, 0px) + 0.75rem);
+      z-index: 20;
+      max-inline-size: none;
+      filter: 
+        drop-shadow(-0.1em -0.1em 0.3rem var(--color-bg))
+        drop-shadow(0.1em 0.1em 0.3rem var(--color-bg))
+        drop-shadow(0.1em -0.1em 0.3rem var(--color-bg))
+        drop-shadow(-0.1em 0.1em 0.3rem var(--color-bg));
+    }
+
 		nav ul {
 			list-style: none;
 			padding: 0;
@@ -106,10 +124,10 @@ import BackgroundAnimator from "../components/BackgroundAnimator.astro";
     @keyframes logo-neon {
       0%,
       100% {
-        filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.5));
+        filter: drop-shadow(0 0 0 var(--color-ink));
       }
       50% {
-        filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 1));
+        filter: drop-shadow(0 0 0.2rem var(--color-ink));
       }
     }
   </style>

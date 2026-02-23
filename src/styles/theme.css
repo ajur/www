@@ -5,7 +5,7 @@
   --font-body: Georgia, Times, "Times New Roman", serif;
   --font-mono: monaco, Consolas, "Lucida Console", monospace;
   --color-bg: hsla(237, 34%, 12%, 1);
-  --color-ink: hsla(53, 100%, 96%, 1);;
+  --color-ink: hsla(53, 100%, 96%, 1);
   --color-ink-muted: hsla(212, 20%, 46%, 1);
   --color-border: hsla(212, 20%, 46%, 1);
   --color-accent: hsla(202, 100%, 33%, 1);
@@ -28,10 +28,10 @@
 
 [data-theme="light"] {
   color-scheme: light;
-  --color-bg: #f7f4ef;
-  --color-ink: #1b1b1b;
-  --color-ink-muted: #5e5e5e;
-  --color-border: #d9d4cc;
-  --color-accent: #0f5e9c;
-  --color-accent-strong: #0b3f6a;
+  --color-bg: hsla(53, 100%, 96%, 1);
+  --color-ink: hsla(237, 34%, 12%, 1);
+  --color-ink-muted: hsla(212, 20%, 46%, 1);
+  --color-border: hsla(212, 20%, 46%, 1);
+  --color-accent: hsla(202, 100%, 33%, 1);
+  --color-accent-strong: hsla(346, 100%, 65%, 1);
 }
