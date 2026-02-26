@@ -1,0 +1,21 @@
+---
+---
+<footer { ...Astro.props }>
+  <slot />
+</footer>
+
+<style>
+  footer {
+    border-top: 0.1rem solid var(--color-border);
+    
+    padding-block: var(--s-1);
+    padding-inline: var(--s-1);
+  }
+
+  :global(footer) {
+    margin-block-start: var(--s1);
+  }
+  :global(footer + footer) {
+    margin-block-start: 0;
+  }
+</style>

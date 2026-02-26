@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
 import { getCollection } from "astro:content";
 
 const otherPages = (await getCollection("misc")).sort(
@@ -7,7 +7,7 @@ const otherPages = (await getCollection("misc")).sort(
 );
 
 ---
-<BaseLayout title="Miscellaneous">
+<PageLayout title="Miscellaneous">
   <main class="flow">
     <h1>Misc</h1>
     <p>Things I make outside of text and code.</p>
@@ -20,4 +20,4 @@ const otherPages = (await getCollection("misc")).sort(
       ))}
     </ul>
   </main>
-</BaseLayout>
+</PageLayout>

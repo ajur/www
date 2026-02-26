@@ -1,0 +1,42 @@
+/*
+based on https://github.com/lin-stephanie/rehype-callouts/blob/main/src/themes/github/index.css
+*/
+
+
+.callout {
+  --rc-color-default: var(--color-border);
+
+  padding-left: var(--s0);
+  border-left: 0.2rem solid var(--rc-color, var(--rc-color-default));
+}
+
+.callout-title {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  color: var(--rc-color, var(--rc-color-default));
+  line-height: 1em;
+}
+
+.callout-title::-webkit-details-marker {
+  display: none;
+}
+
+.callout-title svg {
+  overflow: visible !important;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.callout[data-collapsible='true'] .callout-title {
+  cursor: pointer;
+}
+
+.callout[data-collapsible='true'] .callout-fold-icon svg {
+  transform: rotate(-90deg);
+  transition: transform 100ms ease-in-out;
+}
+
+.callout[data-collapsible='true'][open] .callout-fold-icon svg {
+  transform: none;
+}

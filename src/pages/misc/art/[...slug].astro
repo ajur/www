@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { getCollection, render } from "astro:content";
-import BaseLayout from "@layouts/BaseLayout.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
 
 export async function getStaticPaths() {
   const entries = await getCollection("art");
@@ -28,8 +28,8 @@ const embedSrc =
 
 ---
 
-<BaseLayout title={entry.data.title}>
-  <main class="flow" style="max-width: 60rem; margin: 12vh auto 4rem; padding: 0 1.5rem;">
+<PageLayout title={entry.data.title}>
+  <main class="flow">
     <article class="flow">
       <header class="flow" style="--flow-space: 0.75rem;">
         <h1>{entry.data.title}</h1>
@@ -74,4 +74,4 @@ const embedSrc =
       )}
     </article>
   </main>
-</BaseLayout>
+</PageLayout>

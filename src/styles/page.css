@@ -1,0 +1,32 @@
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display, sans-serif);
+  font-weight: var(--font-display-weight, bold);
+}
+h1 {
+  font-size: var(--s4);
+}
+h2 {
+  font-size: var(--s3);
+}
+h3 {
+  font-size: var(--s2);
+}
+h4 {
+  font-size: var(--s1);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--color-border);
+  padding-left: 1rem;
+  margin-left: 0;
+  color: var(--color-ink);
+  font-style: italic;
+}
+
+pre,
+code {
+  font-family: var(--font-mono, monospace);
+  max-inline-size: 100%;
+  padding: var(--s-4);
+}

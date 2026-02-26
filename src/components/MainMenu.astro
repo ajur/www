@@ -1,0 +1,72 @@
+---
+const { links = [
+  { href: "/articles/", label: "Text" },
+  { href: "/projects/", label: "Code" },
+  { href: "/misc/", label: "Misc" },
+  { href: "/about/", label: "Self" },
+] } = Astro.props;
+
+
+const firstSegment = Astro.url.pathname.split('/').filter(Boolean)[0] || '';
+const current = `/${firstSegment}/`;
+---
+<nav {...Astro.props}>
+  <ul role="list">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    {links.map((l: { href: string; label: string }) => (
+      <li class:list={[{current: l.href === current}]}>
+        <a href={l.href}>{l.label}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  nav {
+    font-family: var(--font-mono);
+  }
+
+  ul {
+    max-inline-size: none;
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    max-inline-size: none;
+    display: flex;
+    align-items: baseline;
+  }
+
+  li + li::before {
+    content: "·";
+    display: inline-block;
+    margin-inline: 1vw;
+    color: var(--color-border);
+  }
+
+  a {
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    color: var(--color-ink);
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: var(--color-accent-strong);
+  }
+
+  .current a {
+    border-bottom: 0.1em solid var(--color-accent-strong);
+    /* little hack to make border bottom stick bit on the left - otherwise it looked bad */
+    margin-inline-start: -0.1em;
+    padding-inline-start: 0.1em;
+  }
+
+</style>

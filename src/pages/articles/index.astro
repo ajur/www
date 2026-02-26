@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
 import { getCollection } from "astro:content";
 
 const articles = (await getCollection("articles")).sort(
@@ -8,11 +8,11 @@ const articles = (await getCollection("articles")).sort(
 
 ---
 
-<BaseLayout title="Articles">
-  <main class="flow" style="max-width: 60rem; margin: 12vh auto 0; padding: 0 1.5rem;">
+<PageLayout title="Articles">
+  <main class="flow">
     <h1>Articles</h1>
     <p>Writing notes and longer essays.</p>
-    <ul class="flow" style="list-style: none; padding: 0;">
+    <ul class="flow">
       {articles.map((article) => (
         <li>
           <a href={`/articles/${article.id}/`}>{article.data.title}</a>
@@ -20,4 +20,4 @@ const articles = (await getCollection("articles")).sort(
       ))}
     </ul>
   </main>
-</BaseLayout>
+</PageLayout>

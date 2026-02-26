@@ -1,6 +1,5 @@
 ---
-import ArticleTitle from "../../components/ArticleTitle.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -16,11 +15,11 @@ const { Content } = await render(article);
 
 ---
 
-<BaseLayout title={article.data.title}>
-  <main>
+<PageLayout title={article.data.title}>
+  <main class="the-center">
     <article class="flow">
-      <Content components={{ h1: ArticleTitle }} />
+      <Content />
     </article>
   </main>
-</BaseLayout>
+</PageLayout>
 

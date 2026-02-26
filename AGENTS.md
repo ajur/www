@@ -83,6 +83,7 @@ All interactive elements must:
 - Avoid utility CSS frameworks
 - Keep typography readable and serif-focused
 - Avoid heavy visual clutter
+- Avoid inline style attributes if possible
 
 ### Agents MUST NOT:
 - introduce Tailwind

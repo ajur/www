@@ -1,0 +1,125 @@
+---
+import MainMenu from "./MainMenu.astro";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+---
+
+<top-nav-bar>
+  <MainMenu aria-label="Primary" />
+
+  <div aria-label="Theme">
+    <ThemeSwitcher />
+  </div>
+</top-nav-bar>
+<div class="top-nav-bar-spacer" aria-hidden="true"></div>
+
+<script>
+  class TopNavBar extends HTMLElement {
+    #lastY = 0;
+    #hidden = false;
+    #ticking = false;
+    #resizeObserver: ResizeObserver | null = null;
+
+    connectedCallback() {
+      if (typeof window === "undefined") return;
+      this.#lastY = window.scrollY || 0;
+
+      this.#measure();
+      this.#resizeObserver = new ResizeObserver(() => this.#measure());
+      this.#resizeObserver.observe(this);
+
+      window.addEventListener("scroll", this.#onScroll, { passive: true });
+      window.addEventListener("resize", this.#measure, { passive: true });
+    }
+
+    disconnectedCallback() {
+      if (typeof window === "undefined") return;
+      window.removeEventListener("scroll", this.#onScroll);
+      window.removeEventListener("resize", this.#measure);
+      this.#resizeObserver?.disconnect();
+      this.#resizeObserver = null;
+    }
+
+    #measure = () => {
+      const height = this.getBoundingClientRect().height;
+      if (height > 0) {
+        document.documentElement.style.setProperty("--top-nav-bar-height", `${height}px`);
+      }
+    };
+
+    #onScroll = () => {
+      if (this.#ticking) return;
+      this.#ticking = true;
+      window.requestAnimationFrame(() => {
+        this.#ticking = false;
+        this.#handleScroll();
+      });
+    };
+
+    #handleScroll() {
+      const y = window.scrollY || 0;
+      const delta = y - this.#lastY;
+      const absDelta = Math.abs(delta);
+      this.#lastY = y;
+
+      if (y <= 0) {
+        this.#setHidden(false);
+        return;
+      }
+
+      // Ignore micro scroll jitter.
+      if (absDelta < 4) return;
+
+      // Down -> hide (after leaving the very top). Up -> show.
+      if (delta > 0 && y > this.offsetHeight) {
+        this.#setHidden(true);
+      } else if (delta < 0) {
+        this.#setHidden(false);
+      }
+    }
+
+    #setHidden(hidden: boolean) {
+      if (hidden === this.#hidden) return;
+      this.#hidden = hidden;
+      this.toggleAttribute("data-hidden", hidden);
+    }
+  }
+
+  customElements.define("top-nav-bar", TopNavBar);
+</script>
+
+<style>
+  top-nav-bar {
+    position: fixed;
+    inset-inline: 0;
+    top: 0;
+    z-index: 50;
+    max-inline-size: none;
+    border-bottom: 0.1rem solid var(--color-border);
+    background: var(--color-bg);
+    transform: translateY(0);
+    transition: transform 180ms ease;
+    will-change: transform;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--s-1);
+    padding-inline: var(--s-1);
+  }
+
+  top-nav-bar[data-hidden] {
+    transform: translateY(calc(-100% - 1px));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    top-nav-bar {
+      transition: none;
+    }
+  }
+
+  .top-nav-bar-spacer {
+    max-inline-size: none;
+    height: var(--top-nav-bar-height, 3.25rem);
+  }
+
+</style>

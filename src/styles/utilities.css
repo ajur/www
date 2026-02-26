@@ -5,3 +5,15 @@
 .stack > * + * {
   margin-block-start: var(--stack-space, 1.5rem);
 }
+
+.the-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: content-box;
+  padding-inline: var(--s0);
+}
+
+.the-center > * {
+  max-inline-size: 100%;
+}

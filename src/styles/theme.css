@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   color-scheme: dark;
-
-  --font-display: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  --font-display: 'Roboto Condensed', sans-serif;
+  --font-display-weight: 300;
   --font-body: Georgia, Times, "Times New Roman", serif;
-  --font-mono: monaco, Consolas, "Lucida Console", monospace;
+  --font-mono: 'Anonymous Pro', monaco, Consolas, monospace;
+
   --color-bg: hsla(237, 34%, 12%, 1);
   --color-ink: hsla(53, 100%, 96%, 1);
   --color-ink-muted: hsla(212, 20%, 46%, 1);
@@ -14,16 +18,14 @@
   --measure: 60ch;
 
   --calculated-font-size: calc(1rem + 0.6vw);
-  --ratio: 1.5;
-  --s-4: calc(pow(var(--ratio), -4) * var(--s0));
-  --s-3: calc(pow(var(--ratio), -3) * var(--s0));
-  --s-2: calc(pow(var(--ratio), -2) * var(--s0));
-  --s-1: calc(pow(var(--ratio), -1) * var(--s0));
-  --s0: 1rem;
-  --s1: calc(pow(var(--ratio), 1) * var(--s0));
-  --s2: calc(pow(var(--ratio), 2) * var(--s0));
-  --s3: calc(pow(var(--ratio), 3) * var(--s0));
-  --s4: calc(pow(var(--ratio), 4) * var(--s0));
+
+  --spacing-ratio: 1.4;
+
+  --callout-note-color: var(--color-accent);
+  --callout-tip-color: var(--color-accent-strong);
+  --callout-tldr-color: var(--color-accent);
+  --callout-info-color: hsl(131, 99%, 37%);
+  --callout-todo-color: var(--color-accent-strong);
 }
 
 [data-theme="light"] {
@@ -34,4 +36,10 @@
   --color-border: hsla(212, 20%, 46%, 1);
   --color-accent: hsla(202, 100%, 33%, 1);
   --color-accent-strong: hsla(346, 100%, 65%, 1);
+
+  --callout-note-color: var(--color-accent);
+  --callout-tip-color: var(--color-accent-strong);
+  --callout-tldr-color: var(--color-accent);
+  --callout-info-color: hsl(131, 99%, 37%);
+  --callout-todo-color: var(--color-accent-strong);
 }

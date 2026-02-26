@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
 import { getCollection } from "astro:content";
 
 const projects = (await getCollection("projects")).sort((a, b) =>
@@ -14,7 +14,7 @@ const getDescription = (project: typeof projects[number]) =>
   "";
 ---
 
-<BaseLayout title="Projects">
+<PageLayout title="Projects">
   <main class="flow" style="max-width: 60rem; margin: 12vh auto 0; padding: 0 1.5rem;">
     <h1>Projects</h1>
     <p>Selected builds and experiments.</p>
@@ -27,4 +27,4 @@ const getDescription = (project: typeof projects[number]) =>
       ))}
     </ul>
   </main>
-</BaseLayout>
+</PageLayout>

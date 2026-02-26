@@ -1,0 +1,229 @@
+---
+title: "Markdown Cheat Sheet"
+description: "Markdown reference and test page."
+date: 2026-02-25
+tags: ["web dev"]
+---
+
+# Markdown Cheat Sheet
+
+This is a quick reference guide for Markdown syntax, both as a refresher for myself, and test page for styling. Heck, testing rendering is only reason why there are those over-verbose explanations, instead of leaving the page as simple list of syntax examples.
+
+## Headings \<- this one is h2 
+
+To create a heading, add one to six `#` symbols before your heading text.
+The number of `#` you use will determine the hierarchy level and typeface size of the heading.
+
+```markdown
+# H1
+## H2
+### H3
+#### H4
+```
+
+### This is an H3 header
+#### This is an H4 header - last one styled
+
+## Inline text formatting
+
+Lots of options for styling inline text. Heck, I'll probably wont even use all of these, but here they are for reference:
+
+| Syntax | Result |
+| --- | --- |
+| `**bold**` | **bold** |
+| `*italic*` | *italic* |
+| `***bold and italic***` | ***bold and italic*** |
+| `~~strikethrough~~` | ~~strikethrough~~ |
+| `` `inline code` `` | `inline code` |
+| `<sub>sub</sub>script` | <sub>sub</sub>script |
+| `<sup>super</sup>script` | <sup>super</sup>script |
+| `<ins>inserted text</ins>` | <ins>inserted text</ins> |
+| `<mark>highlighted text</mark>` | <mark>highlighted text</mark> |
+
+### Links
+
+To create a link, use the following syntax: `[link text](URL)`. Like link to [my home page](https://ajur.pl/).
+
+```markdown
+[My home page](https://ajur.pl/)
+```
+
+Section links (To headings) work as well, just use `#` followed by the heading text in lowercase, with spaces replaced by hyphens. For example link to [go to top](#markdown-cheat-sheet):
+
+```markdown
+[go to top](#markdown-cheat-sheet)
+```
+
+Relative links work as well, just remember to use relative/absolute url path, not content file path. For example: relative link to [links page](../links/), and absolute linkt to [first article](/articles/first-article/):
+
+```markdown
+[links page](../links/)
+[First Article](/articles/first-article/)
+```
+
+Links url can also be added as reference, which is useful for long urls or when you want to reuse the same url multiple times. You can define a reference link like this: `[reference name]: URL`, and then use it in your text like this: `[link text][reference name]`. For example:
+
+```markdown
+[Google][google]
+
+[google]: https://www.google.com
+```
+
+> [!TODO] Obsidian style wiki links
+> Sometime in the future I might add Obsidian styled wiki links, as I like their simplicity, so I'm dorpping here to [Alex's blog post about doing exactly that](https://alexop.dev/posts/adding-obsidian-wiki-links-to-astro-blog/).
+
+## Lists
+
+List are simple, and we can mix and match all styles. Only pain is nesting ordered lists, as they require non-default indentation.
+
+### Unordered list
+
+- unordered item 1
+- items start with -, +, or * (but stars may mess with up autocomplete)
+  - `- just like this`
+  - subitems are indented with two spaces
+    - further subitems are indented with four spaces
+- unordered item 3
++ item with different bullet is treated as new list...
+* ...even if there is no blank line between them
+
+### Ordered list
+
+1. ordered item 1
+1. just put number and dot, it will auto-increment
+   1. you dont even have to place proper numbers, it will fix them for you
+3. nesting is bit trickier
+   1. you need to indent to line up with the first character previous item
+      1. but that depth wont be too common... probably
+
+### Checklist
+
+- [x] completed item
+- [ ] incomplete item
+  - [ ] subitem of incomplete item
+
+Easier to explain with code:
+```markdown
+- [x] completed item
+- [ ] incomplete item
+  - [ ] subitem of incomplete item
+```
+
+## Block elements
+
+### Blockquotes
+
+To create a blockquote, add a `>` in front of a paragraph. You can also nest blockquotes by adding additional `>` symbols.
+
+> This is a blockquote.
+> It can span multiple lines and paragraphs.
+>
+> > This is a nested blockquote.
+
+```markdown
+> This is a blockquote.
+> It can span multiple lines and paragraphs.
+>
+> > This is a nested blockquote.
+```
+
+
+### Code blocks
+
+To create a code block, wrap your code in triple backticks (```) and optionally specify the language for syntax highlighting.
+
+Note that usual markdown syntax of indentation won't work, as Astro uses [GHF][ghf-page] for rendering.
+
+[ghf-page]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github
+
+`e.g. ```javascript`
+
+```javascript
+function greet(name) {
+  return Math.PI; // 3.14...
+}
+```
+
+Astro uses [Shiki][shiki] for syntax highlighting, which supports a wide range of languages and themes.
+
+[shiki]: https://github.com/shikijs/shiki
+
+> [!tldr]- more code below
+> ```python
+> def greet(name):
+>     return "Hello, " + name + "!"
+> ```
+> 
+> ```typescript
+> class ThemeSwitcher extends HTMLElement {
+>    #storageKey = "theme-preference";
+>    #symbols: Record<string, string> = {
+>      auto: "◐",
+>      light: "☀︎",
+>      dark: "☾",
+>    };
+>
+>    button: HTMLButtonElement;
+>    currentTheme: string;
+>    
+>    constructor() {
+>      super();
+>      this.button = this.querySelector("button")!;
+>      this.currentTheme = localStorage.getItem(this.#storageKey) ?? "auto";
+>      this.updateButton();
+>      this.button.addEventListener("click", () => this.toggleTheme());
+>    }
+>
+>    updateButton() {
+>      this.button.textContent = this.#symbols[this.currentTheme] || "◐";
+>    }
+>
+>    toggleTheme() {
+>      const themes = ["auto", "light", "dark"];
+>      const currentIndex = themes.indexOf(this.currentTheme);
+>      const nextIndex = (currentIndex + 1) % themes.length;
+>      this.setTheme(themes[nextIndex]!);
+>    }
+>
+>    setTheme(theme: string) {
+>      this.currentTheme = theme;
+>      localStorage.setItem(this.#storageKey, theme);
+>      this.updateButton();
+>      if (theme === "auto") {
+>        const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+>        theme = darkQuery.matches ? "dark" : "light";
+>      }
+>      document.documentElement.setAttribute("data-theme", theme);
+>      window.dispatchEvent(new CustomEvent("themechanged", { detail: { theme } }));
+>    }
+>  }
+>
+>  customElements.define("theme-switcher", ThemeSwitcher);
+> ```
+
+> [!todo]
+> Pick proper [light/dark color themes](https://docs.astro.build/en/guides/syntax-highlighting/#setting-light-and-dark-mode-themes), and read about [css color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color-scheme).
+
+### Alerts/Callouts/Admonitions
+
+I've found [plugin for adding callouts](https://www.npmjs.com/package/rehype-callouts), yay!. It has multiple types, includes icons, titles and can be collapsable. Here are examples of some types:
+
+> [!note]
+> Useful information that users should know, even when skimming content.
+
+> [!tip]
+> There are a lot more types, just check [plugin source code](https://github.com/lin-stephanie/rehype-callouts/blob/main/src/themes/obsidian/config.ts).
+
+> [!info]
+> Key information users need to know to achieve their goal.
+
+> [!tldr]- Collapsable abstract/tldr with custom title
+> Useful information that users should know, even when skimming content.
+
+```markdown
+> [!note]
+> Useful information that users should know, even when skimming content.
+
+> [!note]- Collapsable note with custom title
+> Useful information that users should know, even when skimming content.
+```

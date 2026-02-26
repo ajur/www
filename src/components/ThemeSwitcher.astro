@@ -10,7 +10,6 @@ const { placement = "below" } = Astro.props;
 <script>
   class ThemeSwitcher extends HTMLElement {
     #storageKey = "theme-preference";
-    #defaultTheme = "dark";
     #symbols: Record<string, string> = {
       auto: "◐",
       light: "☀︎",
@@ -47,11 +46,7 @@ const { placement = "below" } = Astro.props;
         const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
         theme = darkQuery.matches ? "dark" : "light";
       }
-      if (theme === this.#defaultTheme) {
-        document.documentElement.removeAttribute("data-theme");
-      } else {
-        document.documentElement.setAttribute("data-theme", theme);
-      }
+      document.documentElement.setAttribute("data-theme", theme);
       window.dispatchEvent(new CustomEvent("themechanged", { detail: { theme } }));
     }
   }
@@ -66,8 +61,12 @@ const { placement = "below" } = Astro.props;
   theme-switcher button {
     all: unset;
     cursor: pointer;
+    vertical-align: middle;
   }
-  theme-switcher button:hover {
-    color: var(--color-accent-strong);
+
+  @media (hover: hover) {
+    theme-switcher button:hover {
+      color: var(--color-accent-strong);
+    }
   }
 </style>

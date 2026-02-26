@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection, render } from "astro:content";
 
@@ -21,7 +21,7 @@ const description =
   "";
 ---
 
-<BaseLayout title={project.data.title}>
+<PageLayout title={project.data.title}>
   <main class="flow" style="max-width: 60rem; margin: 12vh auto 4rem; padding: 0 1.5rem;">
     <article class="flow">
       <header class="flow" style="--flow-space: 0.75rem;">
@@ -44,4 +44,4 @@ const description =
       <Content />
     </article>
   </main>
-</BaseLayout>
+</PageLayout>
