@@ -16,10 +16,27 @@ h4 {
   font-size: var(--s1);
 }
 
+a {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+mark {
+  padding: var(--s-5) var(--s-4);
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
 blockquote {
-  border-left: 0.2em solid var(--color-border);
-  padding-left: 1rem;
-  margin-left: 0;
+  border-inline: var(--callout-border-width) solid var(--color-border);
+  padding-inline: var(--callout-padding);
+  margin-inline: 0;
   color: var(--color-ink);
   font-style: italic;
 }
@@ -28,5 +45,30 @@ pre,
 code {
   font-family: var(--font-mono, monospace);
   max-inline-size: 100%;
-  padding: var(--s-4);
+}
+
+code:not(pre code) {
+  padding: var(--s-5) var(--s-4);
+  border-radius: var(--border-radius);
+  background-color: var(--color-inline-code-bg, var(--color-bg));
+}
+
+.astro-code {
+  padding: var(--s-5) var(--s-4);
+  border-radius: var(--border-radius);
+  overflow: auto;
+}
+
+article {
+  padding-inline: var(--s-1);
+  inline-size: var(--measure);
+  max-inline-size: 100vw;
+}
+
+article h1 {
+  margin-block-start: 0;
+}
+
+img {
+  margin: 0 auto;
 }

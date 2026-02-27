@@ -5,7 +5,8 @@ import rehypeCallouts from 'rehype-callouts';
 import glsl from 'vite-plugin-glsl';
 
 import mdx from '@astrojs/mdx';
-// import extractTitleAndAbstract from './src/remark/extractTitleAndAbstract.mjs';
+import { shikiClassMeta } from './src/plugins/shikiClassMeta.ts';
+// import extractTitleAndAbstract from './src/plugins/extractTitleAndAbstract.mjs';
 
 const calloutsOptions = {
   props: {
@@ -30,13 +31,27 @@ export default defineConfig({
         '**/*.glsl', '**/*.wgsl',
         '**/*.vert', '**/*.frag',
         '**/*.vs', '**/*.fs'
-      ]
-    })]
+      ],
+    })],
   },
   integrations: [mdx()],
   output: 'static',
   markdown: {
     rehypePlugins: [[rehypeCallouts, calloutsOptions]],
     // remarkPlugins: [extractTitleAndAbstract],
-  }
+    shikiConfig: {
+      themes: {
+        light: 'gruvbox-light-hard',
+        dark: 'synthwave-84',
+      },
+      defaultColor: 'light-dark()',
+      transformers: [shikiClassMeta],
+    },
+  },
+  image: {
+    responsiveStyles: true,
+    layout: 'constrained',
+    objectFit: 'cover',
+    objectPosition: 'center',
+  },
 });

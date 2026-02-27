@@ -1,0 +1,45 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+  [key: string]: any;
+}
+
+const { headings, ...rest } = Astro.props;
+
+---
+<nav {...rest}>
+  <ol>
+    {headings.map((heading) => (
+      <li>
+        <a href={`#${heading.slug}`} style={`--toc-depth: ${heading.depth};`}>{heading.text}</a>
+      </li>
+    ))}
+  </ol>
+</nav>
+<style>
+
+nav {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+ol {
+  color: var(--color-accent);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+li a {
+  margin-left: calc((var(--toc-depth) - 1) * var(--s2));
+  
+  text-decoration: none;
+}
+li:hover {
+  color: var(--color-accent-strong);
+}
+
+
+</style>

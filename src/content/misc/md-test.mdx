@@ -4,10 +4,16 @@ description: "Markdown reference and test page."
 date: 2026-02-25
 tags: ["web dev"]
 ---
+import { Image } from 'astro:assets';
+import test_img from './md-test-embed-img.webp';
 
 # Markdown Cheat Sheet
 
-This is a quick reference guide for Markdown syntax, both as a refresher for myself, and test page for styling. Heck, testing rendering is only reason why there are those over-verbose explanations, instead of leaving the page as simple list of syntax examples.
+This is a quick reference guide for Markdown syntax, both as a refresher for myself, and test page for styling.
+Heck, testing rendering is only reason why there are those over-verbose explanations, instead of leaving the page as simple list of syntax examples.
+
+I've also added few custom extensions, that are also explained here.
+Maybe I'll put them in some package at some point if they are useful enough.
 
 ## Headings \<- this one is h2 
 
@@ -69,7 +75,7 @@ Links url can also be added as reference, which is useful for long urls or when 
 [google]: https://www.google.com
 ```
 
-> [!TODO] Obsidian style wiki links
+> [!TODO]
 > Sometime in the future I might add Obsidian styled wiki links, as I like their simplicity, so I'm dorpping here to [Alex's blog post about doing exactly that](https://alexop.dev/posts/adding-obsidian-wiki-links-to-astro-blog/).
 
 ## Lists
@@ -127,6 +133,29 @@ To create a blockquote, add a `>` in front of a paragraph. You can also nest blo
 > > This is a nested blockquote.
 ```
 
+### Alerts / Callouts / Admonitions
+
+I've found [plugin for adding callouts](https://www.npmjs.com/package/rehype-callouts), yay!. It has multiple types, includes icons, titles and can be collapsable. Here are examples of some types:
+
+> [!note]
+> Useful information that users should know, even when skimming content.
+
+> [!tip]
+> There are a lot more types, just check [plugin source code](https://github.com/lin-stephanie/rehype-callouts/blob/main/src/themes/obsidian/config.ts).
+
+> [!info]
+> Key information users need to know to achieve their goal.
+
+> [!tldr]- Collapsable abstract/tldr with custom title
+> Might to know information that users can skip if they want.
+
+```markdown
+> [!note]
+> Useful information that users should know.
+
+> [!note]- Collapsable note with custom title
+> Might to know information that users can skip.
+```
 
 ### Code blocks
 
@@ -136,25 +165,46 @@ Note that usual markdown syntax of indentation won't work, as Astro uses [GHF][g
 
 [ghf-page]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github
 
-`e.g. ```javascript`
-
+````markdown
 ```javascript
 function greet(name) {
   return Math.PI; // 3.14...
 }
 ```
+````
 
-Astro uses [Shiki][shiki] for syntax highlighting, which supports a wide range of languages and themes.
+Astro uses [Shiki](https://github.com/shikijs/shiki) for syntax highlighting, which supports a wide range of languages and themes.
 
-[shiki]: https://github.com/shikijs/shiki
+I've also added custom plugin to shiki, witch allows passing in css class to code blocks.
+Thats usefull for adding utility classes. Most notably:
+- `.full-bleed` for making code blocks span the full width of viewport.
+- `.soft-bleed` for making code blocks wide enough to show all code without horizontal scrolling (if fits in viewport).
 
-> [!tldr]- more code below
+To add them, just add class (with dot) after language name:
+
+````markdown
+```javascript .full-bleed
+// code here will be full bleed
+```
+````
+
+
+> [!tldr]- more code examples, including bleed examples
+> Python:
 > ```python
 > def greet(name):
 >     return "Hello, " + name + "!"
 > ```
 > 
-> ```typescript
+> HTML with `.soft-bleed`:
+> ```html .soft-bleed
+> <div class="container"><p>Some faily <em>loooooong</em> line</p></div>
+> <div class="container"><p>Another one, bit shorter</p></div>
+> <div class="container"><p>Short</p></div>
+> ```
+> 
+> Typescript with `.full-bleed`:
+> ```typescript .full-bleed
 > class ThemeSwitcher extends HTMLElement {
 >    #storageKey = "theme-preference";
 >    #symbols: Record<string, string> = {
@@ -201,29 +251,50 @@ Astro uses [Shiki][shiki] for syntax highlighting, which supports a wide range o
 >  customElements.define("theme-switcher", ThemeSwitcher);
 > ```
 
-> [!todo]
-> Pick proper [light/dark color themes](https://docs.astro.build/en/guides/syntax-highlighting/#setting-light-and-dark-mode-themes), and read about [css color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color-scheme).
+## Images
 
-### Alerts/Callouts/Admonitions
+### Basic markdown syntax
 
-I've found [plugin for adding callouts](https://www.npmjs.com/package/rehype-callouts), yay!. It has multiple types, includes icons, titles and can be collapsable. Here are examples of some types:
-
-> [!note]
-> Useful information that users should know, even when skimming content.
-
-> [!tip]
-> There are a lot more types, just check [plugin source code](https://github.com/lin-stephanie/rehype-callouts/blob/main/src/themes/obsidian/config.ts).
-
-> [!info]
-> Key information users need to know to achieve their goal.
-
-> [!tldr]- Collapsable abstract/tldr with custom title
-> Useful information that users should know, even when skimming content.
+Basic syntax for adding images is similar to links, but with an exclamation mark at the beginning: `![alt text](image URL)`.
+Local images paths are relative to current md file.
 
 ```markdown
-> [!note]
-> Useful information that users should know, even when skimming content.
-
-> [!note]- Collapsable note with custom title
-> Useful information that users should know, even when skimming content.
+![Nature pic](https://static.photos/nature/320x180/115)
+![Mountains](./img-local-to-content-mdx.webp)
 ```
+
+![Mountains](./md-test-embed-img.webp)
+
+### Astro `<Image>` component
+
+Astro provides an `<Image>` and `<Picture>` [components](https://docs.astro.build/en/guides/images/#astro-components-for-images) that offers advanced features like automatic optimization, lazy loading, and support for various image formats.
+
+These components are available only in `.astro` or `.mdx` files, and not in regular markdown files.
+
+To use it, you need to import the component, and image (unless its external or in public folder), than use Image component in your mdx:
+
+```markdown .soft-bleed
+import { Image } from 'astro:assets';
+import test_img from './img-local-to-content-mdx.webp';
+
+<Image src="{test_img}" alt="Mountains" width="100px" />
+```
+
+<Image src={test_img} alt="Mountains" width="100px" />
+
+It supports even [more attributes](https://docs.astro.build/en/reference/modules/astro-assets/#image-), but also accepts any valid HTML attributes, so you can add custom classes, styles, data attributes, etc.
+
+```markdown .soft-bleed
+<Image src={test_img} alt="Mountains" layout='full-width' style="height: 10vh" />
+```
+
+<Image src={test_img} alt="Mountains" layout='full-width' style="height: 10vh" />
+
+> [!tip]
+> I've set some global defaults for images, in particular:
+> - `responsiveStyles: true` to make images responsive by default.
+> - `layout: 'constrained'` to make images scale down to fit their container
+>   - `full-width` will enlarge image to fit parent container.
+>   - other values are very specific, [check css docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-fit).
+> - `objectPosition: 'center'` to make sure images cover their container without distortion and are centered. [More options](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-position) are for really specific use.
+> - also, as objectPosition only defines position within container, I've added centering styles to all images by default.

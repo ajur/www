@@ -10,10 +10,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: content-box;
-  padding-inline: var(--s0);
 }
 
 .the-center > * {
-  max-inline-size: 100%;
+  max-inline-size: 100vw;
+}
+
+.full-bleed {
+  max-inline-size: none;
+  inline-size: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
+.soft-bleed {
+  min-inline-size: 100%;
+  max-inline-size: 100vw;
+  inline-size: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
