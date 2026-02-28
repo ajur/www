@@ -1,6 +1,7 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
 import { getCollection, render } from "astro:content";
+import { formatDate } from "~/utils";
 
 export async function getStaticPaths() {
   const articles = await getCollection("articles");
@@ -12,18 +13,13 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await render(article);
+
 ---
 
 <PageLayout title={article.data.title}>
   <main class="the-center">
     <article class="flow">
-      <p class="header--date">
-        {article?.data.date.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric"
-        })}
-      </p>
+      <p class="header--date">{formatDate(article.data.date)}</p>
       <Content />
     </article>
   </main>

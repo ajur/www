@@ -34,8 +34,9 @@ mark {
 }
 
 blockquote {
-  border-inline: var(--callout-border-width) solid var(--color-border);
-  padding-inline: var(--callout-padding);
+  border-inline-start: var(--callout-border-width) solid var(--color-border);
+  padding-inline-start: var(--callout-padding);
+  padding-inline-end: calc(var(--callout-padding) + var(--callout-border-width));
   margin-inline: 0;
   color: var(--color-ink);
   font-style: italic;

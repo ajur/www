@@ -1,6 +1,7 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
 import { getCollection } from "astro:content";
+import { formatDate } from "~/utils";
 
 const articles = (await getCollection("articles")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -9,15 +10,78 @@ const articles = (await getCollection("articles")).sort(
 ---
 
 <PageLayout title="Articles">
-  <main class="flow">
-    <h1>Articles</h1>
-    <p>Writing notes and longer essays.</p>
-    <ul class="flow">
-      {articles.map((article) => (
+  <main class="the-center">
+    <header>
+      <h1>Articles</h1>
+      <p>Writing notes and longer essays.</p>
+    </header>
+
+    <ul>
+      {articles.map((page) => (
         <li>
-          <a href={`/articles/${article.id}/`}>{article.data.title}</a>
+          <a href={`/articles/${page.id}/`}>
+            <h2>{page.data.title}</h2>
+            <p>
+              {formatDate(page.data.date)}
+              <span class="tags">{page.data.tags.join(', ')}</span>
+            </p>
+          </a>
         </li>
       ))}
     </ul>
   </main>
 </PageLayout>
+
+
+<style>
+main {
+  padding-inline: var(--s0);
+}
+
+header {
+  text-align: center;
+  padding-block: var(--s2);
+}
+
+header > *:first-child {
+  margin-block-start: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  inline-size: 100%;
+  max-inline-size: var(--measure);
+}
+
+a {
+  display: block;
+  padding-block: var(--s1);
+  padding-inline: var(--s-1);
+  border-top: 1px solid var(--color-border);
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-accent);
+}
+
+h2 {
+  font-size: var(--s1);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  margin-top: var(--s-3);
+  color: var(--color-ink-muted);
+}
+
+.tags {
+  float: right;
+  font-variant: small-caps;
+}
+</style>

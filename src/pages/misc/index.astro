@@ -8,16 +8,75 @@ const otherPages = (await getCollection("misc")).sort(
 
 ---
 <PageLayout title="Miscellaneous">
-  <main class="flow">
-    <h1>Misc</h1>
-    <p>Things I make outside of text and code.</p>
-    <ul class="flow" style="list-style: none; padding: 0;">
-      <li><a href="art/">Art</a> - Creative works and visual experiments.</li>
+  <main class="the-center">
+    <header>
+      <h1>Misc</h1>
+      <p>A collection of things worth sharing.</p>
+    </header>
+
+    <ul>
+      <li>
+        <a href="art/">
+          <h2>Art</h2>
+          <p>Creative works and visual experiments.</p>
+        </a>
+      </li>
       {otherPages.map((page) => (
         <li>
-          <a href={`/misc/${page.id}/`}>{page.data.title}</a> - {page.data.description}
+          <a href={`/misc/${page.id}/`}>
+            <h2>{page.data.title}</h2>
+            {page.data.description && <p>{page.data.description}</p>}
+          </a>
         </li>
       ))}
     </ul>
   </main>
 </PageLayout>
+
+<style>
+  main {
+    padding-inline: var(--s0);
+  }
+
+  header {
+    text-align: center;
+    padding-block: var(--s2);
+  }
+
+  header > *:first-child {
+    margin-block-start: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    inline-size: 100%;
+    max-inline-size: var(--measure);
+  }
+
+  a {
+    display: block;
+    padding-block: var(--s1);
+    padding-inline: var(--s-1);
+    border-top: 1px solid var(--color-border);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: var(--color-accent);
+  }
+
+  h2 {
+    font-size: var(--s1);
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    margin-top: var(--s-3);
+    color: var(--color-ink-muted);
+  }
+</style>

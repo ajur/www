@@ -6,8 +6,9 @@ based on https://github.com/lin-stephanie/rehype-callouts/blob/main/src/themes/g
 .callout {
   --rc-color-default: var(--color-border);
 
-  padding-inline: var(--callout-padding);
-  border-inline: var(--callout-border-width) solid var(--rc-color, var(--rc-color-default));
+  border-inline-start: var(--callout-border-width) solid var(--rc-color, var(--rc-color-default));
+  padding-inline-start: var(--callout-padding);
+  padding-inline-end: calc(var(--callout-padding) + var(--callout-border-width));
 }
 
 .callout-title {

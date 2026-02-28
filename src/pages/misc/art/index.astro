@@ -21,7 +21,7 @@ const getDescription = (entry: typeof entries[number]) =>
     <ul class="flow" style="list-style: none; padding: 0;">
       {entries.map((entry) => (
         <li class="flow" style="--flow-space: 0.5rem;">
-          <a href={`/art/${entry.id}/`}>{entry.data.title}</a>
+          <a href={`${entry.id}/`}>{entry.data.title}</a>
           {getDescription(entry) && <p>{getDescription(entry)}</p>}
         </li>
       ))}
