@@ -2,6 +2,7 @@
 import PageLayout from "~/layouts/PageLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection, render } from "astro:content";
+import LinkBadge from "~/components/LinkBadge.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -13,35 +14,67 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
-const description =
-  project.data.description ??
-  project.body
-    ?.split("\n")
-    ?.find((line) => line.trim().length > 0) ??
-  "";
 ---
 
 <PageLayout title={project.data.title}>
-  <main class="flow" style="max-width: 60rem; margin: 12vh auto 4rem; padding: 0 1.5rem;">
+  <main class="the-center">
     <article class="flow">
       <header class="flow" style="--flow-space: 0.75rem;">
         <h1>{project.data.title}</h1>
-        {description && <p>{description}</p>}
-        <p>
-          <a href={project.data.link} rel="noopener noreferrer">Visit project</a>
-        </p>
-        {project.data.article && (
+        {project.data.url && (
+          <a class="go-to-project" href={project.data.url} rel="noopener noreferrer">Go to project</a>
+        )}
+        {project.data.articles.length > 0 && (
           <p>
-            <a href={`/articles/${project.data.article}/`}>Read the article</a>
+            <a href={`/articles/${project.data.articles[0]}/`}>Read the article</a>
           </p>
         )}
       </header>
       <Image
-        src={project.data.thumbnail}
+        src={project.data.image}
         alt={`${project.data.title} thumbnail`}
         loading="lazy"
       />
+      {project.data.links.length > 0 && (
+        <nav class="badges" aria-label="Project links">
+          {project.data.links.map((link) => (
+            <LinkBadge url={link} />
+          ))}
+        </nav>
+      )}
       <Content />
     </article>
   </main>
 </PageLayout>
+
+<style>
+.go-to-project {
+  display: inline-block;
+  margin-inline: auto;
+  padding: var(--s-2) var(--s1);
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  border-radius: var(--border-radius, 4px);
+  font-family: var(--font-mono);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.go-to-project:hover,
+.go-to-project:focus-visible {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+header {
+  text-align: center;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s-1);
+}
+</style>

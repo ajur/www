@@ -16,9 +16,12 @@ const projects = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string().optional(),
-    thumbnail: image(),
-    link: z.string().url(),
-    article: z.string().optional()
+    startDate: z.date(),
+    endDate: z.date().optional(),
+    image: image(),
+    url: z.string().url().optional(),
+    links: z.string().url().array().default([]),
+    articles: z.string().array().default([]),
   })
 });
 

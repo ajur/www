@@ -1,15 +1,23 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
+import Content from "./_content.mdx";
 ---
 
 <PageLayout title="About">
-  <main class="flow" style="max-width: 60rem; margin: 12vh auto 0; padding: 0 1.5rem;">
-    <h1>About</h1>
-    <p>
-      I'm AJ. I build minimal, content-first web experiences and experiments.
-    </p>
-    <p>
-      If you want to reach me, head to the <a href="/contact/">Contact</a> page.
-    </p>
+  <main class="the-center">
+    <article class="flow">
+      <header>
+        <h1>Self</h1>
+        <p>A bit about me and this site.</p>
+      </header>
+      <Content />
+    </article>
   </main>
 </PageLayout>
+
+<style>
+header {
+  text-align: center;
+  padding-block: var(--s2);
+}
+</style>

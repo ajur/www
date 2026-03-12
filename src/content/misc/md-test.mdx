@@ -78,6 +78,20 @@ Links url can also be added as reference, which is useful for long urls or when 
 > [!TODO]
 > Sometime in the future I might add Obsidian styled wiki links, as I like their simplicity, so I'm dorpping here to [Alex's blog post about doing exactly that](https://alexop.dev/posts/adding-obsidian-wiki-links-to-astro-blog/).
 
+### Footnotes
+
+Footnotes syntax is similar to reference links, but with a caret `^` instead of square brackets. You can define a footnote like this: `[^1]: Footnote content`, and then reference it in your text like this: `[^1]`. For example:
+
+```markdown
+This is some text with a footnote reference.[^1]
+[^1]: This is the content of the footnote.
+```
+
+Rendered footnote[^1] will appear as a superscript number, and the content will be displayed at the bottom of the page.
+
+[^1]: This is the content of the footnote.
+
+
 ## Lists
 
 List are simple, and we can mix and match all styles. Only pain is nesting ordered lists, as they require non-default indentation.

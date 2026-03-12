@@ -27,6 +27,15 @@ a:focus-visible {
   text-decoration-color: var(--color-accent);
 }
 
+a[data-footnote-ref] {
+  font-family: var(--font-mono);
+  padding: 0 var(--s-5);
+}
+
+strong {
+  color: var(--color-accent-strong, var(--color-accent));
+}
+
 mark {
   padding: var(--s-5) var(--s-4);
   background-color: var(--color-accent);

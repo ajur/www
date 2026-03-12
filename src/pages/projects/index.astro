@@ -1,30 +1,144 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
+import { formatDate } from "~/utils";
 
-const projects = (await getCollection("projects")).sort((a, b) =>
-  a.data.title.localeCompare(b.data.title)
-);
-
-const getDescription = (project: typeof projects[number]) =>
-  project.data.description ??
-  project.body
-    ?.split("\n")
-    ?.find((line) => line.trim().length > 0) ??
-  "";
+const projects = (await getCollection("projects")).sort((a, b) => {
+  const aEnd = a.data.endDate?.valueOf() ?? Infinity;
+  const bEnd = b.data.endDate?.valueOf() ?? Infinity;
+  if (aEnd !== bEnd) return bEnd - aEnd;
+  return b.data.startDate.valueOf() - a.data.startDate.valueOf();
+});
 ---
 
-<PageLayout title="Projects">
-  <main class="flow" style="max-width: 60rem; margin: 12vh auto 0; padding: 0 1.5rem;">
-    <h1>Projects</h1>
-    <p>Selected builds and experiments.</p>
-    <ul class="flow" style="list-style: none; padding: 0;">
+<PageLayout title="Code">
+  <main class="the-center">
+    <header>
+      <h1>Code</h1>
+      <p>Coding endeavors and side projects.</p>
+    </header>
+
+    <ul>
       {projects.map((project) => (
-        <li class="flow" style="--flow-space: 0.5rem;">
-          <a href={`/projects/${project.id}/`}>{project.data.title}</a>
-          {getDescription(project) && <p>{getDescription(project)}</p>}
+        <li>
+          <a href={`/projects/${project.id}/`}>
+            <div class="card">
+              {project.data.image && (
+                <Image
+                  class="card-image"
+                  src={project.data.image}
+                  alt={`${project.data.title} thumbnail`}
+                  widths={[320, 480]}
+                  sizes="(max-width: 600px) 100vw, 320px"
+                  loading="lazy"
+                />
+              )}
+              <div class="card-body">
+                <h2>{project.data.title}</h2>
+                {project.data.description && <p class="description">{project.data.description}</p>}
+                <p class="date">
+                  {project.data.endDate
+                    ? formatDate(project.data.endDate)
+                    : <><span>{formatDate(project.data.startDate)}</span> <span class="in-progress">in progress</span></>
+                  }
+                </p>
+              </div>
+            </div>
+          </a>
         </li>
       ))}
     </ul>
   </main>
 </PageLayout>
+
+<style>
+main {
+  padding-inline: var(--s0);
+}
+
+header {
+  text-align: center;
+  padding-block: var(--s2);
+}
+
+header > *:first-child {
+  margin-block-start: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  inline-size: 100%;
+  max-inline-size: var(--measure);
+}
+
+li + li {
+  border-top: 1px solid var(--color-border);
+}
+
+a {
+  display: block;
+  padding-block: var(--s1);
+  padding-inline: var(--s-1);
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-accent);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--s0);
+  align-items: start;
+}
+
+.card-image {
+  inline-size: 10rem;
+  block-size: auto;
+  border-radius: var(--border-radius, 4px);
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+h2 {
+  font-size: var(--s1);
+  margin: 0;
+}
+
+.description {
+  margin: 0;
+}
+
+.date {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: var(--s-1);
+}
+
+.in-progress {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    inline-size: 100%;
+  }
+}
+</style>
