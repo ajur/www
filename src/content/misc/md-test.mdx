@@ -312,3 +312,43 @@ It supports even [more attributes](https://docs.astro.build/en/reference/modules
 >   - other values are very specific, [check css docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-fit).
 > - `objectPosition: 'center'` to make sure images cover their container without distortion and are centered. [More options](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-position) are for really specific use.
 > - also, as objectPosition only defines position within container, I've added centering styles to all images by default.
+
+## Video
+
+No special support for videos for now. Use HTML.
+
+> [!todo]
+> Custom video component for local, or even better, easier embedding of external videos (like from YouTube or Vimeo).
+
+## Audio
+
+No special support for audio for now. Use HTML.
+
+> [!todo]
+> Custom audio component for local, or even better, easier embedding of external audio (like from Spotify or SoundCloud).
+
+## Tables
+
+To create a table, use pipes `|` to separate columns and hyphens `-` to create the header row. You can also align text in columns using colons `:`.
+
+```markdown
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
+| Left Aligned | Center Aligned | Right Aligned |
+| :----------- |:--------------:| -----:|
+| Left         | Center         | Right         |
+```
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+| Bit longer text | to see how it breaks |
+
+| Left Aligned | Center Aligned | Right Aligned |
+| :----------- |:--------------:| -----:|
+| Left         | Center         | Right         |
+| Some extra long text | to ensure that table is responsive and doesn't break layout | even if it has to be scrollable |

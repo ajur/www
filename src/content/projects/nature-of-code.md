@@ -6,8 +6,6 @@ image: nature-of-code.png
 url: https://observablehq.com/@ajur/the-nature-of-code-0-introduction?collection=@ajur/the-nature-of-code
 ---
 
-## The Pitch
-
 A hands-on journey through [The Nature of Code](https://natureofcode.com/) by Daniel Shiffman — exploring algorithms and approaches behind computer simulations: vectors, forces, particle systems, autonomous agents (as in simulation entities, not LLMs AI), and more.
 
 ## Project Context

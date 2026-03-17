@@ -26,6 +26,10 @@ a:focus-visible {
   color: var(--color-accent);
   text-decoration-color: var(--color-accent);
 }
+a:visited {
+  color: inherit;
+  text-decoration-color: var(--color-accent-muted);
+}
 
 a[data-footnote-ref] {
   font-family: var(--font-mono);
@@ -82,3 +86,36 @@ article h1 {
 img {
   margin: 0 auto;
 }
+
+table {
+  border-collapse: collapse;
+  inline-size: 100%;
+  max-inline-size: 100%;
+}
+
+th,
+td {
+  padding: var(--s-3) var(--s-1);
+  text-align: start;
+}
+
+th:first-child, td:first-child {
+  padding-left: 0;
+}
+th:last-child, td:last-child {
+  padding-right: 0;
+}
+
+th {
+  font-family: var(--font-display, sans-serif);
+  font-weight: normal;
+  color: var(--color-accent-strong)
+}
+
+tr + tr {
+  border-block-start: var(--border-width, 1px) solid var(--color-border);
+}
+thead tr {
+  border-block-end: var(--border-width, 1px) solid var(--color-border-strong, var(--color-accent-strong));
+}
+

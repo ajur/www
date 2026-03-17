@@ -19,8 +19,13 @@ const { Content } = await render(project);
 <PageLayout title={project.data.title}>
   <main class="the-center">
     <article class="flow">
-      <header class="flow" style="--flow-space: 0.75rem;">
+      <header class="stack">
         <h1>{project.data.title}</h1>
+        <Image
+          src={project.data.image}
+          alt={`${project.data.title} thumbnail`}
+          loading="lazy"
+        />
         {project.data.url && (
           <a class="go-to-project" href={project.data.url} rel="noopener noreferrer">Go to project</a>
         )}
@@ -29,25 +34,27 @@ const { Content } = await render(project);
             <a href={`/articles/${project.data.articles[0]}/`}>Read the article</a>
           </p>
         )}
-      </header>
-      <Image
-        src={project.data.image}
-        alt={`${project.data.title} thumbnail`}
-        loading="lazy"
-      />
-      {project.data.links.length > 0 && (
+        {project.data.links.length > 0 && (
         <nav class="badges" aria-label="Project links">
           {project.data.links.map((link) => (
             <LinkBadge url={link} />
           ))}
         </nav>
       )}
+      </header>
+      
       <Content />
     </article>
   </main>
 </PageLayout>
 
 <style>
+
+header {
+  --stack-space: var(--s-1);
+  align-items: center;
+}
+
 .go-to-project {
   display: inline-block;
   margin-inline: auto;
@@ -65,10 +72,6 @@ const { Content } = await render(project);
 .go-to-project:focus-visible {
   background-color: var(--color-accent);
   color: var(--color-surface);
-}
-
-header {
-  text-align: center;
 }
 
 .badges {

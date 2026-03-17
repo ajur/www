@@ -2,6 +2,14 @@
   margin-block-start: var(--flow-space, 1em);
 }
 
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.stack > * {
+  margin-block: 0;
+} 
 .stack > * + * {
   margin-block-start: var(--stack-space, 1.5rem);
 }
@@ -29,4 +37,28 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.with-sidebar, .with-sidebar-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}
+.with-sidebar > :first-child,
+.with-sidebar-right > :last-child {
+  flex-grow: 1;
+}
+.with-sidebar > :last-child,
+.with-sidebar-right > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
+.padded {
+  padding: var(--padded-width, var(--s-1));
+}
+
+.width-measure {
+  max-inline-size: var(--measure);
 }

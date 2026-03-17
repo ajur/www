@@ -16,8 +16,9 @@ const projects = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string().optional(),
+    status: z.enum(["in_progress", "completed"]).default("in_progress"),
     startDate: z.date(),
-    endDate: z.date().optional(),
+    lastUpdated: z.date().optional(),
     image: image(),
     url: z.string().url().optional(),
     links: z.string().url().array().default([]),
