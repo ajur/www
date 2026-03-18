@@ -26,13 +26,13 @@ const calloutsOptions = {
 export default defineConfig({
   site: "https://ajur.pl",
   vite: {
-    plugins: [glsl({
+    plugins: [/** @type {any} */(glsl({
       include: [
         '**/*.glsl', '**/*.wgsl',
         '**/*.vert', '**/*.frag',
         '**/*.vs', '**/*.fs'
       ],
-    })],
+    }))],
   },
   integrations: [mdx()],
   output: 'static',

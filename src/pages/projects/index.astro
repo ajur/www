@@ -2,7 +2,6 @@
 import PageLayout from "~/layouts/PageLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import { formatDate } from "~/utils";
 
 const projects = (await getCollection("projects")).sort((a, b) => {
   return b.data.startDate.valueOf() - a.data.startDate.valueOf();
@@ -22,11 +21,8 @@ const projects = (await getCollection("projects")).sort((a, b) => {
           <a class="card with-sidebar-right" href={`/projects/${project.id}/`}>
             <div class="width-measure stack">
               <h2>{project.data.title}</h2>
-              <p class="date">
-                <span>{formatDate(project.data.startDate)}</span>{" "}
-                {project.data.status === "in_progress" && (
-                  <span class="in-progress">in progress</span>
-                )}
+              <p class="status">
+                Status: <em>{project.data.status}</em>
               </p>
               {project.data.description && (
                 <p class="description">{project.data.description}</p>
@@ -63,24 +59,22 @@ const projects = (await getCollection("projects")).sort((a, b) => {
   .card:focus-visible h2 {
     color: var(--color-accent);
   }
-  .card h2 {
-    margin: 0;
-  }
   .card .stack {
-    --stack-space: var(--s1);
+    --stack-space: 0;
+  }
+  .card .description {
+    margin-block-start: var(--s1);
   }
 
-  .date {
-    margin: 0;
-    color: var(--color-ink-muted);
-    font-size: var(--s-1);
-  }
-
-  .in-progress {
+  .status {
     font-style: italic;
-    color: var(--color-accent);
+    color: var(--color-ink-muted);
+    font-size: var(--s0);
   }
-
+  .status em {
+    color: var(--color-accent-muted);
+  }
+  
   .thumbnail {
     flex-basis: calc(var(--measure) * 0.45);
   }

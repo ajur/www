@@ -16,12 +16,12 @@ const projects = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string().optional(),
-    status: z.enum(["in_progress", "completed"]).default("in_progress"),
+    status: z.string().default("completed"),
     startDate: z.date(),
     lastUpdated: z.date().optional(),
     image: image(),
-    url: z.string().url().optional(),
-    links: z.string().url().array().default([]),
+    url: z.url().optional(),
+    links: z.url().array().default([]),
     articles: z.string().array().default([]),
   })
 });
@@ -43,7 +43,7 @@ const art = defineCollection({
     description: z.string().optional(),
     tags: z.array(z.string()).default([]),
     thumbnail: image(),
-    link: z.string().url().optional(),
+    link: z.url().optional(),
     article: z.string().optional(),
     mediaType: z.enum(["image", "audio", "video", "external"]).optional(),
     embed: z

@@ -1,7 +1,9 @@
 ---
 title: "The Nature of Code"
 description: "Working through Daniel Shiffman's Nature of Code — simulations, physics, and creative coding with vanilla JS, Canvas, and a custom ECS library, all on Observable."
-startDate: 2024-02-20
+status: "in progress"
+startDate: 2019-12-30
+lastUpdated: 2026-01-23
 image: nature-of-code.png
 url: https://observablehq.com/@ajur/the-nature-of-code-0-introduction?collection=@ajur/the-nature-of-code
 ---

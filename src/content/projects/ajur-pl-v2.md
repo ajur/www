@@ -1,6 +1,7 @@
 ---
 title: "ajur.pl v2"
 description: "Second iteration of personal home page — a content-first journal-style site built with Astro."
+status: "in development"
 startDate: 2026-02-12
 image: ajur-pl-v2.png
 url: https://ajur.pl

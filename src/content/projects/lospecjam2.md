@@ -1,7 +1,7 @@
 ---
 title: "Space Raid"
 description: "Lospec Jam 2 entry. A retro River Raid reinterpretation with pseudo-3D pixel art, local co-op and gamepad support — all within strict 8-bit console constraints."
-status: completed
+status: "completed"
 startDate: 2024-05-31
 lastUpdated: 2024-05-31
 image: lospecjam2.png

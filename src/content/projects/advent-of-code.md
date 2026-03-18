@@ -1,7 +1,9 @@
 ---
 title: "Advent of Code"
 description: "Annual Advent of Code challenge solutions — algorithmic puzzles solved each December, often doubling as an excuse to learn a new language."
+status: "participating"
 startDate: 2021-12-01
+lastUpdate: 2025-12-15
 image: advent-of-code.png
 links:
   - https://github.com/ajur/aoc
