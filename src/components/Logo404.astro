@@ -1,0 +1,203 @@
+---
+---
+
+<div class="glitch-container">
+  <svg
+    class="glitch-svg"
+    width="44.953465"
+    height="150.24409"
+    clip-rule="evenodd"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    version="1.1"
+    viewBox="0 0 44.953465 150.24409"
+    xml:space="preserve"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <defs id="defs1"></defs>
+    <path
+      d="M 6.9596848,76.243172 C 17.58014,46.578295 28.470893,20.04295 38.651058,1.3326909 34.843739,23.131899 27.401292,63.537807 24.167809,89.849512 23.230598,66.280337 19.174735,61.800653 1.3329092,55.712529 9.2983431,54.493826 39.071187,55.280458 43.620142,55.825608 40.976687,85.57054 33.329019,118.16544 25.034909,148.91078"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="4.343"
+      id="path1"
+      style="stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+    ></path>
+  </svg>
+  <span class="glitch-text" aria-hidden="true">404</span>
+</div>
+
+<style>
+  .glitch-container {
+    display: grid;
+    place-items: center;
+    height: 12rem;
+    animation: glitch-fx 4s steps(1) infinite;
+  }
+
+  .glitch-container > * {
+    grid-area: 1 / 1;
+  }
+
+  .glitch-svg {
+    display: block;
+    width: auto;
+    height: 12rem;
+    color: var(--color-ink);
+    animation: glitch-show-logo 4s steps(1) infinite;
+  }
+
+  .glitch-text {
+    font-family: var(--font-mono);
+    font-size: var(--s4);
+    letter-spacing: 0.15em;
+    color: var(--color-ink);
+    animation: glitch-show-text 4s steps(1) infinite;
+    opacity: 0;
+  }
+
+  /* Container: handles transform, filter, clip-path, opacity */
+  @keyframes glitch-fx {
+    /* --- clean --- */
+    0%, 100% {
+      transform: none;
+      filter: none;
+      clip-path: none;
+      opacity: 1;
+    }
+
+    /* --- 1: short chromatic shift (logo → 404 flash) --- */
+    8% {
+      transform: translate(-2px, 0);
+      filter: drop-shadow(-2px 0 0 var(--color-accent-strong))
+              drop-shadow(2px 0 0 var(--color-accent-muted));
+    }
+    10% {
+      transform: none;
+      filter: none;
+    }
+
+    /* --- breathing room --- */
+
+    /* --- 2: shifted + clipped burst (swap to 404) --- */
+    30% {
+      transform: translate(-3px, 1px) skewX(-2deg);
+      filter: drop-shadow(-2px 0 0 var(--color-accent-strong))
+              drop-shadow(2px 0 0 var(--color-accent-muted));
+      clip-path: inset(15% 0 55% 0);
+    }
+    31% {
+      transform: translate(2px, -1px) skewX(1deg);
+      filter: drop-shadow(2px 0 0 var(--color-accent-strong))
+              drop-shadow(-2px 0 0 var(--color-accent-muted));
+      clip-path: inset(50% 0 15% 0);
+    }
+    33% {
+      transform: none;
+      filter: none;
+      clip-path: none;
+    }
+
+    /* --- breathing room --- */
+
+    /* --- 3: big glitch → clip → disappear (404 shown) --- */
+    58% {
+      transform: translate(-4px, 0) skewX(-5deg);
+      filter: drop-shadow(-4px 0 0 var(--color-accent-strong))
+              drop-shadow(4px 0 0 var(--color-accent-muted));
+    }
+    59% {
+      transform: translate(3px, -2px) skewX(6deg);
+      filter: drop-shadow(-5px 0 0 var(--color-accent-strong))
+              drop-shadow(5px 0 0 var(--color-accent-muted));
+      clip-path: inset(10% 0 60% 0);
+    }
+    60% {
+      transform: translate(-2px, 1px) skewX(-4deg);
+      clip-path: inset(40% 0 20% 0);
+      filter: drop-shadow(-3px 0 0 var(--color-accent-strong))
+              drop-shadow(3px 0 0 var(--color-accent-muted));
+    }
+    61% {
+      opacity: 0;
+      clip-path: inset(0);
+      transform: none;
+      filter: none;
+    }
+
+    /* --- gone --- */
+    68% {
+      opacity: 0;
+    }
+
+    /* --- bring back with small residual shift --- */
+    69% {
+      opacity: 1;
+      transform: translate(1px, 0);
+      filter: drop-shadow(-2px 0 0 var(--color-accent-strong))
+              drop-shadow(2px 0 0 var(--color-accent-muted));
+    }
+    71% {
+      opacity: 1;
+      transform: none;
+      filter: none;
+      clip-path: none;
+    }
+  }
+
+  /* Logo SVG visibility: hidden during swap frames */
+  @keyframes glitch-show-logo {
+    0%, 100% { opacity: 1; }
+
+    /* phase 1: brief 404 flash */
+    8%  { opacity: 0; }
+    10% { opacity: 1; }
+
+    /* phase 2: show 404 during clipped burst */
+    30% { opacity: 0; }
+    33% { opacity: 1; }
+
+    /* phase 3: 404 through big glitch + disappearance + return */
+    58% { opacity: 0; }
+    71% { opacity: 1; }
+  }
+
+  /* 404 text visibility: inverse of logo */
+  @keyframes glitch-show-text {
+    0%, 100% { opacity: 0; }
+
+    /* phase 1 */
+    8%  { opacity: 1; }
+    10% { opacity: 0; }
+
+    /* phase 2 */
+    30% { opacity: 1; }
+    33% { opacity: 0; }
+
+    /* phase 3 */
+    58% { opacity: 1; }
+    71% { opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .glitch-container {
+      animation: none;
+      filter: drop-shadow(-2px 0 0 var(--color-accent-strong))
+              drop-shadow(2px 0 0 var(--color-accent-muted));
+    }
+    .glitch-svg,
+    .glitch-text {
+      animation: none;
+    }
+    .glitch-svg {
+      opacity: 1;
+    }
+    .glitch-text {
+      opacity: 0;
+    }
+  }
+</style>

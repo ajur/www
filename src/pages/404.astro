@@ -1,20 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BackgroundAnimator from "../components/BackgroundAnimator.astro";
-import Logo from "../components/Logo.astro";
+import Logo404 from "../components/Logo404.astro";
 import ThemeSwitcher from "../components/ThemeSwitcher.astro";
 ---
 
 <BaseLayout title="404 — Page not found">
   <BackgroundAnimator />
   <main>
-    <Logo glitch />
+    <Logo404 />
 
-    <p class="error-message">
-      <strong>404</strong>
-      <br />
-      lost in space
-    </p>
+    <p class="error-message">nonexistent</p>
 
     <nav aria-label="Primary">
       <ul>
