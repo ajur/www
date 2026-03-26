@@ -55,7 +55,6 @@ blockquote {
   font-style: italic;
 }
 
-pre,
 code {
   font-family: var(--font-mono, monospace);
   max-inline-size: 100%;

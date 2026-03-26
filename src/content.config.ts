@@ -4,9 +4,13 @@ import { z } from 'astro/zod';
 
 const articles = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/articles" }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
-    date: z.date(),
+    description: z.string().optional(),
+    created: z.iso.datetime({ local: true }),
+    published: z.date(),
+    image: image().optional(),
+    imageCaption: z.string().optional(),
     tags: z.array(z.string()).default([]),
   })
 });

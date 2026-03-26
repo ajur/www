@@ -70,11 +70,14 @@ Relative links work as well, just remember to use relative/absolute url path, no
 ```
 
 Links url can also be added as reference, which is useful for long urls or when you want to reuse the same url multiple times. You can define a reference link like this: `[reference name]: URL`, and then use it in your text like this: `[link text][reference name]`. For example:
+Or even shorter `[ref-name][]` if reference name is the same as link text:
 
 ```markdown
-[Google][google]
+Either [Google browser][Google]
+Or this [Google][]
+Will link to the same place.
 
-[google]: https://www.google.com
+[Google]: https://www.google.com
 ```
 
 > [!TODO]
@@ -102,9 +105,9 @@ List are simple, and we can mix and match all styles. Only pain is nesting order
 
 - unordered item 1
 - items start with -, +, or * (but stars may mess with up autocomplete)
-  - `- just like this`
-  - subitems are indented with two spaces
-    - further subitems are indented with four spaces
+    - `- just like this`
+    - subitems are indented with at least two spaces
+        - further subitems are indented even more
 - unordered item 3
 + item with different bullet is treated as new list...
 * ...even if there is no blank line between them
@@ -112,24 +115,24 @@ List are simple, and we can mix and match all styles. Only pain is nesting order
 ### Ordered list
 
 1. ordered item 1
-2. just put number and dot, it will auto-increment
-	1. you dont even have to place proper numbers, it will fix them for you
-3. nesting is bit trickier
-	1. you need to indent to line up with the first character previous item
-		1. but that depth wont be too common... probably
-  1. just indend by 2
+1. just put number and dot, it will auto-increment
+    1. you dont even have to place proper numbers, it will fix them for you
+1. nesting is bit trickier
+    1. you need to indent at least to line up with the first character previous item
+        1. if using obysdian, it will auto-indent with 4 spaces
+        1. this is bit tricky if when i have 2 spaces indent in vscode
 
 ### Checklist
 
 - [x] completed item
 - [ ] incomplete item
-  - [ ] subitem of incomplete item
+    - [ ] subitem of incomplete item
 
 Easier to explain with code:
 ```markdown
 - [x] completed item
 - [ ] incomplete item
-  - [ ] subitem of incomplete item
+    - [ ] subitem of incomplete item
 ```
 
 ## Block elements
@@ -176,7 +179,8 @@ I've found [plugin for adding callouts](https://www.npmjs.com/package/rehype-cal
 
 ### Code blocks
 
-To create a code block, wrap your code in triple backticks (```) and optionally specify the language for syntax highlighting.
+To create a code block, wrap your code in triple backticks (` ``` `) and optionally specify the language for syntax highlighting.
+Use more backticks if your code contains triple backticks.
 
 Note that usual markdown syntax of indentation won't work, as Astro uses [GHF][ghf-page] for rendering.
 
@@ -341,17 +345,17 @@ To create a table, use pipes `|` to separate columns and hyphens `-` to create t
 | Paragraph   | Text        |
 
 | Left Aligned | Center Aligned | Right Aligned |
-| :----------- |:--------------:| -----:|
+| :--- |:---:| ---:|
 | Left         | Center         | Right         |
 ```
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Syntax          | Description          |
+| --------------- | -------------------- |
+| Header          | Title                |
+| Paragraph       | Text                 |
 | Bit longer text | to see how it breaks |
 
-| Left Aligned | Center Aligned | Right Aligned |
-| :----------- |:--------------:| -----:|
-| Left         | Center         | Right         |
+| Left Aligned         |                       Center Aligned                        |                   Right Aligned |
+| :------------------- | :---------------------------------------------------------: | ------------------------------: |
+| Left                 |                           Center                            |                           Right |
 | Some extra long text | to ensure that table is responsive and doesn't break layout | even if it has to be scrollable |

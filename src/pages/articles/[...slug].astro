@@ -19,7 +19,7 @@ const { Content } = await render(article);
 <PageLayout title={article.data.title}>
   <main class="the-center">
     <article class="flow">
-      <p class="header--date">{formatDate(article.data.date)}</p>
+      <p class="header--date">{formatDate(article.data.published)}</p>
       <Content />
     </article>
   </main>

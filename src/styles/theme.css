@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Smooch+Sans:wght@100..900&display=swap');
-
 :root {
   color-scheme: dark;
-  --font-display: 'Smooch Sans', sans-serif;
+  --font-display: var(--font-smooch-sans);
   --font-display-weight: 550;
-  --font-body: "Baskervville", Georgia, Times, "Times New Roman", serif;
-  --font-mono: 'Anonymous Pro', monaco, Consolas, monospace;
+  --font-body: var(--font-baskervville);
+  --font-mono: var(--font-anonymous-pro);
 
   --color-bg: hsla(237, 34%, 12%, 1);
   --color-ink: hsla(53, 100%, 96%, 1);

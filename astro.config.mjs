@@ -1,12 +1,12 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import rehypeCallouts from 'rehype-callouts';
 
 import glsl from 'vite-plugin-glsl';
 
 import mdx from '@astrojs/mdx';
 import { shikiClassMeta } from './src/plugins/shikiClassMeta.ts';
-// import extractTitleAndAbstract from './src/plugins/extractTitleAndAbstract.mjs';
+
 
 const calloutsOptions = {
   props: {
@@ -38,7 +38,6 @@ export default defineConfig({
   output: 'static',
   markdown: {
     rehypePlugins: [[rehypeCallouts, calloutsOptions]],
-    // remarkPlugins: [extractTitleAndAbstract],
     shikiConfig: {
       themes: {
         light: 'gruvbox-light-hard',
@@ -54,4 +53,23 @@ export default defineConfig({
     objectFit: 'cover',
     objectPosition: 'center',
   },
+  fonts: [{
+    provider: fontProviders.google(),
+    name: "Anonymous Pro",
+    cssVariable: "--font-anonymous-pro",
+    optimizedFallbacks: false,
+    fallbacks: ['monaco', 'Consolas', 'monospace'],
+  }, {
+    provider: fontProviders.google(),
+    name: "Baskervville",
+    cssVariable: "--font-baskervville",
+    optimizedFallbacks: false,
+    fallbacks: ['Georgia', 'Times', 'Times New Roman', 'serif'],
+  }, {
+    provider: fontProviders.google(),
+    name: "Smooch Sans",
+    cssVariable: "--font-smooch-sans",
+    optimizedFallbacks: false,
+    fallbacks: ['sans-serif'],
+  }]
 });

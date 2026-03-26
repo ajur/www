@@ -1,4 +1,6 @@
 ---
+import { Font } from "astro:assets";
+
 import BaseLayout from "./BaseLayout.astro";
 
 import "~/styles/page.css";
@@ -13,6 +15,8 @@ const { title = "Astro" } = Astro.props;
 ---
 
 <BaseLayout title={title}>
+  <Font cssVariable="--font-baskervville" />
+  <Font cssVariable="--font-smooch-sans" />
   <TopNavBar />
   <slot />
   <Footer class="footer-main-menu">

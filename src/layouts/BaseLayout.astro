@@ -1,4 +1,6 @@
 ---
+import { Font } from "astro:assets";
+
 import "~/styles/reset.css";
 import "~/styles/theme.css";
 import "~/styles/base.css";
@@ -13,6 +15,7 @@ const { title = "Astro" } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <!-- <link rel="icon" href="/favicon.ico" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Font cssVariable="--font-anonymous-pro" />
     <script type="module" is:inline>
       (() => {
         let theme = localStorage.getItem("theme-preference") ?? "auto";

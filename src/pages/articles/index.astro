@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import { formatDate } from "~/utils";
 
 const articles = (await getCollection("articles")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  (a, b) => b.data.published.valueOf() - a.data.published.valueOf()
 );
 
 ---
@@ -22,7 +22,7 @@ const articles = (await getCollection("articles")).sort(
           <a href={`/articles/${page.id}/`}>
             <h2>{page.data.title}</h2>
             <p>
-              {formatDate(page.data.date)}
+              {formatDate(page.data.published)}
               <span class="tags">{page.data.tags.join(', ')}</span>
             </p>
           </a>
