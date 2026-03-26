@@ -7,6 +7,8 @@ lastUpdated: 2023-03-18
 image: ajur-pl-v1.png
 links:
   - https://github.com/ajur/ajur.github.io/tree/v1
+tags:
+  - site
 ---
 
 First version of the personal home page. Very minimalistic — a single page with a few links, featuring a Solarized color scheme with dark and light theme support (manual toggle, no auto switcher). The background featured a random walk visualization on canvas.

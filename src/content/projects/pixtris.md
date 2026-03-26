@@ -1,6 +1,6 @@
 ---
-title: "Pixtris"
-description: "Very simple Tetris clone built with Pixi.js"
+title: Pixtris
+description: Very simple Tetris clone built with Pixi.js
 status: completed
 startDate: 2017-06-23
 lastUpdated: 2017-07-11
@@ -8,6 +8,9 @@ image: pixtris.png
 url: https://ajur.pl/pixtris/dist/
 links:
   - https://github.com/ajur/pixtris
+tags:
+  - gamedev
+  - Pixi
 ---
 
 Very simple Tetris clone built with Pixi.js. Originally created as a development task for a job interview. One of the first (if not *the* first) games I made with [Pixi.js](https://pixijs.com/).

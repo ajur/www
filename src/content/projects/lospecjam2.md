@@ -1,7 +1,7 @@
 ---
-title: "Space Raid"
-description: "Lospec Jam 2 entry. A retro River Raid reinterpretation with pseudo-3D pixel art, local co-op and gamepad support — all within strict 8-bit console constraints."
-status: "completed"
+title: Space Raid
+description: Lospec Jam 2 entry. A retro River Raid reinterpretation with pseudo-3D pixel art, local co-op and gamepad support — all within strict 8-bit console constraints.
+status: completed
 startDate: 2024-05-31
 lastUpdated: 2024-05-31
 image: lospecjam2.png
@@ -10,6 +10,10 @@ links:
   - https://github.com/ajur/lospecjam2
   - https://ajur.itch.io/space-raid
   - https://itch.io/jam/lospec-jam-2/rate/2743660
+tags:
+  - gamedev
+  - gamejam
+  - LoSpec
 ---
 
 A small reinterpretation of the classic River Raid, built to fit the specs of an imaginary 8-bit home console. Fly through a scrolling corridor, shoot enemies, collect fuel, and try to survive as long as possible — solo or with a friend in local co-op.

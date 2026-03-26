@@ -1,0 +1,121 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+import { getTagsContent } from "~/utils";
+
+export async function getStaticPaths() {
+  const tagsMap = await getTagsContent();
+  return Array.from(tagsMap.keys()).map((tag) => ({
+    params: { tag },
+    props: { tagName: tag, collections: tagsMap.get(tag) }
+  }));
+}
+
+const collectionNamesMap = {
+  articles: "text",
+  projects: "code",
+  art: "art",
+  misc: "misc"
+};
+
+console.log(Astro)
+
+const { tagName, collections } = Astro.props;
+
+const { articles, projects, art, misc } = collections || {};
+
+---
+<PageLayout title={`Tag: ${tagName}`}>
+  <main class="the-center">
+    <header>
+      <h1><span>tag:</span>{tagName}</h1>
+    </header>
+
+    { articles.length > 0 && (
+      <section>
+        <h2>text</h2>
+        <ul>
+          {articles.map((article) => (
+            <li>
+              <a href={`/articles/${article.id}/`}>{article.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    { projects.length > 0 && (
+      <section>
+        <h2>code</h2>
+        <ul>
+          {projects.map((project) => (
+            <li>
+              <a href={`/projects/${project.id}/`}>{project.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    { art.length > 0 && (
+      <section>
+        <h2>art</h2>
+        <ul>
+          {art.map((artwork) => (
+            <li>
+              <a href={`/art/${artwork.id}/`}>{artwork.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    { misc.length > 0 && (
+      <section>
+        <h2>misc</h2>
+        <ul>
+          {misc.map((item) => (
+            <li>
+              <a href={`/misc/${item.id}/`}>{item.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </main>
+</PageLayout>
+
+<style>
+  main {
+    padding-inline: var(--s0);
+  }
+
+  header {
+    text-align: center;
+    padding-block: var(--s2);
+  }
+
+  header > *:first-child {
+    margin-block-start: 0;
+  }
+
+  header h1 span {
+    color: var(--color-ink-muted);
+  }
+
+  h2 {
+    justify-self: center;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-inline-size: var(--measure);
+  }
+
+  p {
+    margin: 0;
+    margin-top: var(--s-3);
+  }
+</style>

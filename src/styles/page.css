@@ -27,7 +27,6 @@ a:focus-visible {
   text-decoration-color: var(--color-accent);
 }
 a:visited {
-  color: inherit;
   text-decoration-color: var(--color-accent-muted);
 }
 

@@ -28,7 +28,13 @@
       style="stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
     ></path>
   </svg>
-  <span class="glitch-text" aria-hidden="true">404</span>
+  <div class="glitch-text" aria-hidden="true">
+    <span>#0?</span>
+    <span>4#4</span>
+    <span>404</span>
+    <span>?04</span>
+    <span>4?#</span>
+  </div>
 </div>
 
 <style>
@@ -53,11 +59,33 @@
 
   .glitch-text {
     font-family: var(--font-mono);
-    font-size: var(--s4);
+    font-size: var(--s1);
     letter-spacing: 0.15em;
     color: var(--color-ink);
     animation: glitch-show-text 4s steps(1) infinite;
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .glitch-text *:nth-child(1) {
+    transform: translate(0.5em, 0);
+    font-size: var(--s-1);
+  }
+  .glitch-text *:nth-child(2) {
+    transform: translate(-1em, 0);
+  }
+  .glitch-text *:nth-child(3) {
+    font-style: normal;
+    font-size: var(--s4);
+  }
+  .glitch-text *:nth-child(4) {
+    transform: translate(1em, 0);
+  }
+  .glitch-text *:nth-child(5) {
+    transform: translate(-0.3em, 0);
+    font-size: var(--s-1);
   }
 
   /* Container: handles transform, filter, clip-path, opacity */
@@ -197,7 +225,7 @@
       opacity: 1;
     }
     .glitch-text {
-      opacity: 0;
+      opacity: 1;
     }
   }
 </style>

@@ -5,6 +5,7 @@ created: 2026-03-21T00:03
 published: 2026-03-24
 tags:
   - devlog
+  - site
 ---
 # Starting from structure, not content
 

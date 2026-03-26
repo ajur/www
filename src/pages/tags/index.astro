@@ -1,0 +1,91 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+import { getTagsContent } from "~/utils";
+
+const collectionNamesMap = {
+  articles: "text",
+  projects: "code",
+  art: "art",
+  misc: "misc"
+};
+
+const tagsMap = await getTagsContent();
+const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
+
+---
+<PageLayout title="Miscellaneous">
+  <main class="the-center">
+    <header>
+      <h1>Tags</h1>
+      <p>Listing all available tags.</p>
+    </header>
+
+    <ul>
+      {tagsList.map((tag) => (
+        <li>
+          <a href={`/tags/${tag}/`}>
+            <div class="tag">{tag}</div>
+
+            
+              {Object.keys(collectionNamesMap).map((collection) => {
+                const collectionItems = tagsMap.get(tag)?.[collection] || [];
+                if (collectionItems.length === 0) return null;
+
+                return (
+                  <span class="tag-count">
+                    {collectionNamesMap[collection]}: {collectionItems.length}
+                  </span>
+                );
+              })}
+            
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+</PageLayout>
+
+<style>
+  main {
+    padding-inline: var(--s0);
+  }
+
+  header {
+    text-align: center;
+    padding-block: var(--s2);
+  }
+
+  header > *:first-child {
+    margin-block-start: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-inline-size: var(--measure);
+  }
+
+  a {
+    display: flex;
+    gap: var(--s-2);
+    padding-block: var(--s-4);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover .tag,
+  a:focus-visible .tag {
+    color: var(--color-accent);
+  }
+
+  .tag-count {
+    color: var(--color-ink-muted);
+  }
+
+  p {
+    margin: 0;
+    margin-top: var(--s-3);
+  }
+</style>

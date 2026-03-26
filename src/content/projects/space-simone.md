@@ -1,6 +1,6 @@
 ---
-title: "SpaceSimone"
-description: "A space-themed Simon clone — the first (and only) entry in the 'Super Simple Clones' series, built with TypeScript, Pixi.js and GSAP."
+title: SpaceSimone
+description: A space-themed Simon clone — the first (and only) entry in the 'Super Simple Clones' series, built with TypeScript, Pixi.js and GSAP.
 status: completed
 startDate: 2022-03-10
 lastUpdated: 2022-03-16
@@ -8,6 +8,9 @@ image: space-simone.png
 url: https://ajur.pl/ssc/
 links:
   - https://github.com/ajur/ssc
+tags:
+  - gamedev
+  - Pixi
 ---
 
 SpaceSimone was meant to kick off **Super Simple Clones** — a series of small games built with TypeScript and Pixi.js under one umbrella...

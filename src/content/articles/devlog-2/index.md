@@ -5,6 +5,7 @@ created: 2026-03-24T21:03
 published: 2026-03-26
 tags:
   - devlog
+  - site
 ---
 # From prompt to project
 

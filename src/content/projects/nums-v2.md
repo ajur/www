@@ -1,12 +1,14 @@
 ---
-title: "Nums v2"
-description: "A second remake of Nums — a two-player strategy game on an irregular grid."
-status: "in development"
+title: Nums v2
+description: A second remake of Nums — a two-player strategy game on an irregular grid.
+status: in development
 startDate: 2025-11-01
 image: nums-v2.png
 url: https://ajur.pl/vibed_nums/
 links:
   - https://github.com/ajur/vibed_nums
+tags:
+  - gamedev
 ---
 
 A new version of Nums, started as a proof of concept for vibecoding. I started with Google AI Studio, and the effects were pretty solid (at least for my low expectations with it).

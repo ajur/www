@@ -1,6 +1,6 @@
 ---
-title: "ViVi the Vicious Viper"
-description: "A PICO-8 clone of the classic DOS game Vicious Viper — a nostalgic recreation built from childhood memories on the fantasy console."
+title: ViVi the Vicious Viper
+description: A PICO-8 clone of the classic DOS game Vicious Viper — a nostalgic recreation built from childhood memories on the fantasy console.
 status: completed
 startDate: 2017-02-22
 lastUpdated: 2017-03-04
@@ -8,6 +8,9 @@ image: vivi.png
 url: https://www.lexaloffle.com/bbs/?tid=28867
 links:
   - https://github.com/ajur/pico-8-carts
+tags:
+  - gamedev
+  - PICO-8
 ---
 
 A clone of the old DOS game *Vivi Vicious Viper*, recreated from memory on the PICO-8 fantasy console. This was the first PICO-8 project — after a few days of tinkering, it became something playable and satisfying.

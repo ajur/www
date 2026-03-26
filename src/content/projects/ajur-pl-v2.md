@@ -7,6 +7,8 @@ image: ajur-pl-v2.png
 url: https://ajur.pl
 links:
   - https://github.com/ajur/ajur.github.io/
+tags:
+  - site
 ---
 
 Second iteration of the personal home page, built with Astro as a static-first, content-driven site. Features an MDX-powered blog with tag system, RSS feed, project showcase, art gallery, and a full-screen animated background on the landing page. Supports multiple themes, and auto light/dark theme switching. Styled with pure CSS variables and custom properties — no utility frameworks. Interactive elements use vanilla TypeScript as progressive enhancement islands.
