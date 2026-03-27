@@ -29,11 +29,9 @@ export const getTagsContent = async () => {
         allTagsMap.set(tag, { articles: [], projects: [], art: [], misc: [] });
       }
       const tagData = allTagsMap.get(tag)!;
-      tagData[item.collection].push(item);
+      tagData[item.collection].push(item as any);
     });
   });
-
-  console.log(allTagsMap);
 
   return allTagsMap;
 }
