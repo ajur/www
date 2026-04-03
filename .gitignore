@@ -48,3 +48,7 @@ Icon?
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/tasks.json
+
+# Raw files to exclude from GIT
+
+assets_raw/

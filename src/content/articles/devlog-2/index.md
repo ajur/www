@@ -101,4 +101,4 @@ In the end, I've spent quite a lot of time researching and learning a modern app
 
 The single downside was that most generated code was very "reacty" and "tailwindy", so I had to step in a lot with handcrafted code to actually get it written the way I wanted.
 
-Nonetheless, this was a pretty good start, but I had a pretty specific idea for the landing page, so I went to [make that next](../devlog-3).
+Nonetheless, this was a pretty good start. And as I had a pretty specific idea for the landing page, I went to [make that next](../devlog-3).

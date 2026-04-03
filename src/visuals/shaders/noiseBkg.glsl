@@ -1,6 +1,6 @@
 precision mediump float;
 
-#include simplexNoise.glsl;
+#include psrdnoise3.glsl;
 
 uniform vec2 u_resolution;
 uniform float u_time;
@@ -11,8 +11,11 @@ uniform vec4 c_ink;
 uniform vec4 c_acc1;
 uniform vec4 c_acc2;
 
-// demo code:
-float noiseVal(vec2 xy) { return 0.7 * snoise(vec3(xy, 0.1 * u_time)); }
+vec3 noise_period = vec3(0.0);
+float noise_alpha = 0.0;
+vec3 noise_gradient = vec3(0.0);
+
+float noiseVal(vec2 xy) { return 0.7 * psrdnoise(vec3(xy, 0.1 * u_time), noise_period, noise_alpha, noise_gradient); }
 
 vec3 noiseColor() {
   vec2 p = (gl_FragCoord.xy / u_resolution.y) * 2.0 - 1.0;
