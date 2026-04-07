@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig, fontProviders, envField } from 'astro/config';
 import rehypeCallouts from 'rehype-callouts';
 
 import glsl from 'vite-plugin-glsl';
@@ -52,6 +52,11 @@ export default defineConfig({
     layout: 'constrained',
     objectFit: 'cover',
     objectPosition: 'center',
+  },
+  env: {
+    schema: {
+      PUBLIC_ART_CDN: envField.string({ context: "client", access: "public", default: '/_art_bucket' }),
+    }
   },
   fonts: [{
     provider: fontProviders.google(),

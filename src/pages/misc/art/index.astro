@@ -2,29 +2,168 @@
 import { getCollection } from "astro:content";
 import PageLayout from "~/layouts/PageLayout.astro";
 
+import { PUBLIC_ART_CDN } from "astro:env/client";
+
 const entries = (await getCollection("art")).sort((a, b) =>
-  a.data.title.localeCompare(b.data.title)
+  b.data.created.localeCompare(a.data.created)
 );
 
-const getDescription = (entry: typeof entries[number]) =>
-  entry.data.description ??
-  entry.body
-    ?.split("\n")
-    ?.find((line) => line.trim().length > 0) ??
-  "";
+function ratioSpan(ratio: string): { cols: number; rows: number } {
+  const [w, h] = ratio.split(":").map(Number);
+  return { cols: w!, rows: h! };
+}
+
+function buildSrcset(images: { src: string; width: number }[]): string {
+  return images.map((img) => `${PUBLIC_ART_CDN}/${img.src} ${img.width}w`).join(", ");
+}
 ---
 
 <PageLayout title="Art">
-  <main class="flow" style="max-width: 60rem; margin: 12vh auto 0; padding: 0 1.5rem;">
-    <h1>Art</h1>
-    <p>Studies, sound, and visual sketches.</p>
-    <ul class="flow" style="list-style: none; padding: 0;">
-      {entries.map((entry) => (
-        <li class="flow" style="--flow-space: 0.5rem;">
-          <a href={`${entry.id}/`}>{entry.data.title}</a>
-          {getDescription(entry) && <p>{getDescription(entry)}</p>}
-        </li>
-      ))}
-    </ul>
+  <main>
+    <div class="gallery-grid">
+      {entries.map((entry) => {
+        const { cols, rows } = ratioSpan(entry.data.thumbnailRatio);
+        return (
+          <a
+            class="gallery-cell"
+            href={`/misc/art/${entry.id}`}
+            style={`--span-col: ${cols}; --span-row: ${rows};`}
+            data-srcset={buildSrcset(entry.data.images)}
+            data-title={entry.data.title}
+          >
+            <img
+              src={`${PUBLIC_ART_CDN}/${entry.data.thumbnails[0]!.src}`}
+              alt={entry.data.title}
+              loading="lazy"
+            />
+          </a>
+        );
+      })}
+    </div>
+
+    <dialog class="lightbox" id="lightbox">
+      <img class="lightbox-img" />
+      <button class="lightbox-close" aria-label="Close" type="button">&times;</button>
+    </dialog>
   </main>
 </PageLayout>
+
+<script>
+  const dialog = document.getElementById("lightbox") as HTMLDialogElement;
+  const img = dialog.querySelector(".lightbox-img") as HTMLImageElement;
+  const closeBtn = dialog.querySelector(".lightbox-close") as HTMLButtonElement;
+
+  document.querySelector(".gallery-grid")?.addEventListener("click", (e) => {
+    const cell = (e.target as HTMLElement).closest<HTMLAnchorElement>(".gallery-cell");
+    if (!cell) return;
+    e.preventDefault();
+
+    const srcset = cell.dataset.srcset ?? "";
+    const title = cell.dataset.title ?? "";
+
+    img.srcset = srcset;
+    img.alt = title;
+    img.sizes = "100vw";
+    img.src = "";
+
+    dialog.showModal();
+  });
+
+  closeBtn.addEventListener("click", () => dialog.close());
+
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+
+  dialog.addEventListener("close", () => {
+    img.srcset = "";
+    img.src = "";
+  });
+</script>
+
+<style>
+  main {
+    padding: var(--s0) 1vw;
+  }
+
+  .gallery-grid {
+    --cell: clamp(90px, 8vw, 120px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--cell));
+    grid-auto-rows: var(--cell);
+    grid-auto-flow: dense;
+    gap: 0;
+    justify-content: center;
+  }
+
+  .gallery-cell {
+    grid-column: span var(--span-col, 1);
+    grid-row: span var(--span-row, 1);
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+
+  .gallery-cell::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 0 1px var(--color-surface, #000);
+    pointer-events: none;
+  }
+
+  .gallery-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* --- Lightbox --- */
+
+  .lightbox {
+    border: none;
+    background: none;
+    padding: 0;
+    max-width: 95vw;
+    max-height: 95vh;
+    overflow: hidden;
+  }
+
+  .lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  .lightbox[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox-img {
+    max-width: min(95vw, 100%);
+    max-height: 95vh;
+    object-fit: contain;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  .lightbox-close {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    z-index: 1;
+  }
+
+  .lightbox-close:hover {
+    opacity: 0.7;
+  }
+</style>

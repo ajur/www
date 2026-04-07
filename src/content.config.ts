@@ -1,5 +1,5 @@
 import { defineCollection } from "astro:content";
-import { glob } from 'astro/loaders';
+import { file, glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const articles = defineCollection({
@@ -41,22 +41,23 @@ const misc = defineCollection({
   })
 });
 
+const artImageRef = z.object({
+  src: z.string(),
+  width: z.number(),
+});
+
 const art = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/art" }),
-  schema: ({ image }) => z.object({
+  loader: file("./src/content/art.yaml"),
+  schema: z.object({
+    id: z.string(),
     title: z.string(),
     description: z.string().optional(),
+    created: z.string().regex(/^\d{4}(-\d{2}(-\d{2})?)?$/),
+    published: z.iso.datetime({ local: true }),
+    thumbnailRatio: z.string().regex(/^\d+:\d+$/),
     tags: z.array(z.string()).default([]),
-    thumbnail: image(),
-    link: z.url().optional(),
-    article: z.string().optional(),
-    mediaType: z.enum(["image", "audio", "video", "external"]).optional(),
-    embed: z
-      .object({
-        type: z.enum(["youtube", "soundcloud"]),
-        id: z.string()
-      })
-      .optional()
+    images: z.array(artImageRef),
+    thumbnails: z.array(artImageRef),
   })
 });
 

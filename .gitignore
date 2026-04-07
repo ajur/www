@@ -49,6 +49,7 @@ Icon?
 !.vscode/launch.json
 !.vscode/tasks.json
 
-# Raw files to exclude from GIT
-
+# Raw art gallery files to exclude from GIT
 assets_raw/
+# symlink to the above, which is used in dev
+public/_art_bucket

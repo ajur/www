@@ -1,0 +1,876 @@
+- id: 2000-misc-demon
+  title: Demon
+  images:
+    - src: 2000-misc-demon_full.webp
+      width: 3437
+    - src: 2000-misc-demon_mid.webp
+      width: 1200
+  thumbnails:
+    - src: 2000-misc-demon_thumb_3x4.webp
+      width: 600
+  thumbnailRatio: "3:4"
+  tags:
+    - misc
+  created: "2000"
+  published: "2026-04-03T17:57:38"
+  description: ""
+- id: 2017-02-18-misc-books
+  title: Books
+  images:
+    - src: 2017-02-18-misc-books_full.webp
+      width: 4568
+    - src: 2017-02-18-misc-books_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-02-18-misc-books_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - misc
+  created: "2017-02-18"
+  published: "2026-04-03T17:57:38"
+  description: ""
+- id: 2017-03-28-misc-palms
+  title: Palms
+  images:
+    - src: 2017-03-28-misc-palms_full.webp
+      width: 4882
+    - src: 2017-03-28-misc-palms_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-03-28-misc-palms_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - misc
+  created: "2017-03-28"
+  published: "2026-04-03T17:57:39"
+  description: ""
+- id: 2017-05-05-misc-tulips
+  title: Tulips
+  images:
+    - src: 2017-05-05-misc-tulips_full.webp
+      width: 2696
+    - src: 2017-05-05-misc-tulips_mid.webp
+      width: 1200
+  thumbnails:
+    - src: 2017-05-05-misc-tulips_thumb_3x4.webp
+      width: 600
+  thumbnailRatio: "3:4"
+  tags:
+    - misc
+  created: "2017-05-05"
+  published: "2026-04-03T17:57:39"
+  description: ""
+- id: 2017-05-20-misc-rocket-and-groot
+  title: Rocket And Groot
+  images:
+    - src: 2017-05-20-misc-rocket-and-groot_full.webp
+      width: 4848
+    - src: 2017-05-20-misc-rocket-and-groot_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-05-20-misc-rocket-and-groot_thumb_2x2.webp
+      width: 400
+  thumbnailRatio: "2:2"
+  tags:
+    - misc
+  created: "2017-05-20"
+  published: "2026-04-03T17:57:41"
+  description: ""
+- id: 2017-06-09-misc-peter-rabbit
+  title: Peter Rabbit
+  images:
+    - src: 2017-06-09-misc-peter-rabbit_full.webp
+      width: 3251
+    - src: 2017-06-09-misc-peter-rabbit_mid.webp
+      width: 1067
+  thumbnails:
+    - src: 2017-06-09-misc-peter-rabbit_thumb_2x3.webp
+      width: 400
+  thumbnailRatio: "2:3"
+  tags:
+    - misc
+  created: "2017-06-09"
+  published: "2026-04-03T17:57:42"
+  description: ""
+- id: 2017-09-09-notebook-hydrangea
+  title: Hydrangea
+  images:
+    - src: 2017-09-09-notebook-hydrangea_full.webp
+      width: 3358
+    - src: 2017-09-09-notebook-hydrangea_mid.webp
+      width: 1200
+  thumbnails:
+    - src: 2017-09-09-notebook-hydrangea_thumb_3x4.webp
+      width: 600
+  thumbnailRatio: "3:4"
+  tags:
+    - notebook
+  created: "2017-09-09"
+  published: "2026-04-03T17:57:42"
+  description: ""
+- id: 2017-09-27-notebook-throwing-rock
+  title: Throwing Rock
+  images:
+    - src: 2017-09-27-notebook-throwing-rock_full.webp
+      width: 2933
+    - src: 2017-09-27-notebook-throwing-rock_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-09-27-notebook-throwing-rock_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - notebook
+  created: "2017-09-27"
+  published: "2026-04-03T17:57:42"
+  description: ""
+- id: 2017-10-12-inktober-12
+  title: "12"
+  images:
+    - src: 2017-10-12-inktober-12_full.webp
+      width: 2863
+    - src: 2017-10-12-inktober-12_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-12-inktober-12_thumb_2x2.webp
+      width: 400
+  thumbnailRatio: "2:2"
+  tags:
+    - inktober
+  created: "2017-10-12"
+  published: "2026-04-03T17:57:43"
+  description: ""
+- id: 2017-10-13-inktober-13
+  title: "13"
+  images:
+    - src: 2017-10-13-inktober-13_full.webp
+      width: 4419
+    - src: 2017-10-13-inktober-13_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-13-inktober-13_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-13"
+  published: "2026-04-03T17:57:43"
+  description: ""
+- id: 2017-10-14-inktober-14
+  title: "14"
+  images:
+    - src: 2017-10-14-inktober-14_full.webp
+      width: 4495
+    - src: 2017-10-14-inktober-14_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-14-inktober-14_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-14"
+  published: "2026-04-03T17:57:43"
+  description: ""
+- id: 2017-10-15-inktober-15
+  title: "15"
+  images:
+    - src: 2017-10-15-inktober-15_full.webp
+      width: 2020
+    - src: 2017-10-15-inktober-15_mid.webp
+      width: 1379
+  thumbnails:
+    - src: 2017-10-15-inktober-15_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-15"
+  published: "2026-04-03T17:57:44"
+  description: ""
+- id: 2017-10-15-inktober-3
+  title: "3"
+  images:
+    - src: 2017-10-15-inktober-3_full.webp
+      width: 2643
+    - src: 2017-10-15-inktober-3_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-15-inktober-3_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-15"
+  published: "2026-04-03T17:57:44"
+  description: ""
+- id: 2017-10-16-inktober-16
+  title: "16"
+  images:
+    - src: 2017-10-16-inktober-16_full.webp
+      width: 1085
+  thumbnails:
+    - src: 2017-10-16-inktober-16_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-16"
+  published: "2026-04-03T17:57:44"
+  description: ""
+- id: 2017-10-19-inktober-17
+  title: "17"
+  images:
+    - src: 2017-10-19-inktober-17_full.webp
+      width: 1298
+    - src: 2017-10-19-inktober-17_mid.webp
+      width: 761
+  thumbnails:
+    - src: 2017-10-19-inktober-17_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-19"
+  published: "2026-04-03T17:57:44"
+  description: ""
+- id: 2017-10-19-inktober-19
+  title: "19"
+  images:
+    - src: 2017-10-19-inktober-19_full.webp
+      width: 2008
+    - src: 2017-10-19-inktober-19_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-19-inktober-19_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-19"
+  published: "2026-04-03T17:57:44"
+  description: ""
+- id: 2017-10-20-inktober-20
+  title: "20"
+  images:
+    - src: 2017-10-20-inktober-20_full.webp
+      width: 6772
+    - src: 2017-10-20-inktober-20_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-20-inktober-20_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - inktober
+  created: "2017-10-20"
+  published: "2026-04-03T17:57:46"
+  description: ""
+- id: 2017-10-21-inktober-21
+  title: "21"
+  images:
+    - src: 2017-10-21-inktober-21_full.webp
+      width: 4750
+    - src: 2017-10-21-inktober-21_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-21-inktober-21_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-21"
+  published: "2026-04-03T17:57:46"
+  description: ""
+- id: 2017-10-23-inktober-22
+  title: "22"
+  images:
+    - src: 2017-10-23-inktober-22_full.webp
+      width: 4827
+    - src: 2017-10-23-inktober-22_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-23-inktober-22_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-23"
+  published: "2026-04-03T17:57:46"
+  description: ""
+- id: 2017-10-23-inktober-23
+  title: "23"
+  images:
+    - src: 2017-10-23-inktober-23_full.webp
+      width: 2887
+    - src: 2017-10-23-inktober-23_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-23-inktober-23_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-23"
+  published: "2026-04-03T17:57:47"
+  description: ""
+- id: 2017-10-24-inktober-24
+  title: "24"
+  images:
+    - src: 2017-10-24-inktober-24_full.webp
+      width: 2375
+    - src: 2017-10-24-inktober-24_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-24-inktober-24_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-24"
+  published: "2026-04-03T17:57:47"
+  description: ""
+- id: 2017-10-25-inktober-25
+  title: "25"
+  images:
+    - src: 2017-10-25-inktober-25_full.webp
+      width: 4289
+    - src: 2017-10-25-inktober-25_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-25-inktober-25_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - inktober
+  created: "2017-10-25"
+  published: "2026-04-03T17:57:47"
+  description: ""
+- id: 2017-10-26-inktober-26
+  title: "26"
+  images:
+    - src: 2017-10-26-inktober-26_full.webp
+      width: 4605
+    - src: 2017-10-26-inktober-26_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-26-inktober-26_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - inktober
+  created: "2017-10-26"
+  published: "2026-04-03T17:57:48"
+  description: ""
+- id: 2017-10-27-inktober-27
+  title: "27"
+  images:
+    - src: 2017-10-27-inktober-27_full.webp
+      width: 2748
+    - src: 2017-10-27-inktober-27_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-27-inktober-27_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-27"
+  published: "2026-04-03T17:57:48"
+  description: ""
+- id: 2017-10-29-inktober-28
+  title: "28"
+  images:
+    - src: 2017-10-29-inktober-28_full.webp
+      width: 6931
+    - src: 2017-10-29-inktober-28_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-29-inktober-28_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - inktober
+  created: "2017-10-29"
+  published: "2026-04-03T17:57:50"
+  description: ""
+- id: 2017-10-30-inktober-29
+  title: "29"
+  images:
+    - src: 2017-10-30-inktober-29_full.webp
+      width: 4026
+    - src: 2017-10-30-inktober-29_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-30-inktober-29_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-30"
+  published: "2026-04-03T17:57:50"
+  description: ""
+- id: 2017-10-30-inktober-30
+  title: "30"
+  images:
+    - src: 2017-10-30-inktober-30_full.webp
+      width: 3389
+    - src: 2017-10-30-inktober-30_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-30-inktober-30_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-30"
+  published: "2026-04-03T17:57:50"
+  description: ""
+- id: 2017-10-30-inktober-7
+  title: "7"
+  images:
+    - src: 2017-10-30-inktober-7_full.webp
+      width: 2728
+    - src: 2017-10-30-inktober-7_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-30-inktober-7_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2017-10-30"
+  published: "2026-04-03T17:57:51"
+  description: ""
+- id: 2017-10-31-inktober-31
+  title: "31"
+  images:
+    - src: 2017-10-31-inktober-31_full.webp
+      width: 2904
+    - src: 2017-10-31-inktober-31_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2017-10-31-inktober-31_thumb_2x2.webp
+      width: 400
+  thumbnailRatio: "2:2"
+  tags:
+    - inktober
+  created: "2017-10-31"
+  published: "2026-04-03T17:57:51"
+  description: ""
+- id: 2017-10-31-inktober-6
+  title: "6"
+  images:
+    - src: 2017-10-31-inktober-6_full.webp
+      width: 1987
+    - src: 2017-10-31-inktober-6_mid.webp
+      width: 800
+  thumbnails:
+    - src: 2017-10-31-inktober-6_thumb_2x4.webp
+      width: 400
+  thumbnailRatio: "3:6"
+  tags:
+    - inktober
+  created: "2017-10-31"
+  published: "2026-04-03T17:57:51"
+  description: ""
+- id: 2018-11-15-notebook-landscapes-study
+  title: Landscapes Study
+  images:
+    - src: 2018-11-15-notebook-landscapes-study_full.webp
+      width: 3079
+    - src: 2018-11-15-notebook-landscapes-study_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-11-15-notebook-landscapes-study_thumb_4x2.webp
+      width: 800
+  thumbnailRatio: "2:1"
+  tags:
+    - notebook
+  created: "2018-11-15"
+  published: "2026-04-03T17:57:52"
+  description: ""
+- id: 2018-11-16-notebook-old-man-study
+  title: Old Man Study
+  images:
+    - src: 2018-11-16-notebook-old-man-study_full.webp
+      width: 1243
+  thumbnails:
+    - src: 2018-11-16-notebook-old-man-study_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - notebook
+  created: "2018-11-16"
+  published: "2026-04-03T17:57:52"
+  description: ""
+- id: 2019-04-29-notebook-doodle
+  title: Doodle
+  images:
+    - src: 2019-04-29-notebook-doodle_full.webp
+      width: 1548
+    - src: 2019-04-29-notebook-doodle_mid.webp
+      width: 800
+  thumbnails:
+    - src: 2019-04-29-notebook-doodle_thumb_1x2.webp
+      width: 200
+  thumbnailRatio: "1:2"
+  tags:
+    - notebook
+  created: "2019-04-29"
+  published: "2026-04-03T17:57:52"
+  description: ""
+- id: 2019-07-07-notebook-dobczyce
+  title: Dobczyce
+  images:
+    - src: 2019-07-07-notebook-dobczyce_full.webp
+      width: 4895
+    - src: 2019-07-07-notebook-dobczyce_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2019-07-07-notebook-dobczyce_thumb_2x2.webp
+      width: 400
+  thumbnailRatio: "2:2"
+  tags:
+    - notebook
+  created: "2019-07-07"
+  published: "2026-04-03T17:57:52"
+  description: ""
+- id: 2019-07-15-notebook-birdhouse
+  title: Birdhouse
+  images:
+    - src: 2019-07-15-notebook-birdhouse_full.webp
+      width: 1972
+    - src: 2019-07-15-notebook-birdhouse_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2019-07-15-notebook-birdhouse_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - notebook
+  created: "2019-07-15"
+  published: "2026-04-03T17:57:52"
+  description: ""
+- id: 2019-08-04-notebook-tree
+  title: Tree
+  images:
+    - src: 2019-08-04-notebook-tree_full.webp
+      width: 2964
+    - src: 2019-08-04-notebook-tree_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2019-08-04-notebook-tree_thumb_2x2.webp
+      width: 400
+  thumbnailRatio: "2:2"
+  tags:
+    - notebook
+  created: "2019-08-04"
+  published: "2026-04-03T17:57:53"
+  description: ""
+- id: 2020-10-02-inktober-1
+  title: "1"
+  images:
+    - src: 2020-10-02-inktober-1_full.webp
+      width: 3830
+    - src: 2020-10-02-inktober-1_mid.webp
+      width: 1067
+  thumbnails:
+    - src: 2020-10-02-inktober-1_thumb_2x3.webp
+      width: 400
+  thumbnailRatio: "2:3"
+  tags:
+    - inktober
+  created: "2020-10-02"
+  published: "2026-04-03T17:57:54"
+  description: ""
+- id: 2020-10-07-inktober-5
+  title: "5"
+  images:
+    - src: 2020-10-07-inktober-5_full.webp
+      width: 6133
+    - src: 2020-10-07-inktober-5_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2020-10-07-inktober-5_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - inktober
+  created: "2020-10-07"
+  published: "2026-04-03T17:57:55"
+  description: ""
+- id: 2021-05-26-misc-lion
+  title: Lion
+  images:
+    - src: 2021-05-26-misc-lion_full.webp
+      width: 4204
+    - src: 2021-05-26-misc-lion_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2021-05-26-misc-lion_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - misc
+  created: "2021-05-26"
+  published: "2026-04-03T17:57:55"
+  description: ""
+- id: 2021-05-26-misc-ostrich
+  title: Ostrich
+  images:
+    - src: 2021-05-26-misc-ostrich_full.webp
+      width: 1624
+    - src: 2021-05-26-misc-ostrich_mid.webp
+      width: 725
+  thumbnails:
+    - src: 2021-05-26-misc-ostrich_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - misc
+  created: "2021-05-26"
+  published: "2026-04-03T17:57:55"
+  description: ""
+- id: 2022-10-01-inktober-1-gargoyle
+  title: 1 Gargoyle
+  images:
+    - src: 2022-10-01-inktober-1-gargoyle_full.webp
+      width: 3384
+    - src: 2022-10-01-inktober-1-gargoyle_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2022-10-01-inktober-1-gargoyle_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2022-10-01"
+  published: "2026-04-03T17:57:56"
+  description: ""
+- id: 2022-10-02-inktober-2-scurry
+  title: 2 Scurry
+  images:
+    - src: 2022-10-02-inktober-2-scurry_full.webp
+      width: 3136
+    - src: 2022-10-02-inktober-2-scurry_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2022-10-02-inktober-2-scurry_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2022-10-02"
+  published: "2026-04-03T17:57:56"
+  description: ""
+- id: 2022-10-04-inktober-3-bat
+  title: 3 Bat
+  images:
+    - src: 2022-10-04-inktober-3-bat_full.webp
+      width: 1626
+    - src: 2022-10-04-inktober-3-bat_mid.webp
+      width: 1067
+  thumbnails:
+    - src: 2022-10-04-inktober-3-bat_thumb_2x3.webp
+      width: 400
+  thumbnailRatio: "2:3"
+  tags:
+    - inktober
+  created: "2022-10-04"
+  published: "2026-04-03T17:57:56"
+  description: ""
+- id: 2022-10-04-inktober-4-scallop
+  title: 4 Scallop
+  images:
+    - src: 2022-10-04-inktober-4-scallop_full.webp
+      width: 1821
+    - src: 2022-10-04-inktober-4-scallop_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2022-10-04-inktober-4-scallop_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - inktober
+  created: "2022-10-04"
+  published: "2026-04-03T17:57:56"
+  description: ""
+- id: 2022-10-06-inktober-5-flame
+  title: 5 Flame
+  images:
+    - src: 2022-10-06-inktober-5-flame_full.webp
+      width: 3763
+    - src: 2022-10-06-inktober-5-flame_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2022-10-06-inktober-5-flame_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - inktober
+  created: "2022-10-06"
+  published: "2026-04-03T17:57:57"
+  description: ""
+- id: 2023-notebook-doodle-faces
+  title: Doodle Faces
+  images:
+    - src: 2023-notebook-doodle-faces_full.webp
+      width: 2768
+    - src: 2023-notebook-doodle-faces_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2023-notebook-doodle-faces_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - notebook
+  created: "2023"
+  published: "2026-04-03T17:57:57"
+  description: ""
+- id: 2018-03-02-marchofrobots-2-bastion
+  title: 2 Bastion
+  images:
+    - src: 2018-03-02-marchofrobots-2-bastion_full.webp
+      width: 3914
+    - src: 2018-03-02-marchofrobots-2-bastion_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-03-02-marchofrobots-2-bastion_thumb_2x2.webp
+      width: 400
+  thumbnailRatio: "2:2"
+  tags:
+    - marchofrobots
+  created: "2018-03-02"
+  published: "2026-04-03T21:00:28"
+  description: ""
+- id: 2018-03-03-marchofrobots-3-moon
+  title: 3 Moon
+  images:
+    - src: 2018-03-03-marchofrobots-3-moon_full.webp
+      width: 1820
+    - src: 2018-03-03-marchofrobots-3-moon_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-03-03-marchofrobots-3-moon_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - marchofrobots
+  created: "2018-03-03"
+  published: "2026-04-03T21:00:28"
+  description: ""
+- id: 2018-03-06-marchofrobots-6-idea
+  title: 6 Idea
+  images:
+    - src: 2018-03-06-marchofrobots-6-idea_full.webp
+      width: 2272
+    - src: 2018-03-06-marchofrobots-6-idea_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-03-06-marchofrobots-6-idea_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - marchofrobots
+  created: "2018-03-06"
+  published: "2026-04-03T21:00:28"
+  description: ""
+- id: 2018-03-09-marchofrobots-9-sign
+  title: 9 Sign
+  images:
+    - src: 2018-03-09-marchofrobots-9-sign_full.webp
+      width: 2409
+    - src: 2018-03-09-marchofrobots-9-sign_mid.webp
+      width: 1200
+  thumbnails:
+    - src: 2018-03-09-marchofrobots-9-sign_thumb_3x4.webp
+      width: 600
+  thumbnailRatio: "3:4"
+  tags:
+    - marchofrobots
+  created: "2018-03-09"
+  published: "2026-04-03T21:00:29"
+  description: ""
+- id: 2018-03-14-marchofrobots-14-discovery
+  title: 14 Discovery
+  images:
+    - src: 2018-03-14-marchofrobots-14-discovery_full.webp
+      width: 2849
+    - src: 2018-03-14-marchofrobots-14-discovery_mid.webp
+      width: 1200
+  thumbnails:
+    - src: 2018-03-14-marchofrobots-14-discovery_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - marchofrobots
+  created: "2018-03-14"
+  published: "2026-04-03T21:00:29"
+  description: ""
+- id: 2018-03-15-marchofrobots-15-junk
+  title: 15 Junk
+  images:
+    - src: 2018-03-15-marchofrobots-15-junk_full.webp
+      width: 3402
+    - src: 2018-03-15-marchofrobots-15-junk_mid.webp
+      width: 1154
+  thumbnails:
+    - src: 2018-03-15-marchofrobots-15-junk_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - marchofrobots
+  created: "2018-03-15"
+  published: "2026-04-03T21:00:29"
+  description: ""
+- id: 2018-03-26-marchofrobots-26-flower
+  title: 26 Flower
+  images:
+    - src: 2018-03-26-marchofrobots-26-flower_full.webp
+      width: 1860
+    - src: 2018-03-26-marchofrobots-26-flower_mid.webp
+      width: 1060
+  thumbnails:
+    - src: 2018-03-26-marchofrobots-26-flower_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - marchofrobots
+  created: "2018-03-26"
+  published: "2026-04-03T21:00:30"
+  description: ""
+- id: 2018-03-29-marchofrobots-29-lumber
+  title: 29 Lumber
+  images:
+    - src: 2018-03-29-marchofrobots-29-lumber_full.webp
+      width: 6927
+    - src: 2018-03-29-marchofrobots-29-lumber_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-03-29-marchofrobots-29-lumber_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - marchofrobots
+  created: "2018-03-29"
+  published: "2026-04-03T21:00:32"
+  description: ""
+- id: 2018-03-16-marchofrobots-16-new-home
+  title: 16 New Home
+  images:
+    - src: 2018-03-16-marchofrobots-16-new-home_full.webp
+      width: 4199
+    - src: 2018-03-16-marchofrobots-16-new-home_mid.webp
+      width: 1154
+  thumbnails:
+    - src: 2018-03-16-marchofrobots-16-new-home_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - marchofrobots
+  created: "2018-03-16"
+  published: "2026-04-03T21:03:33"
+  description: ""
