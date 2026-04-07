@@ -8,6 +8,9 @@ import mdx from '@astrojs/mdx';
 import { shikiClassMeta } from './src/plugins/shikiClassMeta.ts';
 
 
+import cloudflare from '@astrojs/cloudflare';
+
+
 const calloutsOptions = {
   props: {
     /**
@@ -25,6 +28,7 @@ const calloutsOptions = {
 // https://astro.build/config
 export default defineConfig({
   site: "https://ajur.pl",
+
   vite: {
     plugins: [/** @type {any} */(glsl({
       include: [
@@ -34,8 +38,10 @@ export default defineConfig({
       ],
     }))],
   },
+
   integrations: [mdx()],
   output: 'static',
+
   markdown: {
     rehypePlugins: [[rehypeCallouts, calloutsOptions]],
     shikiConfig: {
@@ -47,17 +53,20 @@ export default defineConfig({
       transformers: [shikiClassMeta],
     },
   },
+
   image: {
     responsiveStyles: true,
     layout: 'constrained',
     objectFit: 'cover',
     objectPosition: 'center',
   },
+
   env: {
     schema: {
       PUBLIC_ART_CDN: envField.string({ context: "client", access: "public", default: '/_art_bucket' }),
     }
   },
+
   fonts: [{
     provider: fontProviders.google(),
     name: "Anonymous Pro",
@@ -76,5 +85,7 @@ export default defineConfig({
     cssVariable: "--font-smooch-sans",
     optimizedFallbacks: false,
     fallbacks: ['sans-serif'],
-  }]
+  }],
+
+  adapter: cloudflare()
 });

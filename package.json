@@ -1,7 +1,7 @@
 {
-  "name": "ajur_v2",
+  "name": "www",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,11 +9,14 @@
     "astro": "astro",
     "art:update": "node --experimental-strip-types ./scripts/art-update.ts",
     "art:convert": "node --experimental-strip-types ./scripts/art-convert.ts",
-    "art:r2copy": "rclone copy --exclude '.*' assets_raw/bucket r2:ajur-pl-art"
+    "art:r2copy": "rclone copy --exclude '.*' assets_raw/bucket r2:ajur-pl-art",
+    "generate-types": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.1.7",
     "@astrojs/mdx": "^5.0.3",
-    "astro": "^6.1.3"
+    "astro": "^6.1.3",
+    "rehype-callouts": "^2.1.2"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
