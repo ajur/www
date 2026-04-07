@@ -1,122 +1,28 @@
-# Development Guidelines for AI Agents
+# Agent Guidelines
 
-## Project Brief
+Static-first personal site built with Astro + MDX. Deploys to Cloudflare worker assets.
 
-Goal: A content-first journal-style personal site with a full-screen WebGL background on the homepage, Markdown/MDX-based blog, tag system, RSS, and minimal design using modern CSS.
+## Hard Constraints
 
-Core principles:
-- Static-first architecture
-- No SPA
-- No React/Vue
-- Vanilla TypeScript for interactive islands
-- Pure CSS with variables
-- Dark/Light/Auto theme support
-- Progressive enhancement
-- Clean URLs
-- GitHub Pages deployment
+- **No SPA, no React/Vue/Svelte, no Tailwind/Bootstrap**
+- Vanilla TypeScript only for interactivity — no framework hydration
+- Pure CSS with variables, CUBE CSS style — no utility frameworks
+- Static build only — no server-side features unless requested
+- JS must not block rendering — use `client:idle` or `client:visible`
+- Accessible semantic HTML, mobile-first responsive
+- Dark/light/auto theme support
 
-Tech stack:
-- Astro
-- MDX
-- Astro Content Collections
-- TypeScript
-- Vanilla JS islands
-- Astro Image integration
-- RSS enabled
+## Code Conventions
 
-Sections:
-- Home (full-screen WebGL background)
-- Bio
-- Blog (MDX, tags)
-- Projects (static descriptions linking to subdomains)
-- Art (gallery + detail pages, future modal enhancement)
-- Contact (social links only)
+- Interactive islands: vanilla TS, progressive enhancement, load after content
+- CSS: use variables for spacing/colors, serif-focused typography, avoid inline styles
+- Do not mix layout and visual concerns or couple layout to components
+- WebGL background: isolated in `/src/visuals`, no layout coupling, fail gracefully
 
-Requirements:
-- Blog posts stored as single MDX files
-- Tag pages auto-generated
-- RSS feed auto-generated
-- Theme toggle with light/dark/auto
-- Canvas loads after content
-- No heavy framework dependencies
-- Accessible semantic HTML
-- Mobile-first responsive design
+## Content
 
-Deliverables:
-- Astro project scaffold
-- Content collection schema
-- Base layout
-- Theme system
-- WebGL background scaffold
-- Blog system
-- Tag system
-- RSS
-- GitHub Actions workflow
-
-## Architecture Philosophy
-
-This project is:
-- Static-first
-- Content-driven
-- Minimalistic
-- Framework-light
-
-Avoid:
-- Introducing React/Vue/Svelte
-- Adding unnecessary runtime dependencies
-- Converting the site into an SPA
-- Adding Tailwind unless explicitly requested
-
-## Interactive Components
-
-All interactive elements must:
-- Be written in vanilla TypeScript
-- Avoid framework hydration
-- Use progressive enhancement
-- Load after main content
-
-## Styling Rules
-
-- If possible follow CUBE CSS style guide
-- Use CSS variables
-- Support dark/light/auto
-- Avoid utility CSS frameworks
-- Keep typography readable and serif-focused
-- Avoid heavy visual clutter
-- Avoid inline style attributes if possible
-
-### Agents MUST NOT:
-- introduce Tailwind
-- introduce Bootstrap
-- introduce utility-heavy frameworks
-- use arbitrary spacing without variables
-- mix layout and visual concerns
-- tightly couple layout to specific components
-
-## WebGL Background
-
-- Must be isolated in `/src/visuals`
-- No tight coupling with Astro layout
-- Must fail gracefully
-- Load after content
-
-## Content Rules
-
-- Blog posts: MDX
+- Blog posts: MDX files in `src/content/articles/`
 - Projects: Markdown (.md), not MDX
-- Art: Markdown (.md), not MDX
-- Use frontmatter for metadata
-- Support tags in blog
-
-## Performance Guidelines
-
-- JS must not block rendering
-- Use `client:idle` or `client:visible`
-- Avoid unnecessary third-party scripts
-
-## Deployment
-
-- Must build statically
-- Compatible with GitHub Pages
-- No server-side features
+- Art: yaml listing file
+- Frontmatter for metadata, tags in blog
 

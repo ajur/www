@@ -520,7 +520,7 @@
   thumbnails:
     - src: 2017-10-31-inktober-6_thumb_2x4.webp
       width: 400
-  thumbnailRatio: "3:6"
+  thumbnailRatio: "2:4"
   tags:
     - inktober
     - "2017"
@@ -1523,4 +1523,580 @@
     - misc
   created: "2021-11-10"
   published: "2026-04-07T21:24:31"
+  description: ""
+- id: 2018-10-01-inktober-0-inktober
+  title: 0 Inktober
+  images:
+    - src: 2018-10-01-inktober-0-inktober_full.webp
+      width: 4500
+    - src: 2018-10-01-inktober-0-inktober_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-01-inktober-0-inktober_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-01"
+  published: "2026-04-07T23:14:01"
+  description: ""
+- id: 2018-10-01-inktober-1-poisonous
+  title: 1 Poisonous
+  images:
+    - src: 2018-10-01-inktober-1-poisonous_full.webp
+      width: 4500
+    - src: 2018-10-01-inktober-1-poisonous_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-01-inktober-1-poisonous_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-01"
+  published: "2026-04-07T23:14:02"
+  description: ""
+- id: 2018-10-02-inktober-2-tranquill
+  title: 2 Tranquill
+  images:
+    - src: 2018-10-02-inktober-2-tranquill_full.webp
+      width: 4827
+    - src: 2018-10-02-inktober-2-tranquill_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-02-inktober-2-tranquill_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-02"
+  published: "2026-04-07T23:14:03"
+  description: ""
+- id: 2018-10-03-inktober-3-roasted
+  title: 3 Roasted
+  images:
+    - src: 2018-10-03-inktober-3-roasted_full.webp
+      width: 3106
+    - src: 2018-10-03-inktober-3-roasted_mid.webp
+      width: 1067
+  thumbnails:
+    - src: 2018-10-03-inktober-3-roasted_thumb_2x3.webp
+      width: 400
+  thumbnailRatio: "2:3"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-03"
+  published: "2026-04-07T23:14:03"
+  description: ""
+- id: 2018-10-04-inktober-4-spell
+  title: 4 Spell
+  images:
+    - src: 2018-10-04-inktober-4-spell_full.webp
+      width: 3619
+    - src: 2018-10-04-inktober-4-spell_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-04-inktober-4-spell_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-04"
+  published: "2026-04-07T23:14:04"
+  description: ""
+- id: 2018-10-06-inktober-5-chicken
+  title: 5 Chicken
+  images:
+    - src: 2018-10-06-inktober-5-chicken_full.webp
+      width: 3433
+    - src: 2018-10-06-inktober-5-chicken_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-06-inktober-5-chicken_thumb_2x2.webp
+      width: 400
+  thumbnailRatio: "2:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-06"
+  published: "2026-04-07T23:14:04"
+  description: ""
+- id: 2018-10-07-inktober-6-drooling
+  title: 6 Drooling
+  images:
+    - src: 2018-10-07-inktober-6-drooling_full.webp
+      width: 2952
+    - src: 2018-10-07-inktober-6-drooling_mid.webp
+      width: 1067
+  thumbnails:
+    - src: 2018-10-07-inktober-6-drooling_thumb_2x3.webp
+      width: 400
+  thumbnailRatio: "2:3"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-07"
+  published: "2026-04-07T23:14:05"
+  description: ""
+- id: 2018-10-07-inktober-7-exhausted
+  title: 7 Exhausted
+  images:
+    - src: 2018-10-07-inktober-7-exhausted_full.webp
+      width: 4697
+    - src: 2018-10-07-inktober-7-exhausted_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-07-inktober-7-exhausted_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-07"
+  published: "2026-04-07T23:14:05"
+  description: ""
+- id: 2018-10-08-inktober-8-star
+  title: 8 Star
+  images:
+    - src: 2018-10-08-inktober-8-star_full.webp
+      width: 3262
+    - src: 2018-10-08-inktober-8-star_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-08-inktober-8-star_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-08"
+  published: "2026-04-07T23:14:06"
+  description: ""
+- id: 2018-10-09-inktober-9-precious
+  title: 9 Precious
+  images:
+    - src: 2018-10-09-inktober-9-precious_full.webp
+      width: 3390
+    - src: 2018-10-09-inktober-9-precious_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-09-inktober-9-precious_thumb_2x2.webp
+      width: 400
+  thumbnailRatio: "2:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-09"
+  published: "2026-04-07T23:14:06"
+  description: ""
+- id: 2018-10-11-inktober-10-flowing
+  title: 10 Flowing
+  images:
+    - src: 2018-10-11-inktober-10-flowing_full.webp
+      width: 3864
+    - src: 2018-10-11-inktober-10-flowing_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-11-inktober-10-flowing_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-11"
+  published: "2026-04-07T23:14:07"
+  description: ""
+- id: 2018-10-12-inktober-11-cruel
+  title: 11 Cruel
+  images:
+    - src: 2018-10-12-inktober-11-cruel_full.webp
+      width: 4688
+    - src: 2018-10-12-inktober-11-cruel_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-12-inktober-11-cruel_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-12"
+  published: "2026-04-07T23:14:07"
+  description: ""
+- id: 2018-10-12-inktober-12-whale
+  title: 12 Whale
+  images:
+    - src: 2018-10-12-inktober-12-whale_full.webp
+      width: 4731
+    - src: 2018-10-12-inktober-12-whale_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-12-inktober-12-whale_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-12"
+  published: "2026-04-07T23:14:08"
+  description: ""
+- id: 2018-10-14-inktober-13-guarded
+  title: 13 Guarded
+  images:
+    - src: 2018-10-14-inktober-13-guarded_full.webp
+      width: 3193
+    - src: 2018-10-14-inktober-13-guarded_mid.webp
+      width: 1200
+  thumbnails:
+    - src: 2018-10-14-inktober-13-guarded_thumb_3x4.webp
+      width: 600
+  thumbnailRatio: "3:4"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-14"
+  published: "2026-04-07T23:14:09"
+  description: ""
+- id: 2018-10-14-inktober-14-clock
+  title: 14 Clock
+  images:
+    - src: 2018-10-14-inktober-14-clock_full.webp
+      width: 3346
+    - src: 2018-10-14-inktober-14-clock_mid.webp
+      width: 1200
+  thumbnails:
+    - src: 2018-10-14-inktober-14-clock_thumb_3x4.webp
+      width: 600
+  thumbnailRatio: "3:4"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-14"
+  published: "2026-04-07T23:14:10"
+  description: ""
+- id: 2018-10-15-inktober-15-weak
+  title: 15 Weak
+  images:
+    - src: 2018-10-15-inktober-15-weak_full.webp
+      width: 3070
+    - src: 2018-10-15-inktober-15-weak_mid.webp
+      width: 1067
+  thumbnails:
+    - src: 2018-10-15-inktober-15-weak_thumb_2x3.webp
+      width: 400
+  thumbnailRatio: "2:3"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-15"
+  published: "2026-04-07T23:14:10"
+  description: ""
+- id: 2018-10-16-inktober-16-angular
+  title: 16 Angular
+  images:
+    - src: 2018-10-16-inktober-16-angular_full.webp
+      width: 3986
+    - src: 2018-10-16-inktober-16-angular_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-16-inktober-16-angular_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-16"
+  published: "2026-04-07T23:14:11"
+  description: ""
+- id: 2018-10-16-inktober-17-swollen
+  title: 17 Swollen
+  images:
+    - src: 2018-10-16-inktober-17-swollen_full.webp
+      width: 3008
+    - src: 2018-10-16-inktober-17-swollen_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-16-inktober-17-swollen_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-16"
+  published: "2026-04-07T23:14:11"
+  description: ""
+- id: 2018-10-18-inktober-18-bottle
+  title: 18 Bottle
+  images:
+    - src: 2018-10-18-inktober-18-bottle_full.webp
+      width: 4441
+    - src: 2018-10-18-inktober-18-bottle_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-18-inktober-18-bottle_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-18"
+  published: "2026-04-07T23:14:12"
+  description: ""
+- id: 2018-10-20-inktober-19-scorched
+  title: 19 Scorched
+  images:
+    - src: 2018-10-20-inktober-19-scorched_full.webp
+      width: 4151
+    - src: 2018-10-20-inktober-19-scorched_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-20-inktober-19-scorched_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-20"
+  published: "2026-04-07T23:14:12"
+  description: ""
+- id: 2018-10-20-inktober-20-breakable
+  title: 20 Breakable
+  images:
+    - src: 2018-10-20-inktober-20-breakable_full.webp
+      width: 2879
+    - src: 2018-10-20-inktober-20-breakable_mid.webp
+      width: 1067
+  thumbnails:
+    - src: 2018-10-20-inktober-20-breakable_thumb_2x3.webp
+      width: 400
+  thumbnailRatio: "2:3"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-20"
+  published: "2026-04-07T23:14:13"
+  description: ""
+- id: 2018-10-21-inktober-21-drain
+  title: 21 Drain
+  images:
+    - src: 2018-10-21-inktober-21-drain_full.webp
+      width: 3295
+    - src: 2018-10-21-inktober-21-drain_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-21-inktober-21-drain_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-21"
+  published: "2026-04-07T23:14:13"
+  description: ""
+- id: 2018-10-22-inktober-22-expensive
+  title: 22 Expensive
+  images:
+    - src: 2018-10-22-inktober-22-expensive_full.webp
+      width: 4495
+    - src: 2018-10-22-inktober-22-expensive_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-22-inktober-22-expensive_thumb_4x3.webp
+      width: 800
+  thumbnailRatio: "4:3"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-22"
+  published: "2026-04-07T23:14:14"
+  description: ""
+- id: 2018-10-24-inktober-23-muddy
+  title: 23 Muddy
+  images:
+    - src: 2018-10-24-inktober-23-muddy_full.webp
+      width: 3263
+    - src: 2018-10-24-inktober-23-muddy_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-24-inktober-23-muddy_thumb_2x2.webp
+      width: 400
+  thumbnailRatio: "2:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-24"
+  published: "2026-04-07T23:14:14"
+  description: ""
+- id: 2018-10-24-inktober-24-chop
+  title: 24 Chop
+  images:
+    - src: 2018-10-24-inktober-24-chop_full.webp
+      width: 4153
+    - src: 2018-10-24-inktober-24-chop_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-24-inktober-24-chop_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-24"
+  published: "2026-04-07T23:14:15"
+  description: ""
+- id: 2018-10-25-inktober-25-prickly
+  title: 25 Prickly
+  images:
+    - src: 2018-10-25-inktober-25-prickly_full.webp
+      width: 3380
+    - src: 2018-10-25-inktober-25-prickly_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-25-inktober-25-prickly_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-25"
+  published: "2026-04-07T23:14:15"
+  description: ""
+- id: 2018-10-26-inktober-26-stretch
+  title: 26 Stretch
+  images:
+    - src: 2018-10-26-inktober-26-stretch_full.webp
+      width: 4716
+    - src: 2018-10-26-inktober-26-stretch_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-26-inktober-26-stretch_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-26"
+  published: "2026-04-07T23:14:16"
+  description: ""
+- id: 2018-10-28-inktober-27-thunder
+  title: 27 Thunder
+  images:
+    - src: 2018-10-28-inktober-27-thunder_full.webp
+      width: 2947
+    - src: 2018-10-28-inktober-27-thunder_mid.webp
+      width: 1067
+  thumbnails:
+    - src: 2018-10-28-inktober-27-thunder_thumb_2x3.webp
+      width: 400
+  thumbnailRatio: "2:3"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-28"
+  published: "2026-04-07T23:14:16"
+  description: ""
+- id: 2018-10-29-inktober-28-gift
+  title: 28 Gift
+  images:
+    - src: 2018-10-29-inktober-28-gift_full.webp
+      width: 3420
+    - src: 2018-10-29-inktober-28-gift_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-29-inktober-28-gift_thumb_2x2.webp
+      width: 400
+  thumbnailRatio: "2:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-29"
+  published: "2026-04-07T23:14:17"
+  description: ""
+- id: 2018-10-30-inktober-29-double
+  title: 29 Double
+  images:
+    - src: 2018-10-30-inktober-29-double_full.webp
+      width: 4645
+    - src: 2018-10-30-inktober-29-double_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-30-inktober-29-double_thumb_3x2.webp
+      width: 600
+  thumbnailRatio: "3:2"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-30"
+  published: "2026-04-07T23:14:17"
+  description: ""
+- id: 2018-10-31-inktober-30-jolt
+  title: 30 Jolt
+  images:
+    - src: 2018-10-31-inktober-30-jolt_full.webp
+      width: 3385
+    - src: 2018-10-31-inktober-30-jolt_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-10-31-inktober-30-jolt_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-10-31"
+  published: "2026-04-07T23:14:18"
+  description: ""
+- id: 2018-11-01-inktober-31-slice
+  title: 31 Slice
+  images:
+    - src: 2018-11-01-inktober-31-slice_full.webp
+      width: 3140
+    - src: 2018-11-01-inktober-31-slice_mid.webp
+      width: 1067
+  thumbnails:
+    - src: 2018-11-01-inktober-31-slice_thumb_2x3.webp
+      width: 400
+  thumbnailRatio: "2:3"
+  tags:
+    - "2018"
+    - inktober
+    - inktober2018
+  created: "2018-11-01"
+  published: "2026-04-07T23:14:19"
   description: ""
