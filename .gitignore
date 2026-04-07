@@ -49,6 +49,9 @@ Icon?
 !.vscode/launch.json
 !.vscode/tasks.json
 
+# Cloudflare
+.wrangler/
+
 # Raw art gallery files to exclude from GIT
 assets_raw/
 # symlink to the above, which is used in dev

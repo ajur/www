@@ -50,6 +50,10 @@ const ALLOWED_RATIOS: [string, number][] = [
 
 const RATIO_TOLERANCE = 0.01;
 
+// --- Constants ---
+
+const TAGS_WITH_YEAR = new Set(["inktober", "marchofrobots"]);
+
 // --- Helpers ---
 
 function getImageDimensions(filepath: string): { w: number; h: number } {
@@ -74,6 +78,7 @@ function matchRatio(w: number, h: number): string | null {
 }
 
 function parseId(id: string): {
+  year: string;
   date: string;
   tag: string;
   name: string;
@@ -122,7 +127,7 @@ function parseId(id: string): {
   if (month) date += `-${month}`;
   if (day) date += `-${day}`;
 
-  return { date, tag, name };
+  return { year, date, tag, name };
 }
 
 function capitalize(s: string): string {
@@ -191,7 +196,7 @@ function main() {
     }
 
     // Parse filename
-    const { date, tag, name } = parseId(id);
+    const { year, date, tag, name } = parseId(id);
     const title = capitalize(name.replace(/-/g, " "));
 
     // Compute thumbnail ratio
@@ -214,6 +219,12 @@ function main() {
       errors++;
     }
 
+    // tags:
+    const tags = [year, tag];
+    if (TAGS_WITH_YEAR.has(tag)) {
+      tags.push(tag + year);
+    }
+
     // Build entry
     const now = new Date();
     const published = now.toISOString().replace(/\.\d{3}Z$/, "");
@@ -224,7 +235,7 @@ function main() {
       images: [],
       thumbnails: [],
       thumbnailRatio,
-      tags: [tag],
+      tags,
       created: date,
       published,
       description: "",
