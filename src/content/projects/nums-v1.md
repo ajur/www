@@ -5,8 +5,9 @@ status: completed
 startDate: 2017-06-25
 lastUpdated: 2019-10-16
 image: nums-v1.png
+url: https://ajur.github.io/old-nums/
 links:
-  - https://github.com/ajur/ajur.github.io/tree/v1/old-nums
+  - https://github.com/ajur/ajur.github.io/tree/master/old-nums
 tags:
   - gamedev
 ---

@@ -87,5 +87,9 @@ export default defineConfig({
     fallbacks: ['sans-serif'],
   }],
 
-  adapter: cloudflare()
+  adapter: cloudflare({
+    imageService: {
+      build: "compile"
+    }
+  })
 });

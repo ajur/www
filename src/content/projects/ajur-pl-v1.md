@@ -5,8 +5,9 @@ status: completed
 startDate: 2014-02-13
 lastUpdated: 2023-03-18
 image: ajur-pl-v1.png
+url: https://ajur.github.io/
 links:
-  - https://github.com/ajur/ajur.github.io/tree/v1
+  - https://github.com/ajur/ajur.github.io/
 tags:
   - site
 ---
