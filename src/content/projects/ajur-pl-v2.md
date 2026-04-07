@@ -20,4 +20,6 @@ Second iteration of the personal home page, built with Astro as a static-first, 
 - TypeScript (interactive islands)
 - WebGL / GLSL (background animation)
 - Pure CSS, with inspiration from CUBE CSS
-- GitHub Pages (deployment)
+- Cloudflare (deployment)
+- ImageMagic for gallery images conversions
+- rclone for syncing images with Cloudflare R2 storage
