@@ -2100,3 +2100,185 @@
   created: "2018-11-01"
   published: "2026-04-07T23:14:19"
   description: ""
+- id: 2018-08-15-zentangle-no2
+  title: No2
+  images:
+    - src: 2018-08-15-zentangle-no2_full.webp
+      width: 1468
+  thumbnails:
+    - src: 2018-08-15-zentangle-no2_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - zentangle
+  created: "2018-08-15"
+  published: "2026-04-08T21:29:25"
+  description: Drawing like this is very satisfying, especially when you end up with something cool.
+- id: 2018-08-16-zentangle-no3
+  title: No3
+  images:
+    - src: 2018-08-16-zentangle-no3_full.webp
+      width: 1152
+  thumbnails:
+    - src: 2018-08-16-zentangle-no3_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - zentangle
+  created: "2018-08-16"
+  published: "2026-04-08T21:29:25"
+- id: 2018-08-21-zentangle-no4
+  title: No4
+  images:
+    - src: 2018-08-21-zentangle-no4_full.webp
+      width: 1602
+    - src: 2018-08-21-zentangle-no4_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-08-21-zentangle-no4_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - zentangle
+  created: "2018-08-21"
+  published: "2026-04-08T21:29:25"
+  description: Coming up with new patterns is inspiring!
+- id: 2018-08-22-zentangle-no5
+  title: No5
+  images:
+    - src: 2018-08-22-zentangle-no5_full.webp
+      width: 1598
+  thumbnails:
+    - src: 2018-08-22-zentangle-no5_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - zentangle
+  created: "2018-08-22"
+  published: "2026-04-08T21:29:26"
+  description: |
+    Patterns:
+    - Paradox
+    - Membranart by Tomás Padrós
+    Found on tanglepatterns.com
+- id: 2018-08-24-zentangle-no6
+  title: No6
+  images:
+    - src: 2018-08-24-zentangle-no6_full.webp
+      width: 1178
+  thumbnails:
+    - src: 2018-08-24-zentangle-no6_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - zentangle
+  created: "2018-08-24"
+  published: "2026-04-08T21:29:26"
+  description: I think all patterns are official, but I remember only "zingle".
+- id: 2018-08-25-zentangle-no7
+  title: No7
+  images:
+    - src: 2018-08-25-zentangle-no7_full.webp
+      width: 1613
+    - src: 2018-08-25-zentangle-no7_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-08-25-zentangle-no7_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - zentangle
+  created: "2018-08-25"
+  published: "2026-04-08T21:29:26"
+  description: |
+    - Crosshatch?
+    - Ahh?
+    - in the middle is my own, but probably similar to something already named
+- id: 2018-08-26-zentangle-no8
+  title: No8
+  images:
+    - src: 2018-08-26-zentangle-no8_full.webp
+      width: 1196
+  thumbnails:
+    - src: 2018-08-26-zentangle-no8_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - zentangle
+  created: "2018-08-26"
+  published: "2026-04-08T21:29:26"
+  description: I'm not even sure this is still a "tangle" ^^
+- id: 2020-10-08-misc-doodles
+  title: Doodles
+  images:
+    - src: 2020-10-08-misc-doodles_full.webp
+      width: 2500
+    - src: 2020-10-08-misc-doodles_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2020-10-08-misc-doodles_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2020"
+    - misc
+  created: "2020-10-08"
+  published: "2026-04-08T21:29:26"
+- id: 2021-03-16-misc-allegro
+  title: Allegro
+  images:
+    - src: 2021-03-16-misc-allegro_full.webp
+      width: 1606
+    - src: 2021-03-16-misc-allegro_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2021-03-16-misc-allegro_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2021"
+    - misc
+  created: "2021-03-16"
+  published: "2026-04-08T21:29:26"
+  description: I've created it for a particular reason when I was working in [Allegro](https://www.allegro.pl/).
+- id: 2021-04-15-zentangle-nox
+  title: No.X
+  images:
+    - src: 2021-04-15-zentangle-nox_full.webp
+      width: 1653
+    - src: 2021-04-15-zentangle-nox_mid.webp
+      width: 1295
+  thumbnails:
+    - src: 2021-04-15-zentangle-nox_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2021"
+    - zentangle
+  created: "2021-04-15"
+  published: "2026-04-08T21:29:26"
+  description: I believed it was the tenth pattern and I wanted to be clever about the title.
+- id: 2021-04-26-misc-coffee
+  title: Coffee
+  images:
+    - src: 2021-04-26-misc-coffee_full.webp
+      width: 1724
+    - src: 2021-04-26-misc-coffee_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2021-04-26-misc-coffee_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2021"
+    - misc
+  created: "2021-04-26"
+  published: "2026-04-08T21:29:26"
+  description: Because my wife loves coffee.

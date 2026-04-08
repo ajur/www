@@ -1,6 +1,5 @@
 ---
 const { placement = "below" } = Astro.props;
-// placement: "below" | "above"
 ---
 
 <theme-switcher data-placement={placement}>
@@ -10,8 +9,7 @@ const { placement = "below" } = Astro.props;
 <script>
   class ThemeSwitcher extends HTMLElement {
     #storageKey = "theme-preference";
-    #symbols: Record<string, string> = {
-      auto: "◐",
+    #themes: Record<string, string> = {
       light: "☀︎",
       dark: "☾",
     };
@@ -22,17 +20,17 @@ const { placement = "below" } = Astro.props;
     constructor() {
       super();
       this.button = this.querySelector("button")!;
-      this.currentTheme = localStorage.getItem(this.#storageKey) ?? "auto";
+      this.currentTheme = document.documentElement.getAttribute("data-theme") ?? "dark";
       this.updateButton();
       this.button.addEventListener("click", () => this.toggleTheme());
     }
 
     updateButton() {
-      this.button.textContent = this.#symbols[this.currentTheme] || "◐";
+      this.button.textContent = this.#themes[this.currentTheme] ?? "?";
     }
 
     toggleTheme() {
-      const themes = ["auto", "light", "dark"];
+      const themes = Object.keys(this.#themes);
       const currentIndex = themes.indexOf(this.currentTheme);
       const nextIndex = (currentIndex + 1) % themes.length;
       this.setTheme(themes[nextIndex]!);
@@ -42,10 +40,6 @@ const { placement = "below" } = Astro.props;
       this.currentTheme = theme;
       localStorage.setItem(this.#storageKey, theme);
       this.updateButton();
-      if (theme === "auto") {
-        const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-        theme = darkQuery.matches ? "dark" : "light";
-      }
       document.documentElement.setAttribute("data-theme", theme);
       window.dispatchEvent(new CustomEvent("themechanged", { detail: { theme } }));
     }
