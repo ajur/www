@@ -2,6 +2,7 @@
 :root {
   font-size: var(--calculated-font-size, 1rem);
   font-family: var(--font-body, serif);
+  font-weight: var(--font-body-normal, normal);
   background: var(--color-bg);
   color: var(--color-ink);
 
@@ -17,6 +18,10 @@
   --s4: calc(pow(var(--spacing-ratio), 4) * var(--s0));
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 img,
 svg,
 video,
@@ -29,4 +34,45 @@ canvas {
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display, sans-serif);
+  font-weight: var(--font-display-weight, bold);
+}
+h1 {
+  font-size: var(--s4);
+}
+h2 {
+  font-size: var(--s3);
+}
+h3 {
+  font-size: var(--s2);
+}
+h4 {
+  font-size: var(--s1);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+a:visited {
+  color: var(--color-ink);
+  text-decoration-color: var(--color-accent-muted);
+}
+
+strong {
+  color: var(--color-accent-strong, var(--color-accent));
 }

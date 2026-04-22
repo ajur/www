@@ -1,6 +1,5 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
-import { getCollection } from "astro:content";
 import { getTagsContent } from "~/utils";
 
 export async function getStaticPaths() {
@@ -11,16 +10,12 @@ export async function getStaticPaths() {
   }));
 }
 
-const collectionNamesMap = {
-  articles: "text",
-  projects: "code",
-  art: "art",
-  misc: "misc"
-};
-
 const { tagName, collections } = Astro.props;
 
-const { articles, projects, art, misc } = collections || {};
+const { articles, projects, art, misc } = {
+  articles: [], projects: [], art: [], misc: [],
+  ...collections
+};
 
 ---
 <PageLayout title={`Tag: ${tagName}`}>
@@ -55,19 +50,6 @@ const { articles, projects, art, misc } = collections || {};
       </section>
     )}
 
-    { art.length > 0 && (
-      <section>
-        <h2>art</h2>
-        <ul>
-          {art.map((artwork) => (
-            <li>
-              <a href={`/art/${artwork.id}/`}>{artwork.data.title}</a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
-
     { misc.length > 0 && (
       <section>
         <h2>misc</h2>
@@ -80,6 +62,20 @@ const { articles, projects, art, misc } = collections || {};
         </ul>
       </section>
     )}
+
+    { art.length > 0 && (
+      <section>
+        <h2>art</h2>
+        <ul>
+          {art.map((artwork) => (
+            <li>
+              <a href={`/misc/art/#${artwork.id}`}>{artwork.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+    
   </main>
 </PageLayout>
 

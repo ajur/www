@@ -63,7 +63,7 @@ I've passed the same prompt to both ChatGPT and Gemini. And besides some overall
 > 
 > But in the end, it is mostly for data visualisation apps and dashboards, so it wasn't really a fit for my case.
 
-![Astro logo](./astro-logo-light-gradient.svg)
+![Astro logo](./astro-logo-light-gradient.png)
 
 This was an example of how vast the front-end framework space is. And of how detached from it I am - or more like, how hard it is to keep track. Tbh, I had no idea what it was, despite it being a fairly popular static site generator framework. And it was already on version 5 (actually, v6 was released during work on this site). Intrigued, I asked ChatGPT for a breakdown of Astro's features, and soon went directly to their web page and [docs](https://docs.astro.build/en/getting-started/) to learn more.
 

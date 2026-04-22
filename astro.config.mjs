@@ -78,13 +78,17 @@ export default defineConfig({
     name: "Baskervville",
     cssVariable: "--font-baskervville",
     optimizedFallbacks: false,
-    fallbacks: ['Georgia', 'Times', 'Times New Roman', 'serif'],
+    subsets: ["latin", "latin-ext"],
+    weights: ["400", "700"],
+    fallbacks: ["Baskerville Old Face", "Hoefler Text", "Garamond", "Times New Roman", "serif"],
   }, {
     provider: fontProviders.google(),
     name: "Smooch Sans",
     cssVariable: "--font-smooch-sans",
     optimizedFallbacks: false,
-    fallbacks: ['sans-serif'],
+    weights: ["500"],
+    subsets: ["latin", "latin-ext"],
+    fallbacks: ['Tahoma', 'Verdana', 'Arial Narrow', 'sans-serif'],
   }],
 
   adapter: cloudflare({

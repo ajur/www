@@ -1,42 +1,8 @@
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display, sans-serif);
-  font-weight: var(--font-display-weight, bold);
-}
-h1 {
-  font-size: var(--s4);
-}
-h2 {
-  font-size: var(--s3);
-}
-h3 {
-  font-size: var(--s2);
-}
-h4 {
-  font-size: var(--s1);
-}
-
-a {
-  text-decoration: underline;
-  text-decoration-color: var(--color-accent);
-}
-
-a:hover,
-a:focus-visible {
-  color: var(--color-accent);
-  text-decoration-color: var(--color-accent);
-}
-a:visited {
-  text-decoration-color: var(--color-accent-muted);
-}
 
 a[data-footnote-ref] {
   font-family: var(--font-mono);
   padding: 0 var(--s-5);
-}
-
-strong {
-  color: var(--color-accent-strong, var(--color-accent));
 }
 
 mark {

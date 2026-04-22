@@ -1,6 +1,5 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
-import { getCollection } from "astro:content";
 import { getTagsContent } from "~/utils";
 
 const collectionNamesMap = {
@@ -9,6 +8,8 @@ const collectionNamesMap = {
   art: "art",
   misc: "misc"
 };
+
+const collections = Object.keys(collectionNamesMap) as (keyof typeof collectionNamesMap)[];
 
 const tagsMap = await getTagsContent();
 const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
@@ -28,7 +29,7 @@ const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
             <div class="tag">{tag}</div>
 
             
-              {Object.keys(collectionNamesMap).map((collection) => {
+              {collections.map((collection) => {
                 const collectionItems = tagsMap.get(tag)?.[collection] || [];
                 if (collectionItems.length === 0) return null;
 

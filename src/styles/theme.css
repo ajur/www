@@ -1,7 +1,7 @@
 :root {
   color-scheme: dark;
   --font-display: var(--font-smooch-sans);
-  --font-display-weight: 550;
+  --font-display-weight: 500;
   --font-body: var(--font-baskervville);
   --font-mono: var(--font-anonymous-pro);
 

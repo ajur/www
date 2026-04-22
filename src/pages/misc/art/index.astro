@@ -5,7 +5,7 @@ import PageLayout from "~/layouts/PageLayout.astro";
 import { PUBLIC_ART_CDN } from "astro:env/client";
 
 const entries = (await getCollection("art")).sort((a, b) =>
-  b.data.created.localeCompare(a.data.created)
+  b.data.created.localeCompare(a.data.created) || b.id.localeCompare(a.id)
 );
 
 function ratioSpan(ratio: string): { cols: number; rows: number } {
@@ -28,8 +28,11 @@ function buildSrcset(images: { src: string; width: number }[]): string {
             class="gallery-cell"
             href={`/misc/art/${entry.id}`}
             style={`--span-col: ${cols}; --span-row: ${rows};`}
+            data-id={entry.id}
             data-srcset={buildSrcset(entry.data.images)}
             data-title={entry.data.title}
+            data-description={entry.data.description ?? ""}
+            data-tags={entry.data.tags.join(",")}
           >
             <img
               src={`${PUBLIC_ART_CDN}/${entry.data.thumbnails[0]!.src}`}
@@ -42,7 +45,10 @@ function buildSrcset(images: { src: string; width: number }[]): string {
     </div>
 
     <dialog class="lightbox" id="lightbox">
+      <h2 class="lightbox-title"></h2>
       <img class="lightbox-img" />
+      <p class="lightbox-desc"></p>
+      <div class="lightbox-tags"></div>
       <button class="lightbox-close" aria-label="Close" type="button">&times;</button>
     </dialog>
   </main>
@@ -51,22 +57,72 @@ function buildSrcset(images: { src: string; width: number }[]): string {
 <script>
   const dialog = document.getElementById("lightbox") as HTMLDialogElement;
   const img = dialog.querySelector(".lightbox-img") as HTMLImageElement;
+  const titleEl = dialog.querySelector(".lightbox-title") as HTMLHeadingElement;
+  const descEl = dialog.querySelector(".lightbox-desc") as HTMLParagraphElement;
+  const tagsEl = dialog.querySelector(".lightbox-tags") as HTMLDivElement;
   const closeBtn = dialog.querySelector(".lightbox-close") as HTMLButtonElement;
+  let prevHtmlOverflow = "";
+  let prevBodyOverflow = "";
+  let activeId = "";
 
-  document.querySelector(".gallery-grid")?.addEventListener("click", (e) => {
-    const cell = (e.target as HTMLElement).closest<HTMLAnchorElement>(".gallery-cell");
-    if (!cell) return;
-    e.preventDefault();
+  const microMD = (str: string) => str
+    .replaceAll('\n', '<br />\n')
+    .replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>')
 
+  const setHash = (id: string) => {
+    history.replaceState(null, "", `${location.pathname}${location.search}#${encodeURIComponent(id)}`);
+  };
+
+  const clearHash = () => {
+    history.replaceState(null, "", `${location.pathname}${location.search}`);
+  };
+
+  const openFromCell = (cell: HTMLAnchorElement) => {
     const srcset = cell.dataset.srcset ?? "";
     const title = cell.dataset.title ?? "";
+    const description = cell.dataset.description ?? "";
+    const tags = cell.dataset.tags ? cell.dataset.tags.split(",").filter(Boolean) : [];
+    const id = cell.dataset.id ?? "";
 
     img.srcset = srcset;
     img.alt = title;
     img.sizes = "100vw";
     img.src = "";
 
+    titleEl.textContent = title;
+    descEl.innerHTML = microMD(description)
+    descEl.hidden = !description;
+
+    tagsEl.replaceChildren();
+    for (const tag of tags) {
+      const a = document.createElement("a");
+      a.href = `/tags/${encodeURIComponent(tag)}`;
+      a.textContent = tag;
+      a.className = "lightbox-tag";
+      tagsEl.appendChild(a);
+    }
+    tagsEl.hidden = tags.length === 0;
+
+    activeId = id;
     dialog.showModal();
+    prevHtmlOverflow = document.documentElement.style.overflow;
+    prevBodyOverflow = document.body.style.overflow;
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    if (id) {
+      setHash(id);
+    }
+  };
+
+  const findCellById = (id: string) =>
+    document.querySelector<HTMLAnchorElement>(`.gallery-cell[data-id="${CSS.escape(id)}"]`);
+
+  document.querySelector(".gallery-grid")?.addEventListener("click", (e) => {
+    const cell = (e.target as HTMLElement).closest<HTMLAnchorElement>(".gallery-cell");
+    if (!cell) return;
+    e.preventDefault();
+
+    openFromCell(cell);
   });
 
   closeBtn.addEventListener("click", () => dialog.close());
@@ -78,7 +134,27 @@ function buildSrcset(images: { src: string; width: number }[]): string {
   dialog.addEventListener("close", () => {
     img.srcset = "";
     img.src = "";
+    titleEl.textContent = "";
+    descEl.textContent = "";
+    descEl.hidden = true;
+    tagsEl.replaceChildren();
+    tagsEl.hidden = true;
+    document.documentElement.style.overflow = prevHtmlOverflow;
+    document.body.style.overflow = prevBodyOverflow;
+    if (activeId && decodeURIComponent(location.hash.slice(1)) === activeId) {
+      clearHash();
+    }
+    activeId = "";
   });
+
+  const initialId = decodeURIComponent(location.hash.slice(1));
+  if (initialId) {
+    const cell = findCellById(initialId);
+    if (cell) {
+      cell.scrollIntoView({ block: "center" });
+      requestAnimationFrame(() => openFromCell(cell));
+    }
+  }
 </script>
 
 <style>
@@ -90,11 +166,10 @@ function buildSrcset(images: { src: string; width: number }[]): string {
 
   main {
     padding: var(--s0) 1vw;
-    text-align: center;
   }
 
   .gallery-grid {
-    display: inline-grid;
+    display: grid;
     max-width: 100%;
     grid-template-columns: repeat(auto-fill, var(--cell));
     grid-auto-rows: var(--cell);
@@ -131,10 +206,13 @@ function buildSrcset(images: { src: string; width: number }[]): string {
   .lightbox {
     border: none;
     background: none;
-    padding: 0;
-    max-width: 95vw;
-    max-height: 95vh;
-    overflow: hidden;
+    box-sizing: border-box;
+    padding: 1rem 1rem 1.25rem;
+    width: 95vw;
+    height: 95vh;
+    overflow: auto;
+    overscroll-behavior: contain;
+    color: #fff;
   }
 
   .lightbox::backdrop {
@@ -143,26 +221,62 @@ function buildSrcset(images: { src: string; width: number }[]): string {
 
   .lightbox[open] {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+  .lightbox-title {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   .lightbox-img {
     max-width: min(95vw, 100%);
-    max-height: 95vh;
+    max-height: 72vh;
     object-fit: contain;
     display: block;
     width: auto;
     height: auto;
   }
 
+  .lightbox-desc {
+    margin: 0.5rem 0 0;
+    text-align: center;
+    opacity: 0.85;
+    font-size: 0.92rem;
+  }
+
+  .lightbox-desc[hidden] {
+    display: none;
+  }
+
+  .lightbox-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.35rem;
+  }
+
+  .lightbox-tags[hidden] {
+    display: none;
+  }
+
+  .lightbox-tag {
+    text-decoration: none;
+    font-size: 0.82rem;
+    border-bottom: 1px solid transparent;
+  }
+  
   .lightbox-close {
     position: fixed;
     top: 1rem;
     right: 1rem;
     background: none;
     border: none;
-    color: #fff;
+    color: var(--color-accent-strong);
     font-size: 2rem;
     cursor: pointer;
     line-height: 1;
