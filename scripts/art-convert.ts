@@ -95,8 +95,6 @@ function main() {
   let yamlDirty = false;
 
   for (const entry of entries) {
-    console.log(`Processing "${entry.id}"...`);
-
     const mainTif = join(SCANS_DIR, `${entry.id}.tif`);
     if (!existsSync(mainTif)) {
       console.error(`  ERROR: Source file not found: ${entry.id}.tif`);
@@ -132,10 +130,8 @@ function main() {
           `magick "${mainTif}" -quality ${WEBP_QUALITY} "${fullPath}"`
         );
       }
-      console.log(`  Created ${fullName}`);
+      console.log(`Created ${fullName}`);
       anyCreated = true;
-    } else {
-      console.log(`  Skipped ${fullName} (exists)`);
     }
 
     const fullDims = getImageDimensions(fullPath);
@@ -150,10 +146,8 @@ function main() {
         execSync(
           `magick "${mainTif}" -filter LanczosSharp -resize ${MID_THRESHOLD}x${MID_THRESHOLD} -quality ${WEBP_QUALITY} "${midPath}"`
         );
-        console.log(`  Created ${midName}`);
+        console.log(`Created ${midName}`);
         anyCreated = true;
-      } else {
-        console.log(`  Skipped ${midName} (exists)`);
       }
       midDims = getImageDimensions(midPath);
     }
@@ -181,10 +175,8 @@ function main() {
         execSync(
           `magick "${source}" -filter LanczosSharp -resize ${tw}x${th}! -unsharp 0x0.5+1.0+0.05 -quality ${WEBP_QUALITY} "${thumbPath}"`
         );
-        console.log(`  Created ${thumbName}`);
+        console.log(`Created ${thumbName}`);
         anyCreated = true;
-      } else {
-        console.log(`  Skipped ${thumbName} (exists)`);
       }
 
       const thumbDims = getImageDimensions(thumbPath);

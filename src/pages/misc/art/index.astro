@@ -67,6 +67,7 @@ function buildSrcset(images: { src: string; width: number }[]): string {
 
   const microMD = (str: string) => str
     .replaceAll('\n', '<br />\n')
+    .replace(/\b_([^_\n]+)_\b/g, '<em>$1</em>')
     .replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>')
 
   const setHash = (id: string) => {

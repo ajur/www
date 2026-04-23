@@ -9,7 +9,9 @@
     "astro": "astro",
     "art:update": "node --experimental-strip-types ./scripts/art-update.ts",
     "art:convert": "node --experimental-strip-types ./scripts/art-convert.ts",
+    "art:edit": "node --experimental-strip-types ./scripts/art-editor.ts",
     "art:r2copy": "rclone copy --exclude '.*' assets_raw/bucket r2:ajur-pl-art",
+    "art:r2sync": "rclone sync --exclude '.*' assets_raw/bucket r2:ajur-pl-art",
     "generate-types": "wrangler types"
   },
   "dependencies": {
