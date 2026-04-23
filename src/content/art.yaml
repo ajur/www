@@ -15,6 +15,7 @@
   created: "2000"
   published: "2026-04-03T17:57:38"
   description: One of my older works. It's a redrawing I did as a study back in high school. It was an illustration from either some magazine or an RPG rulebook.
+  maxCssWidth: 1718
 - id: 2017-02-18-misc-books
   title: Books
   images:
@@ -35,6 +36,7 @@
     Books I had read at the time. [Earthsea](https://en.wikipedia.org/wiki/Earthsea) - a classic fantasy novel. And the book that brought me back to drawing after many years.
     -
     Drawn as entry 3 for _I can draw 50_
+  maxCssWidth: 2284
 - id: 2017-03-28-misc-palms
   title: Palms
   images:
@@ -52,6 +54,7 @@
   created: "2017-03-28"
   published: "2026-04-03T17:57:39"
   description: First full watercolor painting.
+  maxCssWidth: 2441
 - id: 2017-05-05-misc-tulips
   title: Tulips
   images:
@@ -72,6 +75,7 @@
     Even wilting tulips can be pretty.
     -
     I can draw 50, week 14.
+  maxCssWidth: 1348
 - id: 2017-05-20-misc-rocket-and-groot
   title: Rocket And Groot
   images:
@@ -92,6 +96,7 @@
     Drawn for my wife.
     -
     It's not hard to notice that we were in the theater for [the movie](https://www.imdb.com/title/tt3896198/), and that we liked it :D
+  maxCssWidth: 2424
 - id: 2017-06-09-misc-peter-rabbit
   title: Peter Rabbit
   images:
@@ -112,6 +117,7 @@
     Iconic character created by [Beatrix Potter](https://en.wikipedia.org/wiki/Beatrix_Potter). Both her stories and _her story_ are interesting :)
     -
     Drawn and lightly painted with watercolors - for my wife's birthday, if I remember correctly.
+  maxCssWidth: 1625
 - id: 2017-09-09-notebook-hydrangea
   title: Hydrangea
   images:
@@ -129,6 +135,7 @@
   created: "2017-09-09"
   published: "2026-04-03T17:57:42"
   description: Sketching in my in-laws' garden. Although I had to finish the plant at home, as it was pretty time-consuming.
+  maxCssWidth: 1679
 - id: 2017-09-27-notebook-throwing-rock
   title: Throwing Rock
   images:
@@ -146,6 +153,7 @@
   created: "2017-09-27"
   published: "2026-04-03T17:57:42"
   description: Redraw of an illustration from [Bestiariusz Słowiański](https://pl.wikipedia.org/wiki/Bestiariusz_s%C5%82owia%C5%84ski) - a great book with Slavic tales and monsters.
+  maxCssWidth: 1466
 - id: 2017-10-12-inktober-12
   title: Inktober 2017 day 12 Shattered
   images:
@@ -164,6 +172,7 @@
   created: "2017-10-12"
   published: "2026-04-03T17:57:43"
   description: And as I was probably having a hard time catching up with all the previous topics, I somehow tried to combine them - thus, "shattered swift". Based on great [street art](https://www.instagram.com/pejac_art/p/BMoTPoyljtC/) by [@pejac_art](https://www.instagram.com/pejac_art/)
+  maxCssWidth: 1431
 - id: 2017-10-13-inktober-13
   title: Inktober 2017 day 13 Teeming
   images:
@@ -182,6 +191,7 @@
   created: "2017-10-13"
   published: "2026-04-03T17:57:43"
   description: It really is a teeming event on the 13th day ;)
+  maxCssWidth: 2209
 - id: 2017-10-14-inktober-14
   title: Inktober 2017 day 14 Fierce
   images:
@@ -204,6 +214,7 @@
     -
     So, for the 14th day of #inktober2017, here's my fierce Merida.
     Overall I'm satisfied with this one, but there's still much to improve (da face! :/ )
+  maxCssWidth: 2247
 - id: 2017-10-15-inktober-15
   title: Inktober 2017 day 15 Mysterious
   images:
@@ -222,6 +233,7 @@
   created: "2017-10-15"
   published: "2026-04-03T17:57:44"
   description: Yet another _mysterious_ case on the 15th day of _Inktober2017_
+  maxCssWidth: 1010
 - id: 2017-10-15-inktober-3
   title: Inktober 2017 day 3 Poison
   images:
@@ -240,6 +252,7 @@
   created: "2017-10-15"
   published: "2026-04-03T17:57:44"
   description: To catch up with previous topics - a fast and simple take on _underwater+poison_
+  maxCssWidth: 1321
 - id: 2017-10-16-inktober-16
   title: Inktober 2017 day 16 Fat
   images:
@@ -256,6 +269,7 @@
   created: "2017-10-16"
   published: "2026-04-03T17:57:44"
   description: Fat it! It's Monday...
+  maxCssWidth: 542
 - id: 2017-10-19-inktober-17
   title: Inktober 2017 day 17 Graceful
   images:
@@ -276,6 +290,7 @@
   description: |-
     Entry for days 17 & 18.
     Why both? Cause the topic was "graceful", yet the execution turned "filthy" ;)
+  maxCssWidth: 649
 - id: 2017-10-19-inktober-19
   title: Inktober 2017 day 19 Cloud
   images:
@@ -294,6 +309,7 @@
   created: "2017-10-19"
   published: "2026-04-03T17:57:44"
   description: Call it professional bias, but when I hear _cloud_ I see this ;)
+  maxCssWidth: 1004
 - id: 2017-10-20-inktober-20
   title: Inktober 2017 day 20 Deep
   images:
@@ -312,6 +328,7 @@
   created: "2017-10-20"
   published: "2026-04-03T17:57:46"
   description: Deep space station.
+  maxCssWidth: 3386
 - id: 2017-10-21-inktober-21
   title: Inktober 2017 day 21 Furious
   images:
@@ -330,6 +347,7 @@
   created: "2017-10-21"
   published: "2026-04-03T17:57:46"
   description: and fast ;)
+  maxCssWidth: 2375
 - id: 2017-10-23-inktober-22
   title: Inktober 2017 day 22 Trail
   images:
@@ -351,6 +369,7 @@
     On the 22nd day of Inktober2017, the trail through Tuscany
     -
     For my wife :*
+  maxCssWidth: 2413
 - id: 2017-10-23-inktober-23
   title: Inktober 2017 day 23 Juicy
   images:
@@ -369,6 +388,7 @@
   created: "2017-10-23"
   published: "2026-04-03T17:57:47"
   description: Attempt at negative space.
+  maxCssWidth: 1443
 - id: 2017-10-24-inktober-24
   title: Inktober 2017 day 24 Blind
   images:
@@ -390,6 +410,7 @@
     Not one, but two _blinds_ for the 24th day of Inktober.
     -
     This is what you get with a lack of inspiration... but it's better than nothing :)
+  maxCssWidth: 1187
 - id: 2017-10-25-inktober-25
   title: Inktober 2017 day 25 Ship
   images:
@@ -408,6 +429,7 @@
   created: "2017-10-25"
   published: "2026-04-03T17:57:47"
   description: Is it an airship or still only a flying boat? I only know that I'm two days behind, but it won't stop me!
+  maxCssWidth: 2144
 - id: 2017-10-26-inktober-26
   title: Inktober 2017 day 26 Squeak
   images:
@@ -426,6 +448,7 @@
   created: "2017-10-26"
   published: "2026-04-03T17:57:48"
   description: It looks kinda scared... maybe because I'm holding a shovel :P
+  maxCssWidth: 2302
 - id: 2017-10-27-inktober-27
   title: Inktober 2017 day 27 Climb
   images:
@@ -444,6 +467,7 @@
   created: "2017-10-27"
   published: "2026-04-03T17:57:48"
   description: Yeah, I should use a better black marker.
+  maxCssWidth: 1374
 - id: 2017-10-29-inktober-28
   title: Inktober 2017 day 28 Fall
   images:
@@ -462,6 +486,7 @@
   created: "2017-10-29"
   published: "2026-04-03T17:57:50"
   description: Based on fantastic [vector art by Nathan Owens](https://www.instagram.com/zprep/p/2ANqfMRcwU/)
+  maxCssWidth: 3465
 - id: 2017-10-30-inktober-29
   title: Inktober 2017 day 29 United
   images:
@@ -483,6 +508,7 @@
     "[United we stand, divided we fall](https://en.wikipedia.org/wiki/United_we_stand,_divided_we_fall)".
     -
     Getting a bit pompous for day 29
+  maxCssWidth: 2013
 - id: 2017-10-30-inktober-30
   title: Inktober 2017 day 30 Found
   images:
@@ -501,6 +527,7 @@
   created: "2017-10-30"
   published: "2026-04-03T17:57:50"
   description: When Isildur found the [One Ring](https://en.wikipedia.org/wiki/One_Ring)
+  maxCssWidth: 1694
 - id: 2017-10-30-inktober-7
   title: Inktober 2017 day 7 Shy
   images:
@@ -521,6 +548,7 @@
   description: |-
     "Shy giant" combining topics from the 7th & 10th days of Inktober2017
     Only one day left, so I thought about catching up on those I hadn't done yet.
+  maxCssWidth: 1364
 - id: 2017-10-31-inktober-31
   title: Inktober 2017 day 31 Mask
   images:
@@ -544,6 +572,7 @@
     _mask_ for last, 31st day of Inktober2017
     Looks like it's over - hell of a ride!
     Although I have one more to finish, for some earlier theme...
+  maxCssWidth: 1452
 - id: 2017-10-31-inktober-6
   title: Inktober 2017 day 6 Sword
   images:
@@ -564,6 +593,7 @@
   description: |-
     [Landsknecht](https://en.wikipedia.org/wiki/Landsknecht) with a longsword (so days 5 & 6) is my last entry in Inktober2017
     And I'm kind of proud of how it came out :)
+  maxCssWidth: 993
 - id: 2018-11-15-notebook-landscapes-study
   title: Landscapes Study
   images:
@@ -581,6 +611,7 @@
   created: "2018-11-15"
   published: "2026-04-03T17:57:52"
   description: Small-scale drawings made from random photos.
+  maxCssWidth: 1539
 - id: 2018-11-16-notebook-old-man-study
   title: Old Man Study
   images:
@@ -596,6 +627,7 @@
   created: "2018-11-16"
   published: "2026-04-03T17:57:52"
   description: Trying to convince myself to draw more faces. People are hard.
+  maxCssWidth: 621
 - id: 2019-04-29-notebook-doodle
   title: Doodle
   images:
@@ -613,6 +645,7 @@
   created: "2019-04-29"
   published: "2026-04-03T17:57:52"
   description: This was when I explored the idea of not-that-random doodling, by drawing random stuff but with cleaner lines and somehow joining it together.
+  maxCssWidth: 774
 - id: 2019-07-07-notebook-dobczyce
   title: Dobczyce
   images:
@@ -630,6 +663,7 @@
   created: "2019-07-07"
   published: "2026-04-03T17:57:52"
   description: "[Dobczyce Castle](https://pl.wikipedia.org/wiki/Zamek_w_Dobczycach)"
+  maxCssWidth: 2447
 - id: 2019-07-15-notebook-birdhouse
   title: Birdhouse
   images:
@@ -647,6 +681,7 @@
   created: "2019-07-15"
   published: "2026-04-03T17:57:52"
   description: We were on vacation in the mountains, and the building manager was making those birdhouses and other garden decorations from wood.
+  maxCssWidth: 986
 - id: 2019-08-04-notebook-tree
   title: Tree
   images:
@@ -664,6 +699,7 @@
   created: "2019-08-04"
   published: "2026-04-03T17:57:53"
   description: Watercolors. Painted during a workshop at a family picnic with the kids.
+  maxCssWidth: 1482
 - id: 2020-10-02-inktober-1
   title: Inktober 2020 day 1 Fish
   images:
@@ -685,6 +721,7 @@
     Or more like a fisherman
     -
     I hadn't posted for a long time, and I was already late with Inktober this year. The idea was to focus on what I'm most afraid to draw - people.
+  maxCssWidth: 1915
 - id: 2020-10-07-inktober-5
   title: Inktober 2020 day 5 Blade
   images:
@@ -706,6 +743,7 @@
     [Blade Runner](https://www.imdb.com/title/tt0083658/)
     -
     Fun fact - although the movie was based on [Dick's book](https://en.wikipedia.org/wiki/Do_Androids_Dream_of_Electric_Sheep%3F), the name was taken from a different unreleased movie of an [unrelated SF book](https://en.wikipedia.org/wiki/The_Bladerunner).
+  maxCssWidth: 3066
 - id: 2021-05-26-misc-lion
   title: Lion
   images:
@@ -723,6 +761,7 @@
   created: "2021-05-26"
   published: "2026-04-03T17:57:55"
   description: Trying a _loose_ drawing style, with ink and pencils.
+  maxCssWidth: 2102
 - id: 2021-05-26-misc-ostrich
   title: Ostrich
   images:
@@ -740,6 +779,7 @@
   created: "2021-05-26"
   published: "2026-04-03T17:57:55"
   description: Inspired probably by some drawings I found on Pinterest.
+  maxCssWidth: 812
 - id: 2022-10-01-inktober-1-gargoyle
   title: Inktober 2022 day 1 Gargoyle
   images:
@@ -758,6 +798,7 @@
   created: "2022-10-01"
   published: "2026-04-03T17:57:56"
   description: First day, I started ambitiously, and I'm quite happy with the result... it's just that I didn't want to add a darker background at first.
+  maxCssWidth: 1692
 - id: 2022-10-02-inktober-2-scurry
   title: Inktober 2022 day 2 Scurry
   images:
@@ -776,6 +817,7 @@
   created: "2022-10-02"
   published: "2026-04-03T17:57:56"
   description: Just scurry away…
+  maxCssWidth: 1568
 - id: 2022-10-04-inktober-3-bat
   title: Inktober 2022 day 3 Bat
   images:
@@ -794,6 +836,7 @@
   created: "2022-10-04"
   published: "2026-04-03T17:57:56"
   description: Covered in wings like some vampire
+  maxCssWidth: 813
 - id: 2022-10-04-inktober-4-scallop
   title: Inktober 2022 day 4 Scallop
   images:
@@ -812,6 +855,7 @@
   created: "2022-10-04"
   published: "2026-04-03T17:57:56"
   description: Sometimes you just need to go minimal to stay on pace. Besides, it's fun to do some cartoony stuff from time to time :)
+  maxCssWidth: 910
 - id: 2022-10-06-inktober-5-flame
   title: Inktober 2022 day 5 Flame
   images:
@@ -833,6 +877,7 @@
     An Impossible Love
     -
     days 5+6 - flame + bouquet
+  maxCssWidth: 1881
 - id: 2023-notebook-doodle-faces
   title: Doodle Faces
   images:
@@ -850,6 +895,7 @@
   created: "2023"
   published: "2026-04-03T17:57:57"
   description: Sometimes when I just randomly make marks on paper, I end up with something kinda interesting. And then I might even color it. Rarely.
+  maxCssWidth: 1384
 - id: 2018-03-02-marchofrobots-2-bastion
   title: March of Robots 2018 day 2 Bastion
   images:
@@ -871,6 +917,7 @@
     _I'll sit here for a moment and recharge my batteries..._
     -
     [Overwatch](https://pl.wikipedia.org/wiki/Overwatch) homage.
+  maxCssWidth: 1957
 - id: 2018-03-03-marchofrobots-3-moon
   title: March of Robots 2018 day 3 Moon
   images:
@@ -889,6 +936,7 @@
   created: "2018-03-03"
   published: "2026-04-03T21:00:28"
   description: Trying to do some “drawing around” - hard stuff, better to get some masking fluid for this one.
+  maxCssWidth: 910
 - id: 2018-03-06-marchofrobots-6-idea
   title: March of Robots 2018 day 6 Idea
   images:
@@ -907,6 +955,7 @@
   created: "2018-03-06"
   published: "2026-04-03T21:00:28"
   description: _ThinkBot3000, able to conceive up to three ideas simultaneously, expressing progress and results through an advanced facial expression system_
+  maxCssWidth: 1136
 - id: 2018-03-09-marchofrobots-9-sign
   title: March of Robots 2018 day 9 Sign
   images:
@@ -928,6 +977,7 @@
     Monoliths were signs of change... probably not only signs.
     -
     [The Dawn of Men](https://www.youtube.com/watch?v=ypEaGQb6dJk) - in case someone doesn't get the [reference](https://www.imdb.com/title/tt0062622/).
+  maxCssWidth: 1204
 - id: 2018-03-14-marchofrobots-14-discovery
   title: March of Robots 2018 day 14 Discovery
   images:
@@ -946,6 +996,7 @@
   created: "2018-03-14"
   published: "2026-04-03T21:00:29"
   description: Curiosity Mars rover selfie.
+  maxCssWidth: 1424
 - id: 2018-03-15-marchofrobots-15-junk
   title: March of Robots 2018 day 15 Junk
   images:
@@ -966,6 +1017,7 @@
   description: |-
     First doodles with watercolors. I had no idea what I was doing - but it was fun :D
     In the end it was supposed to be kind of a broken robot head... kind of ;)
+  maxCssWidth: 1701
 - id: 2018-03-26-marchofrobots-26-flower
   title: March of Robots 2018 day 26 Flower
   images:
@@ -984,6 +1036,7 @@
   created: "2018-03-26"
   published: "2026-04-03T21:00:30"
   description: This aesthetic kinda suits me :)
+  maxCssWidth: 930
 - id: 2018-03-29-marchofrobots-29-lumber
   title: March of Robots 2018 day 29 Lumber
   images:
@@ -1002,6 +1055,7 @@
   created: "2018-03-29"
   published: "2026-04-03T21:00:32"
   description: _Lumberjack robot_ with some play on perspective and the far plane. Bird is a bit rushed, but I'm happy with the overall result :)
+  maxCssWidth: 3463
 - id: 2018-03-16-marchofrobots-16-new-home
   title: March of Robots 2018 day 24 & 16 New Home
   images:
@@ -1023,6 +1077,7 @@
     New home
     -
     No. 24 + No. 16 - basically a recreation of the [Surviving Mars](https://en.wikipedia.org/wiki/Surviving_Mars) cover
+  maxCssWidth: 2099
 - id: 2021-10-01-inktober-1-crystal
   title: Inktober 2021 day 1 Crystal
   images:
@@ -1044,6 +1099,7 @@
     Cave of Crystals - Naica, Chihuahua, Mexico
     -
     Captivating image of giant gypsum crystals is opening my Inktober this year. I'm aiming for all 31 days this time... but you know how I am. Tbh, I'm already happy to have done at least this one 😁
+  maxCssWidth: 1106
 - id: 2021-10-02-inktober-2-suit
   title: Inktober 2021 day 2 Suit
   images:
@@ -1065,6 +1121,7 @@
     Vintage diving suit
     -
     This was only a rough exploratory sketch for a more refined piece, but it turned out to be “good enough” - as they say, done is better than perfect ☺️
+  maxCssWidth: 1093
 - id: 2021-10-03-inktober-3-vessel
   title: Inktober 2021 day 3 Vessel
   images:
@@ -1083,6 +1140,7 @@
   created: "2021-10-03"
   published: "2026-04-07T15:54:05"
   description: Working on yesterday's prompt, I thought about reversing the roles a bit. Just right for today's prompt :)
+  maxCssWidth: 1103
 - id: 2021-10-04-inktober-4-knot
   title: Inktober 2021 day 4 Knot
   images:
@@ -1101,6 +1159,7 @@
   created: "2021-10-04"
   published: "2026-04-07T15:54:06"
   description: Posting a bit late, but hey, who knew FB would be down for almost 6h :O
+  maxCssWidth: 1092
 - id: 2021-10-05-inktober-5-raven
   title: Inktober 2021 day 5 Raven
   images:
@@ -1119,6 +1178,7 @@
   created: "2021-10-05"
   published: "2026-04-07T15:54:06"
   description: The idea behind Inktober is to draw daily. Even when time is limited. Even something rough and hasty.
+  maxCssWidth: 1140
 - id: 2021-10-07-inktober-6-spirit-7-fan
   title: Inktober 2021 day 6 Spirit 7 Fan
   images:
@@ -1140,6 +1200,7 @@
     Ori, and some fun plant ;)
     -
     Both [Ori](https://en.wikipedia.org/wiki/Ori_and_the_Blind_Forest) games are fantastic and beautiful, with a touching story and fluid gameplay - I loved every minute of playing them!
+  maxCssWidth: 2396
 - id: 2021-10-08-inktober-8-watch
   title: Inktober 2021 day 8 Watch
   images:
@@ -1161,6 +1222,7 @@
     _Brace yourself, winter is coming._
     -
     Night's Watch. Funny thing is, I was the book guy and never watched the full series. Not because I didn't like it (the first season was really good), but because the story is so depressing that I didn't want to "enjoy" it twice 🫣
+  maxCssWidth: 1135
 - id: 2021-10-09-inktober-9-pressure
   title: Inktober 2021 day 9 Pressure
   images:
@@ -1182,6 +1244,7 @@
     [Under Pressure](https://www.youtube.com/watch?v=dN3gax_Z7tw)
     -
     Although this exact shot is for sure from another song at the [Live Aid 1985 concert](https://en.wikipedia.org/wiki/Live_Aid).
+  maxCssWidth: 1159
 - id: 2021-10-10-inktober-10-pick
   title: Inktober 2021 day 10 Pick
   images:
@@ -1204,6 +1267,7 @@
     -
     Couldn't resist, pick is such a versatile word 🙃
     Also, this sketch was fast and kinda embarrassingly crude, but sometimes you just have those 5 min and it has to suffice.
+  maxCssWidth: 1120
 - id: 2021-10-11-inktober-11-sour
   title: Inktober 2021 day 11 Sour
   images:
@@ -1222,6 +1286,7 @@
   created: "2021-10-11"
   published: "2026-04-07T15:54:07"
   description: Whiskey sour
+  maxCssWidth: 1112
 - id: 2021-10-13-inktober-12-stuck
   title: Inktober 2021 day 12 Stuck
   images:
@@ -1245,6 +1310,7 @@
     Couldn't resist coloring Winnie…
     Turns out using a Tombow water-based orange brush pen was a bad idea for coloring 😭
     “You learn every day” 😄
+  maxCssWidth: 1160
 - id: 2021-10-13-inktober-13-roof
   title: Inktober 2021 day 13 Roof
   images:
@@ -1267,6 +1333,7 @@
     -
     Somehow couldn't resist redrawing this well-known bug-turned-into-meme.
     Although, tbh, I don't remember if it ever happened to me while playing Wild Hunt.
+  maxCssWidth: 1146
 - id: 2021-10-14-inktober-14-tick
   title: Inktober 2021 day 14 Tick
   images:
@@ -1289,6 +1356,7 @@
     -
     Funny thing, I barely even remember this cartoon, it just somehow stuck in my memory whenever I hear about ticks.
     Also, another colored pic, this time sticking to markers only :)
+  maxCssWidth: 1127
 - id: 2021-10-15-inktober-15-helmet
   title: Inktober 2021 day 15 Helmet
   images:
@@ -1311,6 +1379,7 @@
     (aka Dogmatix in EN, but I always knew it by the Polish name, i.e. the same as in French)
     -
     This pic is really a homage to [Albert Uderzo](https://en.wikipedia.org/wiki/Albert_Uderzo) and [René Goscinny](https://en.wikipedia.org/wiki/Ren%C3%A9_Goscinny) - I loved [Asterix](https://en.wikipedia.org/wiki/Asterix) as a kid, and I still enjoy reading those stories today :)
+  maxCssWidth: 1148
 - id: 2021-10-16-inktober-16-compass
   title: Inktober 2021 day 16 Compass
   images:
@@ -1332,6 +1401,7 @@
     _Set sail!_
     -
     Today's prompt was very fitting, after we started the day by listening to some shanties :)
+  maxCssWidth: 1141
 - id: 2021-10-17-inktober-17-collision
   title: Inktober 2021 day 17 Collision
   images:
@@ -1355,6 +1425,7 @@
     This one is not nerdy. And kinda cheaty on complexity ;)
     -
     Also, I vaguely remember "drawing" such images while simulating collisions with this crazy [C++ REPL "Root"](https://root.cern/) in some uni class, as our prof was working in [CERN](https://en.wikipedia.org/wiki/CERN) for some time.
+  maxCssWidth: 1147
 - id: 2021-10-19-inktober-18-moon
   title: Inktober 2021 day 18 Moon
   images:
@@ -1373,6 +1444,7 @@
   created: "2021-10-19"
   published: "2026-04-07T21:24:28"
   description: Feeling moony today 😄
+  maxCssWidth: 1132
 - id: 2021-10-19-inktober-19-loop
   title: Inktober 2021 day 19 Loop
   images:
@@ -1391,6 +1463,7 @@
   created: "2021-10-19"
   published: "2026-04-07T21:24:28"
   description: Oὐροβόρος
+  maxCssWidth: 1106
 - id: 2021-10-21-inktober-20-sprout
   title: Inktober 2021 day 20 Sprout
   images:
@@ -1409,6 +1482,7 @@
   created: "2021-10-21"
   published: "2026-04-07T21:24:28"
   description: Fern
+  maxCssWidth: 1111
 - id: 2021-10-21-inktober-21-fuzzy
   title: Inktober 2021 day 21 Fuzzy
   images:
@@ -1427,6 +1501,7 @@
   created: "2021-10-21"
   published: "2026-04-07T21:24:29"
   description: Some fuzzy chick... or should it be fluffy? Those words are all blurred to me 😅
+  maxCssWidth: 1120
 - id: 2021-10-22-inktober-22-open
   title: Inktober 2021 day 22 Open
   images:
@@ -1448,6 +1523,7 @@
     _Speak friend and enter_
     -
     All entries for this year are drawn in 8x8 cm squares. That's the extra constraint for this year :)
+  maxCssWidth: 1160
 - id: 2021-10-23-inktober-23-leak
   title: Inktober 2021 day 23 Leak
   images:
@@ -1469,6 +1545,7 @@
     Seeing the rate those whistleblowers pop up, I should soon draw FB leaking them, not only documents 😜
     -
     And yeah, I'm aware of the irony that I'm posting it on FB and IG only 🤷‍♂️ (well, I was at the time)
+  maxCssWidth: 1158
 - id: 2021-10-26-inktober-24-extinct
   title: Inktober 2021 day 24 Extinct
   images:
@@ -1491,6 +1568,7 @@
     -
     And that's [Horizon: Zero Dawn](https://en.wikipedia.org/wiki/Horizon_Zero_Dawn) gameplay in a nutshell.
     Fantastic game, btw :D
+  maxCssWidth: 1166
 - id: 2021-10-26-inktober-25-splat
   title: Inktober 2021 day 25 Splat
   images:
@@ -1525,6 +1603,7 @@
     Splat.
     ...to get your arse off the bed, and tighten this f*cking thing!
     Splat.
+  maxCssWidth: 1140
 - id: 2021-10-27-inktober-26-connect
   title: Inktober 2021 day 26 Connect
   images:
@@ -1546,6 +1625,7 @@
     [Classic](https://en.wikipedia.org/wiki/The_Creation_of_Adam)
     -
     Hands are hard... humans are hard. Maybe I should finally try some anatomy classes 😅
+  maxCssWidth: 1131
 - id: 2021-10-28-inktober-27-spark
   title: Inktober 2021 day 27 Spark
   images:
@@ -1564,6 +1644,7 @@
   created: "2021-10-28"
   published: "2026-04-07T21:24:30"
   description: Couldn't make a spark, my flint is just not good enough.
+  maxCssWidth: 1149
 - id: 2021-10-29-inktober-28-crispy
   title: Inktober 2021 day 28 Crispy
   images:
@@ -1582,6 +1663,7 @@
   created: "2021-10-29"
   published: "2026-04-07T21:24:30"
   description: Crème brûlée
+  maxCssWidth: 1149
 - id: 2021-10-29-inktober-29-patch
   title: Inktober 2021 day 29 Patch
   images:
@@ -1600,6 +1682,7 @@
   created: "2021-10-29"
   published: "2026-04-07T21:24:31"
   description: Frame from [Legendy Polskie - Twardowsky](https://youtu.be/hRdYz8cnOW4) - one of the shorts taking old Polish legends and putting them in a modern sci-fi setting.
+  maxCssWidth: 1144
 - id: 2021-10-30-inktober-30-slither
   title: Inktober 2021 day 30 Slither
   images:
@@ -1618,6 +1701,7 @@
   created: "2021-10-30"
   published: "2026-04-07T21:24:31"
   description: This snail went for a rustic style.
+  maxCssWidth: 1133
 - id: 2021-11-01-inktober-31-risk
   title: Inktober 2021 day 31 Risk
   images:
@@ -1639,6 +1723,7 @@
     Base jumping - probably the most risky extreme sport.
     Mostly for adrenaline junkies.
     It might be fun to try some day… if anyone makes a good VR experience 😜
+  maxCssWidth: 1105
 - id: 2021-11-10-misc-hope
   title: Hope
   images:
@@ -1659,6 +1744,7 @@
     This just occurred to me in connection with the upcoming Independence Day 🇵🇱
     -
     Without political subtext, but with a significant dose of melancholy...
+  maxCssWidth: 929
 - id: 2018-11-01-inktober-the-end
   title: Inktober 2018 The End
   images:
@@ -1679,6 +1765,7 @@
   description: |-
     It's finished and I actually managed to do all 31 pics :O
     I've probably put more than 100h into this, and that alone was an achievement for me. Nonetheless, it was tough and I'm kinda glad it's only once a year ;)
+  maxCssWidth: 2250
 - id: 2018-10-01-inktober-1-poisonous
   title: Inktober 2018 day 1 Poisonous
   images:
@@ -1701,6 +1788,7 @@
     -
     It looked cool when someone tried to bind all those topics with a common theme, so I came up with something... and then changed it to something I actually can do and still learn a lot throughout the process :)
     This year my common theme is “animals”. Wish me luck! :)
+  maxCssWidth: 2250
 - id: 2018-10-02-inktober-2-tranquill
   title: Inktober 2018 day 2 Tranquill
   images:
@@ -1722,6 +1810,7 @@
     Giant panda
     -
     Ok, it's kinda a stretch for this term, but after seeing the photo I couldn't resist - it's just lovely :)
+  maxCssWidth: 2413
 - id: 2018-10-03-inktober-3-roasted
   title: Inktober 2018 day 3 Roasted
   images:
@@ -1743,6 +1832,7 @@
     Turkey (although it looks more like an ostrich 0_o)
     -
     While looking for a good reference, I thought about this more [urban](https://www.urbandictionary.com/) meaning of [roast](http://roast-me.urbanup.com/10949402). And thought, hell, why not? :)
+  maxCssWidth: 1553
 - id: 2018-10-04-inktober-4-spell
   title: Inktober 2018 day 4 Spell
   images:
@@ -1764,6 +1854,7 @@
     Black cat
     -
     Cause cats are really witches in disguise ;) Plus this one looks extra spooky (especially after I f***ed up its right eye :O)
+  maxCssWidth: 1809
 - id: 2018-10-06-inktober-5-chicken
   title: Inktober 2018 day 5 Chicken
   images:
@@ -1785,6 +1876,7 @@
     Red Jungle Fowl
     -
     Those shading vs. local values are kinda hard stuff, but I'm trying to incorporate more and more of the things I read in [Alphonso Dunn pen and ink drawing book](https://www.youtube.com/watch?v=2ETYtpTLL1Y) :)
+  maxCssWidth: 1716
 - id: 2018-10-07-inktober-6-drooling
   title: Inktober 2018 day 6 Drooling
   images:
@@ -1806,6 +1898,7 @@
     Spotted hyena
     -
     First thought was of course some dog... but it would be too obvious. Then I thought about the scene from Lion King (and fortunately found a good ref photo)
+  maxCssWidth: 1476
 - id: 2018-10-07-inktober-7-exhausted
   title: Inktober 2018 day 7 Exhausted
   images:
@@ -1827,6 +1920,7 @@
     Polar bear with cub
     -
     With special dedication to my wife ;)
+  maxCssWidth: 2348
 - id: 2018-10-08-inktober-8-star
   title: Inktober 2018 day 8 Star
   images:
@@ -1848,6 +1942,7 @@
     Red Tile Starfish
     -
     I thought about adding color and though I'm not entirely satisfied with the effect, I'm leaving it as is since it took ages to draw.
+  maxCssWidth: 1631
 - id: 2018-10-09-inktober-9-precious
   title: Inktober 2018 day 9 Precious
   images:
@@ -1871,6 +1966,7 @@
     This is Fatu, one of two remaining northern white rhinos in the world. This alone makes her precious, but she is probably much more to all those who take care of her.
     -
     Drawing based on a fantastic photo by [Ami Vitale](https://www.instagram.com/amivitale/)
+  maxCssWidth: 1695
 - id: 2018-10-11-inktober-10-flowing
   title: Inktober 2018 day 10 Flowing
   images:
@@ -1892,6 +1988,7 @@
     Salmo Trutta Fario
     -
     River trout live in flowing water, obviously :)
+  maxCssWidth: 1932
 - id: 2018-10-12-inktober-11-cruel
   title: Inktober 2018 day 11 Cruel
   images:
@@ -1915,6 +2012,7 @@
     For me, it's obvious what the most cruel animal on Earth is. But instead of drawing any random poacher, what about ourselves? I remember my childhood, and there were moments when I was really cruel to ants in my garden :/
     -
     Bit rushed, I have to catch up again ;)
+  maxCssWidth: 2344
 - id: 2018-10-12-inktober-12-whale
   title: Inktober 2018 day 12 Whale
   images:
@@ -1933,6 +2031,7 @@
   created: "2018-10-12"
   published: "2026-04-07T23:14:08"
   description: Humpback Whale
+  maxCssWidth: 2365
 - id: 2018-10-14-inktober-13-guarded
   title: Inktober 2018 day 13 Guarded
   images:
@@ -1954,6 +2053,7 @@
     Rottweiler
     -
     Guard dog, with this serious yet a bit bored expression à la British Royal Guard ;)
+  maxCssWidth: 1596
 - id: 2018-10-14-inktober-14-clock
   title: Inktober 2018 day 14 Clock
   images:
@@ -1975,6 +2075,7 @@
     Common Cuckoo
     -
     I'll leave crocodile for another day ;)
+  maxCssWidth: 1673
 - id: 2018-10-15-inktober-15-weak
   title: Inktober 2018 day 15 Weak
   images:
@@ -1996,6 +2097,7 @@
     Philippine Tarsier
     -
     Smallest primate, and so nervous that in captivity it can commit suicide by banging its head and breaking its thin and weak skull :O
+  maxCssWidth: 1535
 - id: 2018-10-16-inktober-16-angular
   title: Inktober 2018 day 16 Angular
   images:
@@ -2017,6 +2119,7 @@
     Tegenaria Domestica
     -
     More commonly known as Barn Funnel Weaver (US), Domestic House Spider (EU), or Kątnik Domowy (PL) - the Polish name in particular is reason enough for drawing a spider :)
+  maxCssWidth: 1993
 - id: 2018-10-16-inktober-17-swollen
   title: Inktober 2018 day 17 Swollen
   images:
@@ -2038,6 +2141,7 @@
     Porcupinefish / blowfish
     -
     This one was “bit” rushed, and looks too cartoony, but hey, at least I'm still on schedule, and that's something!
+  maxCssWidth: 1504
 - id: 2018-10-18-inktober-18-bottle
   title: Inktober 2018 day 18 Bottle
   images:
@@ -2059,6 +2163,7 @@
     Atlantic Bottlenose Dolphin
     -
     Took some time until I remembered a bottle-related animal instead of drawing a bottle stuffed with an animal :)
+  maxCssWidth: 2220
 - id: 2018-10-20-inktober-19-scorched
   title: Inktober 2018 day 19 Scorched
   images:
@@ -2080,6 +2185,7 @@
     Sidewinder snake
     -
     Those snakes are used to life in the desert.
+  maxCssWidth: 2075
 - id: 2018-10-20-inktober-20-breakable
   title: Inktober 2018 day 20 Breakable
   images:
@@ -2101,6 +2207,7 @@
     Emperor Penguin
     -
     So, you have to believe that it's standing on some breakable ice ;D
+  maxCssWidth: 1439
 - id: 2018-10-21-inktober-21-drain
   title: Inktober 2018 day 21 Drain
   images:
@@ -2119,6 +2226,7 @@
   created: "2018-10-21"
   published: "2026-04-07T23:14:13"
   description: Rat
+  maxCssWidth: 1647
 - id: 2018-10-22-inktober-22-expensive
   title: Inktober 2018 day 22 Expensive
   images:
@@ -2140,6 +2248,7 @@
     Horse
     -
     You wouldn't believe how expensive horses could be. The Guinness record is held by the stallion “Fusaichi Pegasus”, and it cost 70 mln dollars!
+  maxCssWidth: 2247
 - id: 2018-10-24-inktober-23-muddy
   title: Inktober 2018 day 23 Muddy
   images:
@@ -2161,6 +2270,7 @@
     Piglet
     -
     “Muddy puddle!” - probably every parent these days knows this shout of some [famous little pig](https://www.imdb.com/title/tt0426769/), cause everyone loves jumping in muddy puddles ;)
+  maxCssWidth: 1631
 - id: 2018-10-24-inktober-24-chop
   title: Inktober 2018 day 24 Chop
   images:
@@ -2182,6 +2292,7 @@
     Beaver
     -
     Cause beavers chop trees, I suppose ^^
+  maxCssWidth: 2076
 - id: 2018-10-25-inktober-25-prickly
   title: Inktober 2018 day 25 Prickly
   images:
@@ -2200,6 +2311,7 @@
   created: "2018-10-25"
   published: "2026-04-07T23:14:15"
   description: Stingray
+  maxCssWidth: 1690
 - id: 2018-10-26-inktober-26-stretch
   title: Inktober 2018 day 26 Stretch
   images:
@@ -2221,6 +2333,7 @@
     Land Snails
     -
     Two animals again, but those snails reaching out to and maybe helping each other are adorable :D
+  maxCssWidth: 2358
 - id: 2018-10-28-inktober-27-thunder
   title: Inktober 2018 day 27 Thunder
   images:
@@ -2244,6 +2357,7 @@
     _Was it thunder, or something worse?_
     -
     So, as prompts go, this one was the hardest. Hope that alerted deer makes sense :)
+  maxCssWidth: 1473
 - id: 2018-10-29-inktober-28-gift
   title: Inktober 2018 day 28 Gift
   images:
@@ -2267,6 +2381,7 @@
     It was pretty obvious after some thinking. Although here in Poland Christmas traditions differ, we are overwhelmed by American culture and customs.
     -
     Only 2 days left and I'm late on schedule. But it's not bad, just 3 more to draw :)
+  maxCssWidth: 1710
 - id: 2018-10-30-inktober-29-double
   title: Inktober 2018 day 29 Double
   images:
@@ -2288,6 +2403,7 @@
     Elephant calves
     -
     I just really wanted to draw an elephant - elephants are awesome :D
+  maxCssWidth: 2322
 - id: 2018-10-31-inktober-30-jolt
   title: Inktober 2018 day 30 Jolt
   images:
@@ -2309,6 +2425,7 @@
     Electric eel
     -
     Without actual “jolts” depicted - sorry, it was late and I was tired :(
+  maxCssWidth: 1692
 - id: 2018-11-01-inktober-31-slice
   title: Inktober 2018 day 31 Slice
   images:
@@ -2330,6 +2447,7 @@
     Pigeon
     -
     I was struggling with something not drastic, and today (unfortunately already in November) I remembered this pigeon I had recently seen in Krakow, wearing a slice of bread like a necklace - it suited the theme pretty well :D
+  maxCssWidth: 1570
 - id: 2018-08-15-zentangle-no2
   title: No2
   images:
@@ -2348,6 +2466,7 @@
     Drawing like this is very satisfying, especially when you end up with something cool.
     -
     I've found this [Zentangle](https://zentangle.com/) thing somewhere on the internet. And it was really great. I'm kinda skeptical about "meditation" stuff, but that idea of focusing on drawing these simple patterns, and kinda getting lost in it, was really enticing. And it worked well enough to unblock me from my creative block, and get me back to drawing, at least in some way.
+  maxCssWidth: 734
 - id: 2018-08-16-zentangle-no3
   title: No3
   images:
@@ -2363,6 +2482,7 @@
   created: "2018-08-16"
   published: "2026-04-08T21:29:25"
   description: Mistakes happen, just embrace it and go on.
+  maxCssWidth: 576
 - id: 2018-08-21-zentangle-no4
   title: No4
   images:
@@ -2380,6 +2500,7 @@
   created: "2018-08-21"
   published: "2026-04-08T21:29:25"
   description: Coming up with new patterns is inspiring!
+  maxCssWidth: 801
 - id: 2018-08-22-zentangle-no5
   title: No5
   images:
@@ -2399,6 +2520,7 @@
     - Paradox
     - Membranart by Tomás Padrós
     Found on [TanglePatterns](https://tanglepatterns.com/)
+  maxCssWidth: 799
 - id: 2018-08-24-zentangle-no6
   title: No6
   images:
@@ -2414,6 +2536,7 @@
   created: "2018-08-24"
   published: "2026-04-08T21:29:26"
   description: I think all patterns are official, but I only remember "zingle".
+  maxCssWidth: 589
 - id: 2018-08-25-zentangle-no7
   title: No7
   images:
@@ -2434,6 +2557,7 @@
     - Crosshatch?
     - Ahh?
     - in the middle is my own, but it's probably similar to something already named
+  maxCssWidth: 806
 - id: 2018-08-26-zentangle-no8
   title: No8
   images:
@@ -2449,6 +2573,7 @@
   created: "2018-08-26"
   published: "2026-04-08T21:29:26"
   description: I'm not even sure this is still a "tangle" ^^
+  maxCssWidth: 598
 - id: 2020-10-08-misc-doodles
   title: Doodles
   images:
@@ -2466,6 +2591,7 @@
   created: "2020-10-08"
   published: "2026-04-08T21:29:26"
   description: When I have no idea what to draw, I tend to draw random curvy lines. _Sometimes_ I end up with _something_.
+  maxCssWidth: 1250
 - id: 2021-03-16-misc-allegro
   title: Allegro
   images:
@@ -2483,6 +2609,7 @@
   created: "2021-03-16"
   published: "2026-04-08T21:29:26"
   description: I've created it for a particular reason when I was working at [Allegro](https://www.allegro.pl/).
+  maxCssWidth: 803
 - id: 2021-04-15-zentangle-nox
   title: No.X
   images:
@@ -2500,6 +2627,7 @@
   created: "2021-04-15"
   published: "2026-04-08T21:29:26"
   description: I believed it was the tenth pattern, and I wanted to be clever about the title.
+  maxCssWidth: 826
 - id: 2021-04-26-misc-coffee
   title: Coffee
   images:
@@ -2517,6 +2645,7 @@
   created: "2021-04-26"
   published: "2026-04-08T21:29:26"
   description: Because my wife loves coffee.
+  maxCssWidth: 862
 - id: 2017-02-16-notebook-work-desk
   title: Work Desk
   images:
@@ -2535,6 +2664,7 @@
   created: "2017-02-16"
   published: "2026-04-10T12:54:49"
   description: Made with the I Can Draw 50 challenge in mind.
+  maxCssWidth: 2372
 - id: 2017-03-28-notebook-spring
   title: Spring
   images:
@@ -2555,6 +2685,7 @@
   description: |-
     I was fiddling with some new brush-pens, all 3 colors of them, that I bought exactly for this kind of simple, washed colored sketches.
     And if I remember correctly, it was done on one of the first sunny days of spring, while waiting for passport documents to be processed.
+  maxCssWidth: 2156
 - id: 2017-12-07-misc-snake
   title: Snake
   images:
@@ -2575,6 +2706,7 @@
     Because even your desktop wallpaper can be an inspiration :)
     -
     Drawing with a ballpoint pen, or more like a gel pen. I believe it was Pentel EnerGel - not sponsored - I just really like this pen :)
+  maxCssWidth: 2527
 - id: 2019-07-02-misc-jazzy-art-box
   title: Jazzy Art Box
   images:
@@ -2592,6 +2724,7 @@
   created: "2019-07-02"
   published: "2026-04-10T12:54:50"
   description: Simple first drawing, done with newly arrived art supplies from [Jazza's](https://www.youtube.com/@Jazza) Jazzy Art Box
+  maxCssWidth: 998
 - id: 2019-07-03-misc-pencils-test
   title: Pencils Test
   images:
@@ -2607,6 +2740,7 @@
   created: "2019-07-03"
   published: "2026-04-10T12:54:50"
   description: Another small test drawing with pencils from [Jazza's](https://www.youtube.com/@Jazza) art box.
+  maxCssWidth: 682
 - id: 2025-misc-mini-drawings
   title: Mini Drawings
   images:
@@ -2624,6 +2758,7 @@
   created: "2025"
   published: "2026-04-10T12:54:51"
   description: I've drawn this throughout 2025, with a whole bunch of artists and styles taken as inspiration.
+  maxCssWidth: 3443
 - id: 2017-02-19-notebook-mamma-mia
   title: Mamma Mia
   images:
@@ -2641,6 +2776,7 @@
   created: "2017-02-19"
   published: "2026-04-22T10:22:29"
   description: Quick sketch of _Agios Ioannis sto Kastri_, after watching [Mamma Mia](https://www.imdb.com/title/tt0795421/).
+  maxCssWidth: 1599
 - id: 2017-03-04-notebook-kosciol
   title: Church
   images:
@@ -2663,6 +2799,7 @@
     -
     Quick live sketch, done with my two kids "helping".
     Done for the I Can Draw 50 challenge, week 4/50: "In my city".
+  maxCssWidth: 1560
 - id: 2017-03-17-notebook-cylon
   title: I can draw 50 week 7 - TV shows - Cylon
   images:
@@ -2685,6 +2822,7 @@
     -
     This one is a sketch from a notebook, and the text translation is:
     _And now a comment about page layout. I thought that writing on the same line on both sides of the drawing would be a great idea. I was wrong. ;)_
+  maxCssWidth: 1650
 - id: 2017-09-17-notebook-mountain
   title: Mountain
   images:
@@ -2702,6 +2840,7 @@
   created: "2017-09-17"
   published: "2026-04-22T10:22:31"
   description: Some mountain drawing, probably a redraw of an image found somewhere while browsing Pinterest.
+  maxCssWidth: 1632
 - id: 2017-09-20-notebook-doodles
   title: Doodles
   images:
@@ -2719,6 +2858,7 @@
   created: "2017-09-20"
   published: "2026-04-22T10:22:31"
   description: Dunno where I found those, either on Pinterest or Instagram, but at the time I really liked this simplistic style.
+  maxCssWidth: 1676
 - id: 2018-06-03-notebook-cousins
   title: Cousins
   images:
@@ -2736,6 +2876,7 @@
   created: "2018-06-03"
   published: "2026-04-22T10:22:31"
   description: Sketched from photos - I was supposed to ink it, but I haven't ^^
+  maxCssWidth: 1002
 - id: 2018-06-03-notebook-sisters
   title: Sisters
   images:
@@ -2753,6 +2894,7 @@
   created: "2018-06-03"
   published: "2026-04-22T10:22:31"
   description: Drawn from an awesome photo my wife took while we were watching airplanes landing.
+  maxCssWidth: 1116
 - id: 2019-10-01-inktober-1-ring
   title: Inktober 2019 day 1 Ring
   images:
@@ -2772,6 +2914,7 @@
     Anyone watching [The Expanse](https://www.imdb.com/title/tt3230854/) will hopefully see something familiar in it :)
     -
     I had ambitious plans... but life happened and drawing was far from my top priorities. In the end, I've decided to go easy on myself and lower the scope and expectations... actually 2x2 cm seemed like a good size
+  maxCssWidth: 352
 - id: 2019-10-02-inktober-2-mindless
   title: Inktober 2019 day 2 Mindless
   images:
@@ -2791,6 +2934,7 @@
     Like most of us nowadays. Losing our heads over smartphones. Social media instead of our thoughts.
     -
     The idea just popped up (for sure a subconscious reference to something).
+  maxCssWidth: 382
 - id: 2019-10-03-inktober-3-bait
   title: Inktober 2019 day 3 Bait
   images:
@@ -2810,6 +2954,7 @@
     dum..dum..dum.. rhythmic vibes of a thumper can't go unnoticed for long...
     -
     I had some (overambitious) plans for this year - fortunately I've realized how unrealistic they were before October. Still, some bits will remain as generally good ideas for the prompts, so there will be more than an average number of movie references, like [this one](https://www.imdb.com/title/tt0087182/).
+  maxCssWidth: 363
 - id: 2019-10-04-inktober-4-freeze
   title: Inktober 2019 day 4 Freeze
   images:
@@ -2826,6 +2971,7 @@
   created: "2019-10-04"
   published: "2026-04-22T10:22:32"
   description: It's a nose... and icicles... just so you know :D
+  maxCssWidth: 476
 - id: 2019-10-05-inktober-5-build
   title: Inktober 2019 day 5 Build
   images:
@@ -2845,6 +2991,7 @@
     I could spend looong hours playing with Lego, not only as a kid :D
     -
     Also, kinda a movie reference. Innovative like Emmet's first builds, but who cares - [everything is awesome](https://www.imdb.com/title/tt1490017/)!
+  maxCssWidth: 448
 - id: 2019-10-06-inktober-6-husky
   title: Inktober 2019 day 6 Husky
   images:
@@ -2866,6 +3013,7 @@
     Cute one!
     -
     Breaking from the “thumbnail-like” pattern - I just couldn't do it any other way, it's so adorable!
+  maxCssWidth: 1151
 - id: 2019-10-07-inktober-7-enchanted
   title: Inktober 2019 day 7 Enchanted
   images:
@@ -2885,6 +3033,7 @@
     To me, every book is enchanted, like a [portkey](https://harrypotter.fandom.com/wiki/Portkey), you take one into your hands and it teleports you to a different place, time, or reality.
     -
     This book is so magical it even skewed my background box ;)
+  maxCssWidth: 423
 - id: 2019-10-08-inktober-8-frail
   title: Inktober 2019 day 8 Frail
   images:
@@ -2904,6 +3053,7 @@
     She may have a weak body, but you better don't mess with a witch!
     -
     A lot to improve here, but still, I went with this year's motto of mine - “first thumbnail that nails it enough” xD
+  maxCssWidth: 710
 - id: 2019-10-09-inktober-9-swing-1
   title: Inktober 2019 day 9 Swing 1
   images:
@@ -2923,6 +3073,7 @@
     Tbh, as kids, usually one rope was enough for us :)
     -
     On the first try I couldn't decide on one color (like I tried this year). Thus, there is a second one...
+  maxCssWidth: 461
 - id: 2019-10-09-inktober-9-swing-2
   title: Inktober 2019 day 9 Swing 2
   images:
@@ -2939,6 +3090,7 @@
   created: "2019-10-09"
   published: "2026-04-22T10:22:32"
   description: I've picked one color, but I'm not sure if it was the right one... a third attempt would most probably be yet another thing.
+  maxCssWidth: 655
 - id: 2019-10-10-inktober-10-pattern
   title: Inktober 2019 day 10 Pattern
   images:
@@ -2958,6 +3110,7 @@
     [Zentangle](https://zentangle.com/)
     -
     Are you familiar with the zentangle method? It's kinda like meditation through drawing simple patterns. I've stumbled upon it some time ago, and although I'm not a meditative guy, it helped me break free from a creative block. To have joy in simply making marks on paper, without worrying about results.
+  maxCssWidth: 381
 - id: 2019-10-11-inktober-11-snow
   title: Inktober 2019 day 11 Snow
   images:
@@ -2976,6 +3129,7 @@
   description: |-
     You probably think, why he's so happy, if he has already been peed on?
     Well, he's not. He just has a fake smile...
+  maxCssWidth: 574
 - id: 2019-10-12-inktober-12-dragon
   title: Inktober 2019 day 12 Dragon
   images:
@@ -2996,6 +3150,7 @@
     -
     What a popular Krakow tale would look like if our dragon were a bit more intelligent.
     Also, I had to catch up and didn't feel like actually drawing a dragon xD
+  maxCssWidth: 536
 - id: 2019-10-13-inktober-13-ash
   title: Inktober 2019 day 13 Ash
   images:
@@ -3016,6 +3171,7 @@
     -
     The 13th prompt felt ideal for a continuation of the previous one :)
     Btw, do you know there is an actual dinosaur named [Smok Wawelski](https://en.wikipedia.org/wiki/Smok_wawelski) 😆
+  maxCssWidth: 639
 - id: 2019-10-14-inktober-14-overgrown
   title: Inktober 2019 day 14 Overgrown
   images:
@@ -3032,6 +3188,7 @@
   created: "2019-10-14"
   published: "2026-04-22T10:22:32"
   description: There is some epic castle in this pic, it's just a bit overgrown, so you have to take my word for it :D
+  maxCssWidth: 367
 - id: 2019-10-15-inktober-15-legend-1
   title: Inktober 2019 day 15 Legend 1
   images:
@@ -3048,6 +3205,7 @@
   created: "2019-10-15"
   published: "2026-04-22T10:22:32"
   description: Everyone knows this one, right?
+  maxCssWidth: 435
 - id: 2019-10-15-inktober-15-legend-2
   title: Inktober 2019 day 15 Legend 2
   images:
@@ -3067,6 +3225,7 @@
     [Pan Twardowski](https://en.wikipedia.org/wiki/Pan_Twardowski)
     -
     Second attempt for the same topic, promoting Polish culture.
+  maxCssWidth: 496
 - id: 2019-10-16-inktober-16-wild
   title: Inktober 2019 day 16 Wild
   images:
@@ -3086,6 +3245,7 @@
     Fairbanks Bus 142, Stampede Trail
     -
     Known for its role in the story of [Christopher McCandless](https://en.wikipedia.org/wiki/Chris_McCandless) (aka Alex Supertramp), depicted in the book and movie [Into the Wild](https://www.imdb.com/title/tt0758758/).
+  maxCssWidth: 497
 - id: 2019-10-17-inktober-17-ornament
   title: Inktober 2019 day 17 Ornament
   images:
@@ -3102,6 +3262,7 @@
   created: "2019-10-17"
   published: "2026-04-22T10:22:32"
   description: Kinda "ornamenty", no?
+  maxCssWidth: 441
 - id: 2019-10-18-inktober-18-misfit
   title: Inktober 2019 day 18 Misfit
   images:
@@ -3121,6 +3282,7 @@
     Rorschach, from [Watchmen](https://www.imdb.com/title/tt0409459/)
     -
     Dunno why, but it kinda popped up when I was thinking about this prompt.
+  maxCssWidth: 469
 - id: 2019-10-19-inktober-19-sling
   title: Inktober 2019 day 19 Sling
   images:
@@ -3140,6 +3302,7 @@
     Yup, just a sling.
     -
     You can imagine there is David and Goliath somewhere outside the frame ;)
+  maxCssWidth: 482
 - id: 2019-10-20-inktober-20-tread
   title: Inktober 2019 day 20 Tread
   images:
@@ -3156,6 +3319,7 @@
   created: "2019-10-20"
   published: "2026-04-22T10:22:33"
   description: "[Curiosity Rover](https://en.wikipedia.org/wiki/Curiosity_rover) wheel with [JPL in Morse code](https://www.arrl.org/news/new-mars-rover-to-feature-morse-code)"
+  maxCssWidth: 516
 - id: 2019-10-21-inktober-21-treasure
   title: Inktober 2019 day 21 Treasure
   images:
@@ -3172,6 +3336,7 @@
   created: "2019-10-21"
   published: "2026-04-22T10:22:33"
   description: Treasure for the kid. And for parents tired of the crying. But for sure, the biggest treasure is the one crying.
+  maxCssWidth: 653
 - id: 2019-10-22-inktober-22-ghost
   title: Inktober 2019 day 22 Ghost
   images:
@@ -3191,6 +3356,7 @@
     [movie time](https://www.imdb.com/title/tt0099653/)
     -
     Tbh, I have no idea how to draw hands (or people in general). That's one of the things that frightens me when drawing. My 👻 of creativity 😅
+  maxCssWidth: 748
 - id: 2019-10-23-inktober-23-ancient
   title: Inktober 2019 day 23 Ancient
   images:
@@ -3207,6 +3373,7 @@
   created: "2019-10-23"
   published: "2026-04-22T10:22:33"
   description: "[Stonehenge](https://en.wikipedia.org/wiki/Stonehenge)"
+  maxCssWidth: 718
 - id: 2019-10-24-inktober-24-dizzy
   title: Inktober 2019 day 24 Dizzy
   images:
@@ -3228,6 +3395,7 @@
     [Las Vegas Parano](https://www.imdb.com/title/tt0120669/)
     -
     One more for the “cinema” series
+  maxCssWidth: 959
 - id: 2019-10-25-inktober-25-tasty
   title: Inktober 2019 day 25 Tasty
   images:
@@ -3244,6 +3412,7 @@
   created: "2019-10-25"
   published: "2026-04-22T10:22:33"
   description: There was something really tasty on this plate, but I couldn't capture it - it was eaten too fast!
+  maxCssWidth: 511
 - id: 2019-10-26-inktober-26-dark
   title: Inktober 2019 day 26 Dark
   images:
@@ -3262,6 +3431,7 @@
   created: "2019-10-26"
   published: "2026-04-22T10:22:33"
   description: Cover art from Iron Maiden album [Fear of the Dark](https://www.ironmaiden.com/studio-album/fear-of-the-dark/)
+  maxCssWidth: 627
 - id: 2019-10-27-inktober-27-coat
   title: Inktober 2019 day 27 Coat
   images:
@@ -3283,6 +3453,7 @@
     Humphrey Bogart in his iconic trench coat, [Casablanca](https://www.imdb.com/title/tt0034583/).
     -
     I really like how this turned out :)
+  maxCssWidth: 565
 - id: 2019-10-28-inktober-28-ride
   title: Inktober 2019 day 28 Ride
   images:
@@ -3302,6 +3473,7 @@
     Roller coaster, kinda.
     -
     I'm not a big fan of the rides, but I have fond memories of hours spent playing [RollerCoaster Tycoon](https://en.wikipedia.org/wiki/RollerCoaster_Tycoon) :)
+  maxCssWidth: 430
 - id: 2019-10-29-inktober-29-injured
   title: Inktober 2019 day 29 Injured
   images:
@@ -3321,6 +3493,7 @@
     Band-aid
     -
     Cause it was simple, and I still had 2 more to do on the last day of Inktober ;)
+  maxCssWidth: 410
 - id: 2019-10-30-inktober-30-catch-1
   title: Inktober 2019 day 30 Catch 1
   images:
@@ -3337,6 +3510,7 @@
   created: "2019-10-30"
   published: "2026-04-22T10:22:33"
   description: Not much of a catch...
+  maxCssWidth: 422
 - id: 2019-10-30-inktober-30-catch-2
   title: Inktober 2019 day 30 Catch 2
   images:
@@ -3353,6 +3527,7 @@
   created: "2019-10-30"
   published: "2026-04-22T10:22:33"
   description: Hitchhiking may be tough, especially when you're trying to catch a ride in the middle of the desert.
+  maxCssWidth: 420
 - id: 2019-10-31-inktober-31-ripe
   title: Inktober 2019 day 31 Ripe
   images:
@@ -3372,3 +3547,4 @@
     Good, ripe pumpkin. Perfect for a soup, cake... or carving, if that's your thing :)
     -
     So, it's done. Last one. And (with some rushing) I've done all of them still in October, yeah!
+  maxCssWidth: 439

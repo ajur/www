@@ -28,6 +28,7 @@ interface ArtEntry {
   created: string;
   published: string;
   description: string;
+  maxCssWidth: number;
 }
 
 // --- Constants ---
@@ -109,11 +110,11 @@ function main() {
     // --- _full ---
     const fullName = `${entry.id}_full.webp`;
     const fullPath = join(BUCKET_DIR, fullName);
+    let is1200dpi = false;
 
     if (!existsSync(fullPath)) {
       const info = getImageInfo(mainTif);
-      const is1200dpi =
-        info.density !== null && Math.abs(info.density - 1200) < 50;
+      is1200dpi = info.density !== null && Math.abs(info.density - 1200) < 50;
       const maxDim = Math.max(info.w, info.h);
 
       if (is1200dpi) {
@@ -200,6 +201,7 @@ function main() {
       if (newThumbnails !== null) {
         entry.thumbnails = newThumbnails;
       }
+      entry.maxCssWidth = is1200dpi ? Math.floor(fullDims.w / 2) : fullDims.w;
       yamlDirty = true;
     }
 

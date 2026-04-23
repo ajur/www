@@ -1,0 +1,11 @@
+---
+import "~/styles/content-tag.css";
+
+interface Props {
+  tag: string;
+}
+
+const { tag } = Astro.props;
+---
+
+<a class="content-tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>

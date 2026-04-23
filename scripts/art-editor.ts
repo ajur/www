@@ -29,6 +29,7 @@ interface ArtEntry {
   created: string;
   published: string;
   description: string;
+  maxCssWidth: number;
 }
 
 // --- YAML helpers ---

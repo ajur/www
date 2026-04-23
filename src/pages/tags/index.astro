@@ -1,5 +1,6 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
+import ContentTag from "~/components/ContentTag.astro";
 import { getTagsContent } from "~/utils";
 
 const collectionNamesMap = {
@@ -25,8 +26,8 @@ const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
     <ul>
       {tagsList.map((tag) => (
         <li>
-          <a href={`/tags/${tag}/`}>
-            <div class="tag">{tag}</div>
+          <div class="tag-row">
+            <ContentTag tag={tag} />
 
             
               {collections.map((collection) => {
@@ -40,7 +41,7 @@ const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
                 );
               })}
             
-          </a>
+          </div>
         </li>
       ))}
     </ul>
@@ -68,17 +69,11 @@ const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
     max-inline-size: var(--measure);
   }
 
-  a {
+  .tag-row {
     display: flex;
+    align-items: center;
     gap: var(--s-2);
     padding-block: var(--s-4);
-    text-decoration: none;
-    color: inherit;
-  }
-
-  a:hover .tag,
-  a:focus-visible .tag {
-    color: var(--color-accent);
   }
 
   .tag-count {

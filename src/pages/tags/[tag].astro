@@ -1,5 +1,6 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
+import GalleryGrid from "~/components/GalleryGrid.astro";
 import { getTagsContent } from "~/utils";
 
 export async function getStaticPaths() {
@@ -64,15 +65,9 @@ const { articles, projects, art, misc } = {
     )}
 
     { art.length > 0 && (
-      <section>
+      <section class="soft-bleed">
         <h2>art</h2>
-        <ul>
-          {art.map((artwork) => (
-            <li>
-              <a href={`/misc/art/#${artwork.id}`}>{artwork.data.title}</a>
-            </li>
-          ))}
-        </ul>
+        <GalleryGrid entries={art} />
       </section>
     )}
     

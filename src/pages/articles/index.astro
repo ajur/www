@@ -1,5 +1,6 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
+import ContentTag from "~/components/ContentTag.astro";
 import { getCollection } from "astro:content";
 import { formatDate } from "~/utils";
 
@@ -21,11 +22,15 @@ const articles = (await getCollection("articles")).sort(
         <li>
           <a href={`/articles/${page.id}/`}>
             <h2>{page.data.title}</h2>
-            <p>
-              {formatDate(page.data.published)}
-              <span class="tags">{page.data.tags.join(', ')}</span>
-            </p>
           </a>
+          <div class="meta">
+            <div class="published-date">{formatDate(page.data.published)}</div>
+            {page.data.tags.length > 0 && (
+              <div class="tags">
+                {page.data.tags.map((tag) => <ContentTag tag={tag} />)}
+              </div>
+            )}
+          </div>
         </li>
       ))}
     </ul>
@@ -57,8 +62,8 @@ ul {
 
 a {
   display: block;
-  padding-block: var(--s1);
-  padding-inline: var(--s-1);
+  padding-block-start: var(--s1);
+  padding-block-end: var(--s-1);
   border-top: 1px solid var(--color-border);
   text-decoration: none;
   color: inherit;
@@ -76,11 +81,23 @@ h2 {
 
 p {
   margin: 0;
-  margin-top: var(--s-3);
+}
+
+.meta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-2);
+  padding-block-end: var(--s1);
+}
+
+.published-date {
+  color: var(--color-ink-muted);
 }
 
 .tags {
-  float: right;
-  font-variant: small-caps;
+  margin-inline-start: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-5);
 }
 </style>

@@ -1,0 +1,22 @@
+  .content-tag,
+  .content-tag:visited {
+    display: inline-block;
+    padding: 0 var(--s-2);
+    border-radius: var(--border-radius);
+    font-family: var(--font-display);
+    text-decoration: none;
+    color: var(--color-accent-muted);
+    background: color-mix(in srgb, var(--color-ink-muted) 12%, transparent);
+    transition-property: color, background;
+    transition-duration: 0.15s;
+  }
+  .content-tag::before {
+    content: '#';
+    color: var(--color-ink-muted);
+  }
+
+  .content-tag:hover,
+  .content-tag:focus-visible {
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 15%, transparent);
+  }

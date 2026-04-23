@@ -27,6 +27,7 @@ interface ArtEntry {
   created: string;
   published: string;
   description: string;
+  maxCssWidth: number;
 }
 
 interface ScanGroup {
@@ -239,6 +240,7 @@ function main() {
       created: date,
       published,
       description: "",
+      maxCssWidth: 0,
     });
   }
 

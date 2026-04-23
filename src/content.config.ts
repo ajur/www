@@ -56,6 +56,7 @@ const art = defineCollection({
     published: z.iso.datetime({ local: true }),
     thumbnailRatio: z.string().regex(/^\d+:\d+$/),
     tags: z.array(z.string()).default([]),
+    maxCssWidth: z.number().optional(),
     images: z.array(artImageRef),
     thumbnails: z.array(artImageRef),
   })
