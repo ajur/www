@@ -1,27 +1,30 @@
 ---
 import "~/styles/content-tag.css";
 ---
-<dialog class="lightbox" id="lightbox">
-  <img class="lightbox-img" />
-  <div class="lightbox-body">
-    <h2 class="lightbox-title"></h2>
-    <p class="lightbox-desc"></p>
-    <div class="lightbox-meta">
-      <span class="lightbox-date"></span>
-      <div class="lightbox-tags"></div>
+<dialog id="lightbox">
+  <div class="padded the-center">
+    <img class="img" />
+    <div class="body width-measure flow">
+      <h2 class="title"></h2>
+      <p class="desc"></p>
+      <div class="meta">
+        <span class="date"></span>
+        <span class="tags"></span>
+      </div>
     </div>
   </div>
-  <button class="lightbox-close" aria-label="Close" type="button">&times;</button>
+  <button class="close" aria-label="Close" type="button">&times;</button>
 </dialog>
 
 <script>
   const dialog = document.getElementById("lightbox") as HTMLDialogElement;
-  const img = dialog.querySelector(".lightbox-img") as HTMLImageElement;
-  const titleEl = dialog.querySelector(".lightbox-title") as HTMLElement;
-  const descEl = dialog.querySelector(".lightbox-desc") as HTMLParagraphElement;
-  const dateEl = dialog.querySelector(".lightbox-date") as HTMLSpanElement;
-  const tagsEl = dialog.querySelector(".lightbox-tags") as HTMLDivElement;
-  const closeBtn = dialog.querySelector(".lightbox-close") as HTMLButtonElement;
+  const wrapper = dialog.querySelector(".the-center") as HTMLElement;
+  const img = dialog.querySelector(".img") as HTMLImageElement;
+  const titleEl = dialog.querySelector(".title") as HTMLElement;
+  const descEl = dialog.querySelector(".desc") as HTMLParagraphElement;
+  const dateEl = dialog.querySelector(".date") as HTMLSpanElement;
+  const tagsEl = dialog.querySelector(".tags") as HTMLDivElement;
+  const closeBtn = dialog.querySelector(".close") as HTMLButtonElement;
   let prevHtmlOverflow = "";
   let prevBodyOverflow = "";
   let activeId = "";
@@ -121,7 +124,7 @@ import "~/styles/content-tag.css";
   closeBtn.addEventListener("click", () => dialog.close());
 
   dialog.addEventListener("click", (e) => {
-    if (e.target === dialog) dialog.close();
+    if (e.target === dialog || e.target === wrapper) dialog.close();
   });
 
   dialog.addEventListener("close", () => {
@@ -174,38 +177,30 @@ import "~/styles/content-tag.css";
 </script>
 
 <style>
-  .lightbox {
+  dialog {
     border: none;
+    padding: 0;
+    margin: 0;
+    padding-block-end: var(--s4);
     background: none;
-    box-sizing: border-box;
-    padding: var(--s-1);
-    width: 95vw;
-    height: 95vh;
-    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    max-height: none;
+    max-width: none;
+    overflow-x: hidden;
+    overflow-y: auto;
     overscroll-behavior: contain;
     outline: none;
+
+    --flow-space: var(--s-2);
   }
 
-  .lightbox::backdrop {
+  dialog::backdrop {
     background: rgba(0, 0, 0, 0.85);
   }
 
-  .lightbox[open] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .lightbox-title {
-    color: var(--color-ink);
-    font-size: var(--s0);
-    margin: 0;
-  }
-
-  .lightbox-img {
-    width: 100%;
-    max-height: 72vh;
+  .img {
+    max-height: 80vh;
     object-fit: contain;
     display: block;
     width: auto;
@@ -213,63 +208,57 @@ import "~/styles/content-tag.css";
     margin: 0;
   }
 
-  .lightbox-body {
+  .body {
     width: 100%;
-    max-width: var(--measure);
     background: var(--color-bg);
-    padding: var(--s-2) var(--s-1) var(--s-1);
-    /* box-sizing: border-box; */
+    padding: var(--s-2);
   }
 
-  .lightbox-desc {
-    margin: 0;
-    opacity: 0.85;
-  }
-
-  .lightbox-desc[hidden] {
-    display: none;
-  }
-
-  .lightbox-meta {
+  .meta {
     display: flex;
-    align-items: baseline;
-    gap: var(--s-2);
-    margin-top: var(--s-3);
+    align-content: space-between;
   }
 
-  .lightbox-date {
+  .title {
+    color: var(--color-ink);
+    font-size: var(--s0);
+    margin: 0;
+    margin-block-start: var(--s-4);
+  }
+
+  .date {
     color: var(--color-ink-muted);
   }
 
-  .lightbox-date[hidden] {
-    display: none;
-  }
-
-  .lightbox-tags {
+  .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--s-3);
+    gap: var(--s-4);
     margin-inline-start: auto;
   }
 
-  .lightbox-tags[hidden] {
-    display: none;
-  }
-  
-  .lightbox-close {
+  .close {
+    --button-size: var(--s3);
+    font-size: var(--s2);
+    padding-bottom: 0.08em;
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--button-size);
+    height: var(--button-size);
+    border-radius: var(--button-size);
     bottom: var(--s-2);
     right: var(--s-2);
-    background: none;
-    border: none;
+    background: var(--color-bg);
+    border: solid 0.1rem var(--color-border);
     color: var(--color-accent-strong);
-    font-size: var(--s3);
     cursor: pointer;
-    line-height: 1;
-    padding: var(--s-4);
+    transition-property: scale, border-color, font-size;
+    transition-duration: 0.15s;
   }
-
-  .lightbox-close:hover {
-    opacity: 0.7;
+  .close:hover {
+    scale: 1.1;
+    border-color: var(--color-accent-strong);
   }
 </style>
