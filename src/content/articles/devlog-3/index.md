@@ -1,5 +1,5 @@
 ---
-title: DRAFT - devlog 3
+title: Designing the Landing Page
 description: "Designing the landing page - main menu, and background animation for the site - with insights on using AI in the process."
 created: 2026-03-27T14:03
 published: 2026-03-27
