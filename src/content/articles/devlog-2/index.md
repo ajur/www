@@ -69,6 +69,9 @@ This was an example of how vast the front-end framework space is. And of how det
 
 And I was kinda stunned by how close it was to what I needed. It matched basically every requirement I had, allowed for easy expansion, and provided me with a few great new ideas.
 
+> [!question] Wasn't it AI bias?
+> As [Amplifying research](https://amplifying.ai/research/claude-code-picks/report) suggests, it could simply be bias in what the models were tuned on. But even so, it matched my needs so well that I'm not too concerned about it.
+
 ## Project setup
 
 I've set up a new project according to Astro's installation instructions, using `npm create astro@latest`. Then I used agentic AI to generate the files for the structure that I had prepared with ChatGPT before. It went pretty smoothly, although I had to go back and make a few changes, e.g. to `content.config.ts`, to make it more like v5 and not v4.

@@ -1,6 +1,6 @@
 ---
-title: Designing the Landing Page
-description: "Designing the landing page - main menu, and background animation for the site - with insights on using AI in the process."
+title: Landing on the page
+description: "Building the new landing page by reworking its animation, layout, and menu while keeping the feel of the old front page."
 created: 2026-03-27T14:03
 published: 2026-03-27
 tags:
@@ -8,47 +8,55 @@ tags:
   - devlog
   - ai
 ---
-# devlog 3
+# Landing page fun
 
-After creating the basic project structure, I got to the fun part and started work on the landing page.
+After [creating the basic project structure](../devlog-2/), I moved straight to the landing page to get that initial "this is fun" boost.
 
-I really liked the visual aspect of the old page. It was bare, but in some way it reflected what I like. Thus, I wanted to preserve that and even expand on it. So the landing page would basically stay like before: minimal navigation, with animation in the background. And that's okay, because if I consider my old home page just a facade, then this new home is basically a refresh of it and an expansion of what lies beyond it.
+The old page felt like mine: bare, minimal, and built around a single strong visual element. I wanted to preserve that feeling. And that was okay, because if I consider my old home page just a facade, then this whole new web page would be like building an actual home with rooms behind it.
 
-Ok, so, what do I need?
+## Animation
 
-First - **logo** - that was easy. I already had something I liked enough and had used as a loading animation for a few games. So that's settled.
+So, background animation was a must. And although I liked my old random walk, this time I wanted a more subtle, noise-based animation. Somewhat inspired by [Nature of Code exercises](/projects/nature-of-code/).
 
-Second - **navigation** - that was trickier – what to include, how to divide it, how to present it. There was some exploration done with AI, but more on that later. In the end, I had a nice minimal main menu.
+Another idea was to have the home page be a sort of visualisation runner, with an option to change between different animations (I kinda ditched the idea for now). Thus I needed some kind of animation runner to swap between different animations, supporting both simpler 2D canvas and shader-based 3D canvas.
 
-Last but not least - **background** - I thought this one would be the most challenging. Especially because I wanted to expand it into multiple animations, with some controls to change them. Kind of like a gallery for generative art pieces. But to start, one landing animation was enough.
+As I didn't want to use any additional library, and I'm not that familiar with WebGL, I've basically vibe-coded the whole thing (well, maybe aside from [GLSL simplex noise](https://github.com/stegu/psrdnoise/)). Yes, from the animation manager, through the shader runner, to the shader animation itself. I had a pretty strong idea of how it should work and look, and I prompted through it without many manual changes to the generated code.
 
-## First animation
+> [!note] Vibe-coding
+> I’m not proud of it, and I did lose the chance to learn more GLSL. But I only have so much free time, and this approach let me finish it without disappearing into another study rabbit hole.
 
-I liked my old random walk, but here, for the first animation, I wanted a more subtle, noise-based animation. Since I wanted to do it without any library, I had to create a simple WebGL shader runner.
-This is where AI coding came in. That's the part I basically vibe-coded: the shader runner and the shader itself (well, [aside from simplex noise](https://github.com/stegu/psrdnoise/)). 
+## Main menu struggles
 
-I might not be proud of it, but after spending a bit too much time on CSS, I figured it wasn't that bad. Besides, I at least understand what's going on, for the most part - shader math is often just too much xD - and can review and adjust the parts that weren't working well. But I must admit that, for this kind of simple, common code, LLMs work fairly well. Especially when you know what you want, what to expect, and how to steer them to do exactly what you want. And I already noticed it's much easier to do in code, especially for a developer who already knows how to code, than with generative art or music.
+What was left was the menu and the general UI layout. In contrast to the old layout, I wanted to make it central, not some corner-stuck afterthought. On the other hand, I didn't want to make it all-containing like some kind of news portal. So no _latest article_ or similar stuff.
 
-And yeah, I lost the opportunity to learn more GLSL. But there is only so much free time I have, and falling into another rabbit hole of studying wouldn't bring me closer to finishing this site.
+With some fiddling, I landed on a centered logo, a simple main menu, and a theme switch icon in the corner.
 
-## Main menu
+As a logo, I've used my initials that I had already used as an animated loading screen for a few projects. It is simple, clean, and works well with switched colors. Done.
 
-I also used it to refine the main menu. Not to generate it, because it often produced overbloated code and too much local CSS (there is still a lot of that), but to help with naming.
+The menu layout was simple: a centered column of links. Clear, visible, and functional. It just didn't look as good as I hoped.
 
-At first I had pretty normal names for my main subpages, and those are still in the links: `articles, projects, art, about`. But when I prepared the front page's vertical menu, it felt off. It was just too uneven and somewhat unappealing. So, as often happens recently in cases like this, I opened an AI chat and started discussing the issue at hand.
+From the start I had 4 main content types in mind, and that was reflected in pretty standard names for the subpages (and as of writing this, those are still in the links): `articles, projects, art, about`. But when I prepared the front page's vertical menu, it felt off. It was just too uneven and somewhat unappealing. Too generic and not fitting the design.
 
-It proposed a few things, asked some follow-up questions, and kept narrowing the direction. But somewhere in the process, it made some good observations about my indecisiveness and about designing for content that I don't have yet and still don't know what it will be. 
+I tried a few things, couldn't land on anything, so I turned to my recent ["rubber duck"](https://en.wikipedia.org/wiki/Rubber_duck_debugging) - AI chat. I asked for alternatives, and one idea clicked: `articles` became `text` and `projects` became `code`. That looked much better, and gave _source code_-like vibes. To align with this 4-letter word constraint, I changed `about` to `self`.
 
-I got almost roasted for focusing on the wrong things and doing stuff backwards... it led to me acknowledging and kinda embracing the issue, and you can read about it in [first devlog](../devlog-1). It was almost like talking with a psychologist :O
+> [!question] Why not `this`
+> As most programmers would notice, `this` seemed like an obvious pick if I wanted to keep the programming vibes. Being a keyword in most languages, that would be perfect... but for some reason, it didn't feel right. Almost like it would suggest that the page was more about itself than about me.
+> As a result, I decided to go with `self`, which is the conventional ([but not forced](https://realpython.com/ref/glossary/self/)) equivalent of `this` in [Python](https://www.python.org/).
 
-I found that, in general, my process of "discussing with AI" often lands in the realm of "talking to a rubber duck" - a commonly known practice in software development, where if you struggle with a solution, you just talk to someone about it, even a rubber duck, and will probably come up with a solution on your own. "Talking" with AI feels similar, but elevated.
-AI will propose some solutions, but I often find them kinda meh... those are usually inspiring enough for me to find another way. Like, "I don't quite like it, but if I changed this and that, it would be kinda cool".
+The last one was `art`, which I couldn't compress into any 4-letter word that still felt right. It was meant to hold a gallery of sorts, with different creative works I fiddle with in my free time. Mostly drawings, but also some writing, maybe music or photos. But no word was good enough to wrap it all up. While going back and forth on it, I got pretty much roasted:
 
-As for the main menu, I ended up with a 4x4 structure: four four-letter words that all looked a bit like they belonged in a codebase.:
+> **You’re over-optimizing structure early** - You spent a lot of time on content schema, naming and pipelines, before having real content volume.
 
-- `text` - for articles - that was simple
-- `code` - for projects - that was even simpler
-- `self` - for the about page - `this` was also considered, but I went with the Python convention
-- `misc` - for everything else - that was the hardest. At first I wanted gallery, or `art`, to be there, but I couldn't find a nice 4-letter word for it that would fit. So I went with the often-used dev shortcut for 'miscellaneous' for, well, everything else. And on that page there is basically a bunch of different things.
+Ouch! That was spot on, and it hit hard (well, that plus a few other points).
 
-And that was it for the main page. Next was [adding articles handling](../devlog-4).
+Initially, I felt like ChatGPT was mocking me for not choosing any of the words it suggested, but after that one line, I understood the issue it had... or more like, the issue **I had**. The whole thing was pretty significant and insightful enough that it led to rethinking [why I'm doing this redesign](../devlog-1/).
+
+In the end, I had to do something with this menu entry, and I stayed with `misc`, putting the art gallery as its subpage. It's commonly used by programmers, vague enough to fit the uncertainty of that section, and practical enough to let me _move on_.
+
+## Final landing page
+
+Here it was, the final result (in case future me decides to change it again):
+
+![Home page screenshot](landing_page.webp)
+
+Now, with the main page in a satisfactory state, it was time to add actual [content pages](../devlog-4).
