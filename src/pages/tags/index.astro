@@ -1,6 +1,7 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
 import ContentTag from "~/components/ContentTag.astro";
+import SubpageHeader from "~/components/SubpageHeader.astro";
 import { getTagsContent } from "~/utils";
 
 const collectionNamesMap = {
@@ -18,10 +19,7 @@ const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
 ---
 <PageLayout title="Miscellaneous">
   <main class="the-center">
-    <header>
-      <h1>Tags</h1>
-      <p>Listing all available tags.</p>
-    </header>
+    <SubpageHeader title="Tags" description="Listing all available tags." />
 
     <ul>
       {tagsList.map((tag) => (
@@ -51,15 +49,6 @@ const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
 <style>
   main {
     padding-inline: var(--s0);
-  }
-
-  header {
-    text-align: center;
-    padding-block: var(--s2);
-  }
-
-  header > *:first-child {
-    margin-block-start: 0;
   }
 
   ul {

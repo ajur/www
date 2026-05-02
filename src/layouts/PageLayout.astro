@@ -24,8 +24,10 @@ const { title = "Astro" } = Astro.props;
   </Footer>
   <Footer class="copyright">
     <div>
-      &copy; {new Date().getFullYear()} ajur.pl Adam Jurczyk.
-      All rights reserved.
+      &copy; {new Date().getFullYear()} Adam Jurczyk.
+      <br />
+      Site content and artwork licensed under 
+      <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>.
     </div>
     <Logo />
   </Footer>
@@ -40,8 +42,12 @@ const { title = "Astro" } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: var(--s0);
     font-size: var(--s-1);
     color: var(--color-ink-muted);
+  }
+  .copyright a {
+    color: inherit;
   }
 </style>

@@ -56,7 +56,7 @@
 }
 
 .padded {
-  padding: var(--padded-width, var(--s-1));
+  padding-inline: var(--padded-width, var(--s-1));
 }
 
 .width-measure {

@@ -1,23 +1,14 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
+import SubpageHeader from "~/components/SubpageHeader.astro";
 import Content from "./_content.mdx";
 ---
 
 <PageLayout title="About">
   <main class="the-center">
     <article class="flow">
-      <header>
-        <h1>Self</h1>
-        <p>A bit about me and this site.</p>
-      </header>
+      <SubpageHeader title="Self" description="A bit about me and this site." />
       <Content />
     </article>
   </main>
 </PageLayout>
-
-<style>
-header {
-  text-align: center;
-  padding-block: var(--s2);
-}
-</style>

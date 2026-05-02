@@ -1,5 +1,6 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
+import SubpageHeader from "~/components/SubpageHeader.astro";
 import { getCollection } from "astro:content";
 
 const otherPages = (await getCollection("misc")).sort(
@@ -9,16 +10,13 @@ const otherPages = (await getCollection("misc")).sort(
 ---
 <PageLayout title="Miscellaneous">
   <main class="the-center">
-    <header>
-      <h1>Misc</h1>
-      <p>A collection of things worth sharing.</p>
-    </header>
+    <SubpageHeader title="Misc" description="A collection of things worth sharing." />
 
     <ul>
       <li>
         <a href="art/">
           <h2>Art</h2>
-          <p>Creative works and visual experiments.</p>
+          <p>Gallery of my drawings and sometimes other forms of visual art that I do as a hobby.</p>
         </a>
       </li>
       {otherPages.map((page) => (
@@ -42,15 +40,6 @@ const otherPages = (await getCollection("misc")).sort(
 <style>
   main {
     padding-inline: var(--s0);
-  }
-
-  header {
-    text-align: center;
-    padding-block: var(--s2);
-  }
-
-  header > *:first-child {
-    margin-block-start: 0;
   }
 
   ul {

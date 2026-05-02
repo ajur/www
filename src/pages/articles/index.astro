@@ -1,6 +1,7 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
 import ContentTag from "~/components/ContentTag.astro";
+import SubpageHeader from "~/components/SubpageHeader.astro";
 import { getCollection } from "astro:content";
 import { formatDate } from "~/utils";
 
@@ -12,16 +13,16 @@ const articles = (await getCollection("articles")).sort(
 
 <PageLayout title="Text">
   <main class="the-center">
-    <header>
-      <h1>Text</h1>
-      <p>Writing notes and longer essays.</p>
-    </header>
+    <SubpageHeader title="Text" description="Writing notes and longer essays." />
 
     <ul>
       {articles.map((page) => (
         <li>
           <a href={`/articles/${page.id}/`}>
-            <h2>{page.data.title}</h2>
+            <h3>{page.data.title}</h3>
+            {page.data.description && (
+              <p>{page.data.description}</p>
+            )}
           </a>
           <div class="meta">
             <div class="published-date">{formatDate(page.data.published)}</div>
@@ -43,13 +44,14 @@ main {
   padding-inline: var(--s0);
 }
 
-header {
-  text-align: center;
-  padding-block: var(--s2);
+h3 {
+  margin: 0;
 }
-
-header > *:first-child {
-  margin-block-start: 0;
+p {
+  margin: 0;
+}
+a p {
+  margin-block-start: var(--s0);
 }
 
 ul {
@@ -72,15 +74,6 @@ a {
 a:hover,
 a:focus-visible {
   color: var(--color-accent);
-}
-
-h2 {
-  font-size: var(--s1);
-  margin: 0;
-}
-
-p {
-  margin: 0;
 }
 
 .meta {

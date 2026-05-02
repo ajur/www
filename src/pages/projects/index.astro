@@ -1,5 +1,6 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
+import SubpageHeader from "~/components/SubpageHeader.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
@@ -10,12 +11,9 @@ const projects = (await getCollection("projects")).sort((a, b) => {
 
 <PageLayout title="Code">
   <main class="padded the-center">
+    <SubpageHeader title="Code" description="Coding endeavors and side projects." />
+    
     <div class="stack">
-      <header>
-        <h1>Code</h1>
-        <p>Coding endeavors and side projects.</p>
-      </header>
-
       {
         projects.map((project) => (
           <a class="card with-sidebar-right" href={`/projects/${project.id}/`}>

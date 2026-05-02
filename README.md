@@ -50,3 +50,11 @@ Commands related to `art:*` may require additional tools and specific layout of 
 - [Astro](https://astro.build) - as main static site builder. [Docs](https://docs.astro.build).
 - [vite-plugin-glsl](https://www.npmjs.com/package/vite-plugin-glsl) - to ease loading of shaders.
 - [psrdnoise](https://github.com/stegu/psrdnoise/) - Simplex noise implementation in GLSL
+
+## Licensing
+
+This repository uses separate licenses for code and site content.
+
+- Source code is licensed under the [MIT License](https://www.tldrlegal.com/license/mit-license). See [LICENSE.md](./LICENSE.md).
+- Written content, artwork, and other media are licensed under [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/). See [LICENSE-content.md](./LICENSE-content.md).
+- If a specific file, page, or asset says otherwise, that notice takes precedence.
