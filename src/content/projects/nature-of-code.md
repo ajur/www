@@ -7,7 +7,7 @@ lastUpdated: 2026-01-23
 image: nature-of-code.png
 url: https://observablehq.com/@ajur/the-nature-of-code-0-introduction?collection=@ajur/the-nature-of-code
 tags:
-  - NatureOfCode
+  - nature-of-code
   - learning
 ---
 

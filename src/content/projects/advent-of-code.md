@@ -9,7 +9,7 @@ links:
   - https://github.com/ajur/aoc
   - https://adventofcode.com/
 tags:
-  - AdventOfCode
+  - advent-of-code
 ---
 
 Solutions for [Advent of Code](https://adventofcode.com/) programming puzzles, done each December as a mix of fun and learning.

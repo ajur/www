@@ -3,9 +3,12 @@ title: From prompt to project
 description: "From an AI prompt to a working Astro project, with a detour through modern CSS"
 created: 2026-03-24T21:03
 published: 2026-03-26
+kind: devlog
 tags:
-  - devlog
   - site
+  - ai
+  - astro
+  - css
 ---
 # From prompt to project
 

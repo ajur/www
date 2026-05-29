@@ -26,6 +26,7 @@
   --callout-padding: var(--s-2);
 
   --callout-note-color: var(--color-accent);
+  --callout-warning-color: var(--color-accent-strong);
   --callout-tip-color: var(--color-accent-strong);
   --callout-tldr-color: var(--color-accent-muted);
   --callout-info-color: hsl(131, 100%, 37%);

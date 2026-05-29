@@ -21,6 +21,8 @@ type ShaderState = {
   acc2Location: WebGLUniformLocation | null;
 };
 
+const NOISE_OFFSET_RANGE = 8;
+
 export class ShaderAnimation implements BackgroundAnimation<WebGLRenderingContext> {
   canvas: HTMLCanvasElement;
   ctx: WebGLRenderingContext;
@@ -159,6 +161,7 @@ export class ShaderAnimation implements BackgroundAnimation<WebGLRenderingContex
     const timeLocation = ctx.getUniformLocation(program, "u_time");
     const resolutionLocation = ctx.getUniformLocation(program, "u_resolution");
     const pixelRatioLocation = ctx.getUniformLocation(program, "u_pixel_ratio");
+    const noiseOffsetLocation = ctx.getUniformLocation(program, "u_noise_offset");
     const quietRectLocation = ctx.getUniformLocation(program, "u_quiet_rect");
     const quietMetaLocation = ctx.getUniformLocation(program, "u_quiet_meta");
 
@@ -170,6 +173,14 @@ export class ShaderAnimation implements BackgroundAnimation<WebGLRenderingContex
     ctx.useProgram(program);
     ctx.enableVertexAttribArray(positionLocation);
     ctx.vertexAttribPointer(positionLocation, 2, ctx.FLOAT, false, 0, 0);
+
+    if (noiseOffsetLocation) {
+      ctx.uniform2f(
+        noiseOffsetLocation,
+        (Math.random() * 2 - 1) * NOISE_OFFSET_RANGE,
+        (Math.random() * 2 - 1) * NOISE_OFFSET_RANGE
+      );
+    }
 
     return {
       program,

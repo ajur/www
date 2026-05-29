@@ -3,10 +3,12 @@ title: Landing on the page
 description: "Building the new landing page by reworking its animation, layout, and menu while keeping the feel of the old front page."
 created: 2026-03-27T14:03
 published: 2026-03-27
+kind: devlog
 tags:
   - site
-  - devlog
   - ai
+  - animation
+  - webgl
 ---
 # Landing page fun
 

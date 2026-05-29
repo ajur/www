@@ -10,7 +10,7 @@ links:
   - https://github.com/ajur/ssc
 tags:
   - gamedev
-  - Pixi
+  - pixi
 ---
 
 SpaceSimone was meant to kick off **Super Simple Clones** — a series of small games built with TypeScript and Pixi.js under one umbrella...

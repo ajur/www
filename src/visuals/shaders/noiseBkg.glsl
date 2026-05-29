@@ -5,6 +5,7 @@ precision mediump float;
 uniform vec2 u_resolution;
 uniform float u_time;
 uniform float u_pixel_ratio;
+uniform vec2 u_noise_offset;
 uniform vec4 u_quiet_rect;
 uniform vec2 u_quiet_meta;
 
@@ -38,14 +39,15 @@ vec3 noiseColor() {
   vec2 p = (gl_FragCoord.xy / u_resolution.y) * 2.0 - 1.0;
 
   vec3 xyz = vec3(p, 0.0);
+  vec2 noiseUv = xyz.xy + u_noise_offset;
 
   vec2 step = vec2(1.3, 1.7);
-  float n = noiseVal(xyz.xy);
-  n += 0.5 * noiseVal(xyz.xy * 2.0 - step);
-  n += 0.25 * noiseVal(xyz.xy * 4.0 - 2.0 * step);
-  n += 0.125 * noiseVal(xyz.xy * 8.0 - 3.0 * step);
-  // n += 0.0625 * noiseVal(xyz.xy * 16.0 - 4.0 * step);
-  // n += 0.03125 * noiseVal(xyz.xy * 32.0 - 5.0 * step);
+  float n = noiseVal(noiseUv);
+  n += 0.5 * noiseVal(noiseUv * 2.0 - step);
+  n += 0.25 * noiseVal(noiseUv * 4.0 - 2.0 * step);
+  n += 0.125 * noiseVal(noiseUv * 8.0 - 3.0 * step);
+  // n += 0.0625 * noiseVal(noiseUv * 16.0 - 4.0 * step);
+  // n += 0.03125 * noiseVal(noiseUv * 32.0 - 5.0 * step);
 
   float t = clamp(0.5 + 0.5 * n, 0.0, 1.0);
   float tUp = smoothstep(0.5, 1.0, t);

@@ -3,8 +3,9 @@ title: "Starting from structure, not content"
 description: "A short devlog about why I’m rebuilding my personal site and the constraints guiding the new homepage."
 created: 2026-03-21T00:03
 published: 2026-03-24
+imageCaption: Photo by Faruk Tokluoğlu from [Pexels](https://www.pexels.com/photo/stool-near-the-white-wall-with-picture-8123018/)
+kind: devlog
 tags:
-  - devlog
   - site
 ---
 # Starting from structure, not content
@@ -19,7 +20,7 @@ My own space (long after [MySpace](https://myspace.com/) has been forgotten) whe
 
 Truth be told, I already had an old webpage at the same address. But it felt more like one of those big development signs showing a home that hadn't been built yet - just a pretty picture and some contact information. It was _good enough_, so I left it there. The only thing missing was a big yellow "under construction" sign.
 
-![Old web page screenshot](./devlog-1-old-page.png)
+![Old web page screenshot](./devlog-1-old-page.webp)
 
 I've revisited it from time to time, dusting off cobwebs and adding another link to some new hobby project. Each time, I kept thinking more and more about how limited it was and how much it held me back from expanding.
 

@@ -10,7 +10,7 @@ links:
   - https://github.com/ajur/pixtris
 tags:
   - gamedev
-  - Pixi
+  - pixi
 ---
 
 Very simple Tetris clone built with Pixi.js. Originally created as a development task for a job interview. One of the first (if not *the* first) games I made with [Pixi.js](https://pixijs.com/).
