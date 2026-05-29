@@ -1,4 +1,9 @@
-import type { AnimationColorsMap, BackgroundAnimation, BackgroundAnimationLoopParams } from "./types";
+import type {
+  AnimationColorsMap,
+  BackgroundAnimation,
+  BackgroundAnimationLoopParams,
+  BackgroundQuietZone,
+} from "./types";
 import fragmentSource from "./shaders/noiseBkg.glsl";
 
 type ShaderState = {
@@ -8,6 +13,8 @@ type ShaderState = {
   timeLocation: WebGLUniformLocation | null;
   resolutionLocation: WebGLUniformLocation | null;
   pixelRatioLocation: WebGLUniformLocation | null;
+  quietRectLocation: WebGLUniformLocation | null;
+  quietMetaLocation: WebGLUniformLocation | null;
   bgLocation: WebGLUniformLocation | null;
   inkLocation: WebGLUniformLocation | null;
   acc1Location: WebGLUniformLocation | null;
@@ -68,6 +75,37 @@ export class ShaderAnimation implements BackgroundAnimation<WebGLRenderingContex
     if (acc2Location && acc2) this.ctx.uniform4f(acc2Location, acc2[0], acc2[1], acc2[2], acc2[3]);
   }
 
+  setQuietZone(quietZone: BackgroundQuietZone | null) {
+    if (!this.state) {
+      return;
+    }
+
+    const { program, quietRectLocation, quietMetaLocation } = this.state;
+    this.ctx.useProgram(program);
+
+    if (quietRectLocation) {
+      if (quietZone) {
+        this.ctx.uniform4f(
+          quietRectLocation,
+          quietZone.left,
+          quietZone.top,
+          quietZone.right,
+          quietZone.bottom
+        );
+      } else {
+        this.ctx.uniform4f(quietRectLocation, 0, 0, 0, 0);
+      }
+    }
+
+    if (quietMetaLocation) {
+      if (quietZone) {
+        this.ctx.uniform2f(quietMetaLocation, 1, quietZone.feather);
+      } else {
+        this.ctx.uniform2f(quietMetaLocation, 0, 0);
+      }
+    }
+  }
+
   destroy() {
     if (!this.state) {
       return;
@@ -121,6 +159,8 @@ export class ShaderAnimation implements BackgroundAnimation<WebGLRenderingContex
     const timeLocation = ctx.getUniformLocation(program, "u_time");
     const resolutionLocation = ctx.getUniformLocation(program, "u_resolution");
     const pixelRatioLocation = ctx.getUniformLocation(program, "u_pixel_ratio");
+    const quietRectLocation = ctx.getUniformLocation(program, "u_quiet_rect");
+    const quietMetaLocation = ctx.getUniformLocation(program, "u_quiet_meta");
 
     const bgLocation = ctx.getUniformLocation(program, "c_bg");
     const inkLocation = ctx.getUniformLocation(program, "c_ink");
@@ -138,6 +178,8 @@ export class ShaderAnimation implements BackgroundAnimation<WebGLRenderingContex
       timeLocation,
       resolutionLocation,
       pixelRatioLocation,
+      quietRectLocation,
+      quietMetaLocation,
       bgLocation,
       inkLocation,
       acc1Location,

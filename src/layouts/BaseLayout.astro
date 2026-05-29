@@ -6,7 +6,13 @@ import "~/styles/theme.css";
 import "~/styles/base.css";
 import "~/styles/utilities.css";
 
-const { title = "Astro" } = Astro.props;
+import BackgroundAnimator from "~/components/BackgroundAnimator.astro";
+
+const {
+  title = "Astro",
+  bkgMode = "full",
+  bkgQuietTarget = "main",
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -30,6 +36,11 @@ const { title = "Astro" } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    {
+      bkgMode !== "none" && (
+        <BackgroundAnimator mode={bkgMode} quietTarget={bkgQuietTarget} />
+      )
+    }
     <slot />
   </body>
 </html>

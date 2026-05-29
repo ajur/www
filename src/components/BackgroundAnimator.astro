@@ -1,13 +1,27 @@
 ---
+import type { BackgroundAnimatorMode } from "../visuals/types";
+
+const {
+  mode = "full",
+  quietTarget = "main",
+} = Astro.props as {
+  mode?: BackgroundAnimatorMode;
+  quietTarget?: string;
+};
 ---
 
-<background-animator aria-hidden="true">
+<background-animator
+  aria-hidden="true"
+  data-mode={mode}
+  data-quiet-target={quietTarget}
+>
   <div id="background-animator-container"></div>
 </background-animator>
 
 <script>
   import "../visuals/requestIdleCallbackShim.js";
   import { BackgroundAnimatorManager } from "../visuals/BackgroundAnimatorManager";
+  import type { BackgroundAnimatorMode } from "../visuals/types";
 
   class BackgroundAnimator extends HTMLElement {
 		manager: BackgroundAnimatorManager;
@@ -15,7 +29,10 @@
     constructor() {
       super();
       const container = this.querySelector("#background-animator-container")!;
-      this.manager = new BackgroundAnimatorManager(container);
+      this.manager = new BackgroundAnimatorManager(container, {
+        mode: (this.dataset.mode as BackgroundAnimatorMode | undefined) ?? "full",
+        quietTarget: this.dataset.quietTarget ?? "main",
+      });
     }
 
     disconnectedCallback() {

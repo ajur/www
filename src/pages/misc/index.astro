@@ -8,11 +8,11 @@ const otherPages = (await getCollection("misc")).sort(
 );
 
 ---
-<PageLayout title="Miscellaneous">
+<PageLayout title="Miscellaneous" bkgQuietTarget="#items-listing">
   <main class="the-center">
     <SubpageHeader title="Misc" description="A collection of things worth sharing." />
 
-    <ul>
+    <ul id="items-listing">
       <li>
         <a href="art/">
           <h2>Art</h2>

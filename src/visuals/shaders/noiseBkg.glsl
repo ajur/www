@@ -5,6 +5,8 @@ precision mediump float;
 uniform vec2 u_resolution;
 uniform float u_time;
 uniform float u_pixel_ratio;
+uniform vec4 u_quiet_rect;
+uniform vec2 u_quiet_meta;
 
 uniform vec4 c_bg;
 uniform vec4 c_ink;
@@ -14,6 +16,21 @@ uniform vec4 c_acc2;
 vec3 noise_period = vec3(0.0);
 float noise_alpha = 0.0;
 vec3 noise_gradient = vec3(0.0);
+
+float softBand(float startEdge, float endEdge, float feather, float coord) {
+  return smoothstep(startEdge - feather, startEdge, coord)
+    * (1.0 - smoothstep(endEdge, endEdge + feather, coord));
+}
+
+float quietZoneMask(vec2 uv) {
+  if (u_quiet_meta.x < 0.5) {
+    return 0.0;
+  }
+
+  float xMask = softBand(u_quiet_rect.x, u_quiet_rect.z, u_quiet_meta.y, uv.x);
+  float yMask = softBand(u_quiet_rect.y, u_quiet_rect.w, u_quiet_meta.y, uv.y);
+  return xMask * yMask;
+}
 
 float noiseVal(vec2 xy) { return 0.7 * psrdnoise(vec3(xy, 0.1 * u_time), noise_period, noise_alpha, noise_gradient); }
 
@@ -50,9 +67,15 @@ void main() {
   vec2 center = vec2((col + 0.5) * spacing + offset, (row + 0.5) * rowHeight);
   float distToCenter = length(pos - center);
   float isDot = 1.0 - smoothstep(dotRadius, dotRadius + 1.0, distToCenter);
+  vec2 uv = gl_FragCoord.xy / u_resolution;
+  vec2 quietUv = vec2(uv.x, 1.0 - uv.y);
+  float quietMask = quietZoneMask(quietUv);
+  float quietDotScale = mix(1.0, 0.28, quietMask);
+  float quietColorFade = 0.35 * quietMask;
 
   // noise color for dots background
-  vec3 color = (isDot > 0.0) ? noiseColor() : c_bg.rgb;
+  vec3 dotColor = mix(noiseColor(), c_bg.rgb, quietColorFade);
+  vec3 color = mix(c_bg.rgb, dotColor, isDot * quietDotScale);
 
   gl_FragColor = vec4(color, 1.0);
 }

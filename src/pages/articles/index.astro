@@ -11,11 +11,11 @@ const articles = (await getCollection("articles")).sort(
 
 ---
 
-<PageLayout title="Text">
+<PageLayout title="Text" bkgQuietTarget="#articles-listing">
   <main class="the-center">
     <SubpageHeader title="Text" description="Writing notes and longer essays." />
 
-    <ul>
+    <ul id="articles-listing">
       {articles.map((page) => (
         <li>
           <a href={`/articles/${page.id}/`}>

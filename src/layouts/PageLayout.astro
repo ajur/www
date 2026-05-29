@@ -11,19 +11,23 @@ import TopNavBar from "~/components/TopNavBar.astro";
 import MainMenu from "~/components/MainMenu.astro";
 import Logo from "~/components/Logo.astro";
 
-const { title = "Astro" } = Astro.props;
+const {
+  title = "Astro",
+  bkgMode = "quiet",
+  bkgQuietTarget = "article",
+} = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} bkgMode={bkgMode} bkgQuietTarget={bkgQuietTarget}>
   <Font cssVariable="--font-baskervville" />
   <Font cssVariable="--font-smooch-sans" />
   <TopNavBar />
   <slot />
   <Footer class="footer-main-menu">
-    <MainMenu aria-label="Footer menu" />
+    <MainMenu aria-label="Footer menu" class="bg-drop-shadow" />
   </Footer>
   <Footer class="copyright">
-    <div>
+    <div class="bg-drop-shadow">
       &copy; {new Date().getFullYear()} Adam Jurczyk.
       <br />
       Site content and artwork licensed under 

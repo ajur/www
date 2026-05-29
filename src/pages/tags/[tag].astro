@@ -20,14 +20,14 @@ const { articles, projects, art, misc } = {
 
 ---
 <PageLayout title={`Tag: ${tagName}`}>
-  <main class="the-center">
+  <main class="the-center bg-drop-shadow">
     <header>
       <h1><span>tag:</span>{tagName}</h1>
     </header>
 
     { articles.length > 0 && (
       <section>
-        <h2>text</h2>
+        <h2 >text</h2>
         <ul>
           {articles.map((article) => (
             <li>

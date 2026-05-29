@@ -9,11 +9,11 @@ const projects = (await getCollection("projects")).sort((a, b) => {
 });
 ---
 
-<PageLayout title="Code">
+<PageLayout title="Code" bkgQuietTarget="#projects-listing">
   <main class="padded the-center">
     <SubpageHeader title="Code" description="Coding endeavors and side projects." />
     
-    <div class="stack">
+    <div class="stack" id="projects-listing">
       {
         projects.map((project) => (
           <a class="card with-sidebar-right" href={`/projects/${project.id}/`}>

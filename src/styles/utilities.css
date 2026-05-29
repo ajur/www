@@ -62,3 +62,10 @@
 .width-measure {
   max-inline-size: var(--measure);
 }
+
+.bg-drop-shadow {
+  filter: drop-shadow(-0.1em -0.1em 0.3rem var(--color-bg))
+      drop-shadow(0.1em 0.1em 0.3rem var(--color-bg))
+      drop-shadow(0.1em -0.1em 0.3rem var(--color-bg))
+      drop-shadow(-0.1em 0.1em 0.3rem var(--color-bg));
+}
