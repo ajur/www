@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, fontProviders, envField } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import rehypeCallouts from 'rehype-callouts';
 
 import glsl from 'vite-plugin-glsl';
@@ -43,7 +44,9 @@ export default defineConfig({
   output: 'static',
 
   markdown: {
-    rehypePlugins: [[rehypeCallouts, calloutsOptions]],
+    processor: unified({
+      rehypePlugins: [[rehypeCallouts, calloutsOptions]],
+    }),
     shikiConfig: {
       themes: {
         light: 'gruvbox-light-hard',
