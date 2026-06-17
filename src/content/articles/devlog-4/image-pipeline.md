@@ -2,7 +2,7 @@
 title: "Processing gallery images"
 description: ""
 created: 2026-04-30T19:01
-published: 2026-04-30
+published: 2026-05-12
 kind: how-to
 tags:
   - site
