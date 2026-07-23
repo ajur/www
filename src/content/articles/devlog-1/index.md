@@ -77,4 +77,4 @@ And as a developer, I immediately started with the technical constraints:
 
 If maintenance or adding content is annoying, I won't do it.
 
-So I've set out to look for tools that would support this kind of workflow, but that's a topic for [another post](../devlog-2).
+So I've set out to look for tools that would support this kind of workflow, but that's a topic for [another post](/articles/devlog-2).

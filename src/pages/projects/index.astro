@@ -55,7 +55,7 @@ const projects = (await getCollection("projects")).sort((a, b) => {
   }
   .card:hover h2,
   .card:focus-visible h2 {
-    color: var(--color-accent);
+    color: var(--color-link);
   }
   .card .stack {
     --stack-space: 0;
@@ -70,7 +70,7 @@ const projects = (await getCollection("projects")).sort((a, b) => {
     font-size: var(--s0);
   }
   .status em {
-    color: var(--color-accent-muted);
+    color: var(--color-link-muted);
   }
   
   .thumbnail {

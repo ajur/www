@@ -1,6 +1,6 @@
 ---
-title: "Processing gallery images"
-description: ""
+title: "Image processing pipeline"
+description: "Building a manageable pipeline for processing, organizing, and hosting scanned artwork"
 created: 2026-04-30T19:01
 published: 2026-05-12
 kind: how-to
@@ -10,7 +10,7 @@ tags:
   - cloudflare
   - image-processing
 ---
-# Processing gallery images for hosting
+# Image processing pipeline
 
 As I've got hold of a better scanner recently, I've taken the opportunity to scan my old artwork at a higher resolution. So I've scanned all of it as 1200dpi TIFF images. And for 100+ images, usually around A5 size, that's _a lot_ of data.
 

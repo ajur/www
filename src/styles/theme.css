@@ -5,13 +5,14 @@
   --font-body: var(--font-baskervville);
   --font-mono: var(--font-anonymous-pro);
 
-  --color-bg: hsla(237, 34%, 12%, 1);
-  --color-ink: hsla(53, 100%, 96%, 1);
-  --color-ink-muted: hsla(212, 20%, 46%, 1);
-  --color-border: hsla(212, 20%, 46%, 1);
-  --color-accent: hsl(202, 100%, 50%);
-  --color-accent-muted: hsla(202, 100%, 33%, 1);
-  --color-accent-strong: hsla(346, 100%, 65%, 1);
+  --color-bg: #141529;
+  --color-ink: #fffdeb;
+  --color-ink-muted: #5e748d;
+  --color-link: #00a2ff;
+  --color-link-muted: #006ba8;
+  --color-link-strong: #ff4d76;
+  --color-accent: #CBA96B;
+  --color-accent-2: #2FAF9F;
   --color-inline-code-bg: #262335;
 
   --measure: 66ch;
@@ -21,21 +22,22 @@
   --spacing-ratio: 1.4;
 
   --border-radius: var(--s-5);
-
+  --color-border: var(--color-ink-muted);
+  
   --callout-border-width: var(--s-5);
   --callout-padding: var(--s-2);
 
-  --callout-note-color: var(--color-accent);
-  --callout-warning-color: var(--color-accent-strong);
-  --callout-tip-color: var(--color-accent-strong);
-  --callout-tldr-color: var(--color-accent-muted);
-  --callout-info-color: hsl(131, 100%, 37%);
-  --callout-todo-color: var(--color-accent-strong);
+  --callout-note-color: var(--color-link);
+  --callout-info-color: var(--color-accent);
+  --callout-tldr-color: var(--color-accent-2);
+  --callout-warning-color: var(--color-link-strong);
+  --callout-tip-color: var(--color-link-strong);
+  --callout-todo-color: var(--color-link-strong);
 }
 
 [data-theme="light"] {
   color-scheme: light;
-  --color-bg: hsla(53, 100%, 96%, 1);
-  --color-ink: hsla(237, 34%, 12%, 1);
+  --color-bg: #fffdeb;
+  --color-ink: #141529;
   --color-inline-code-bg: #f9f5d7;
 }

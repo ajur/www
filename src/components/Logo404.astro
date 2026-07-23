@@ -101,8 +101,8 @@
     /* --- 1: short chromatic shift (logo → 404 flash) --- */
     8% {
       transform: translate(-2px, 0);
-      filter: drop-shadow(-2px 0 0 var(--color-accent-strong))
-              drop-shadow(2px 0 0 var(--color-accent-muted));
+      filter: drop-shadow(-2px 0 0 var(--color-link-strong))
+              drop-shadow(2px 0 0 var(--color-link-muted));
     }
     10% {
       transform: none;
@@ -114,14 +114,14 @@
     /* --- 2: shifted + clipped burst (swap to 404) --- */
     30% {
       transform: translate(-3px, 1px) skewX(-2deg);
-      filter: drop-shadow(-2px 0 0 var(--color-accent-strong))
-              drop-shadow(2px 0 0 var(--color-accent-muted));
+      filter: drop-shadow(-2px 0 0 var(--color-link-strong))
+              drop-shadow(2px 0 0 var(--color-link-muted));
       clip-path: inset(15% 0 55% 0);
     }
     31% {
       transform: translate(2px, -1px) skewX(1deg);
-      filter: drop-shadow(2px 0 0 var(--color-accent-strong))
-              drop-shadow(-2px 0 0 var(--color-accent-muted));
+      filter: drop-shadow(2px 0 0 var(--color-link-strong))
+              drop-shadow(-2px 0 0 var(--color-link-muted));
       clip-path: inset(50% 0 15% 0);
     }
     33% {
@@ -135,20 +135,20 @@
     /* --- 3: big glitch → clip → disappear (404 shown) --- */
     58% {
       transform: translate(-4px, 0) skewX(-5deg);
-      filter: drop-shadow(-4px 0 0 var(--color-accent-strong))
-              drop-shadow(4px 0 0 var(--color-accent-muted));
+      filter: drop-shadow(-4px 0 0 var(--color-link-strong))
+              drop-shadow(4px 0 0 var(--color-link-muted));
     }
     59% {
       transform: translate(3px, -2px) skewX(6deg);
-      filter: drop-shadow(-5px 0 0 var(--color-accent-strong))
-              drop-shadow(5px 0 0 var(--color-accent-muted));
+      filter: drop-shadow(-5px 0 0 var(--color-link-strong))
+              drop-shadow(5px 0 0 var(--color-link-muted));
       clip-path: inset(10% 0 60% 0);
     }
     60% {
       transform: translate(-2px, 1px) skewX(-4deg);
       clip-path: inset(40% 0 20% 0);
-      filter: drop-shadow(-3px 0 0 var(--color-accent-strong))
-              drop-shadow(3px 0 0 var(--color-accent-muted));
+      filter: drop-shadow(-3px 0 0 var(--color-link-strong))
+              drop-shadow(3px 0 0 var(--color-link-muted));
     }
     61% {
       opacity: 0;
@@ -166,8 +166,8 @@
     69% {
       opacity: 1;
       transform: translate(1px, 0);
-      filter: drop-shadow(-2px 0 0 var(--color-accent-strong))
-              drop-shadow(2px 0 0 var(--color-accent-muted));
+      filter: drop-shadow(-2px 0 0 var(--color-link-strong))
+              drop-shadow(2px 0 0 var(--color-link-muted));
     }
     71% {
       opacity: 1;
@@ -214,8 +214,8 @@
   @media (prefers-reduced-motion: reduce) {
     .glitch-container {
       animation: none;
-      filter: drop-shadow(-2px 0 0 var(--color-accent-strong))
-              drop-shadow(2px 0 0 var(--color-accent-muted));
+      filter: drop-shadow(-2px 0 0 var(--color-link-strong))
+              drop-shadow(2px 0 0 var(--color-link-muted));
     }
     .glitch-svg,
     .glitch-text {

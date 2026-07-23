@@ -200,8 +200,8 @@ export class BackgroundAnimatorManager {
     this.animation?.setColors?.({
       bg: styles.getPropertyValue("--color-bg").trim(),
       ink: styles.getPropertyValue("--color-ink").trim(),
-      acc1: styles.getPropertyValue("--color-accent").trim(),
-      acc2: styles.getPropertyValue("--color-accent-strong").trim(),
+      acc1: styles.getPropertyValue("--color-link").trim(),
+      acc2: styles.getPropertyValue("--color-link-strong").trim(),
     });
   }
 }

@@ -12,7 +12,7 @@ tags:
 ---
 # From prompt to project
 
-[Last time](../devlog-1), I wrote about why I started building a new site, and that was my primary reason. But it wasn't the only reason I finally started it.
+[Last time](/articles/devlog-1), I wrote about why I started building a new site, and that was my primary reason. But it wasn't the only reason I finally started it.
 
 There was another factor behind me starting this redesign: generative AI. Yeah, the thing everyone has been talking about for the past few years already. Well, I have my own thoughts about it, but this isn't the time for that. In the context of this site, there were two AI-related aspects for me:
 
@@ -107,4 +107,4 @@ In the end, I've spent quite a lot of time researching and learning a modern app
 
 The single downside was that most generated code was very "reacty" and "tailwindy", so I had to step in a lot with handcrafted code to actually get it written the way I wanted.
 
-Nonetheless, this was a pretty good start. And as I had a pretty specific idea for the landing page, I went to [make that next](../devlog-3).
+Nonetheless, this was a pretty good start. And as I had a pretty specific idea for the landing page, I went to [make that next](/articles/devlog-3).

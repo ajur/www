@@ -12,7 +12,7 @@ tags:
 ---
 # Landing page fun
 
-After [creating the basic project structure](../devlog-2/), I moved straight to the landing page to get that initial "this is fun" boost.
+After [creating the basic project structure](/articles/devlog-2), I moved straight to the landing page to get that initial "this is fun" boost.
 
 The old page felt like mine: bare, minimal, and built around a single strong visual element. I wanted to preserve that feeling. And that was okay, because if I consider my old home page just a facade, then this whole new web page would be like building an actual home with rooms behind it.
 
@@ -51,7 +51,7 @@ The last one was `art`, which I couldn't compress into any 4-letter word that st
 
 Ouch! That was spot on, and it hit hard (well, that plus a few other points).
 
-Initially, I felt like ChatGPT was mocking me for not choosing any of the words it suggested, but after that one line, I understood the issue it had... or more like, the issue **I had**. The whole thing was pretty significant and insightful enough that it led to rethinking [why I'm doing this redesign](../devlog-1/).
+Initially, I felt like ChatGPT was mocking me for not choosing any of the words it suggested, but after that one line, I understood the issue it had... or more like, the issue **I had**. The whole thing was pretty significant and insightful enough that it led to rethinking [why I'm doing this redesign](/articles/devlog-1/).
 
 In the end, I had to do something with this menu entry, and I stayed with `misc`, putting the art gallery as its subpage. It's commonly used by programmers, vague enough to fit the uncertainty of that section, and practical enough to let me _move on_.
 
@@ -61,4 +61,4 @@ Here it was, the final result (in case future me decides to change it again):
 
 ![Home page screenshot](landing_page.webp)
 
-Now, with the main page in a satisfactory state, it was time to add actual [content pages](../devlog-4).
+Now, with the main page in a satisfactory state, it was time to add actual [content pages](/articles/devlog-4).

@@ -53,6 +53,14 @@ That allowed me to accentuate images that I was especially proud of by making su
 
 I also took this opportunity to scan whatever I had at higher resolution and [created a pipeline to turn those scans into proper assets for the page](./image-pipeline).
 
+> [!note]
+> Notably, the gallery was also the trigger to move hosting from GitHub Pages to [Cloudflare](https://www.cloudflare.com/).
+> There were just too many binary files to keep it all in git.
+>
+> So after I settled on [Cloudflare R2](https://www.cloudflare.com/products/r2/) for hosting assets, I decided to move to [Workers](https://www.cloudflare.com/products/workers/).
+>
+> An added benefit is that I now have the option to add some backend functionality if I want to... if.
+
 ## Tags
 
 Content started to fill up the page. Adding quite a lot of images and the first few articles made it feel less empty.
@@ -60,5 +68,3 @@ Content started to fill up the page. Adding quite a lot of images and the first 
 But there was still one issue with the gallery that I wanted to solve - searchability - or at least filtering content by tags. I felt like that might be especially useful in the context of showing only images with a common theme, like [Inktober](https://inktober.com/) entries.
 
 This led to a [tags](/tags/) listing, with pages for each tag gathering all content types that share the same tag. Nothing fancy, just a nice little addition.
-
-Notably, the gallery was also the trigger to [move hosting from GitHub Pages to Cloudflare](../devlog-5/).
