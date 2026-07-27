@@ -6,7 +6,7 @@ startDate: 2026-02-12
 image: ajur-pl-v2.png
 url: https://ajur.pl
 links:
-  - https://github.com/ajur/ajur.github.io/
+  - https://github.com/ajur/www/
 tags:
   - site
 ---

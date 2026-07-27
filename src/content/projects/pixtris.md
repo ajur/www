@@ -5,7 +5,7 @@ status: completed
 startDate: 2017-06-23
 lastUpdated: 2017-07-11
 image: pixtris.png
-url: https://ajur.pl/pixtris/dist/
+url: https://gh.ajur.pl/pixtris/dist/
 links:
   - https://github.com/ajur/pixtris
 tags:

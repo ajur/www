@@ -4,7 +4,7 @@ description: A second remake of Nums — a two-player strategy game on an irregu
 status: in development
 startDate: 2025-11-01
 image: nums-v2.png
-url: https://ajur.pl/vibed_nums/
+url: https://gh.ajur.pl/vibed_nums/
 links:
   - https://github.com/ajur/vibed_nums
 tags:

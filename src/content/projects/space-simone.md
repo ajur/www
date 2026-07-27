@@ -5,7 +5,7 @@ status: completed
 startDate: 2022-03-10
 lastUpdated: 2022-03-16
 image: space-simone.png
-url: https://ajur.pl/ssc/
+url: https://gh.ajur.pl/ssc/
 links:
   - https://github.com/ajur/ssc
 tags:

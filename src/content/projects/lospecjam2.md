@@ -5,7 +5,7 @@ status: completed
 startDate: 2024-05-31
 lastUpdated: 2024-05-31
 image: lospecjam2.png
-url: https://ajur.pl/lospecjam2/
+url: https://gh.ajur.pl/lospecjam2/
 links:
   - https://github.com/ajur/lospecjam2
   - https://ajur.itch.io/space-raid
