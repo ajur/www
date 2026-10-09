@@ -4,7 +4,7 @@
   font-family: var(--font-body, serif);
   font-weight: var(--font-body-normal, normal);
   background: var(--color-bg);
-  color: var(--color-ink);
+  color: var(--color-text);
 
   --s-6: calc(pow(var(--spacing-ratio), -6) * var(--s0));
   --s-5: calc(pow(var(--spacing-ratio), -5) * var(--s0));
@@ -34,7 +34,7 @@ canvas {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-link);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
 
@@ -60,7 +60,7 @@ p {
 }
 
 a {
-  color: var(--color-ink);
+  color: var(--color-text);
   text-decoration: underline;
   text-decoration-color: var(--color-link);
 }
@@ -71,10 +71,10 @@ a:focus-visible {
   text-decoration-color: var(--color-link);
 }
 a:visited {
-  color: var(--color-ink);
-  text-decoration-color: var(--color-link-muted);
+  color: var(--color-text);
+  text-decoration-color: var(--color-link-visited);
 }
 
 strong {
-  color: var(--color-accent, var(--color-link));
+  color: var(--color-emphasis);
 }

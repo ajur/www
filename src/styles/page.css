@@ -6,7 +6,8 @@ a[data-footnote-ref] {
 }
 
 mark {
-  background-color: var(--color-accent-2);
+  background-color: var(--color-highlight);
+  color: var(--color-text);
 }
 
 blockquote {
@@ -14,7 +15,7 @@ blockquote {
   padding-inline-start: var(--callout-padding);
   padding-inline-end: calc(var(--callout-padding) + var(--callout-border-width));
   margin-inline: 0;
-  color: var(--color-ink);
+  color: var(--color-text);
   font-style: italic;
 }
 
@@ -26,7 +27,7 @@ code {
 code:not(pre code) {
   padding: var(--s-5) var(--s-4);
   border-radius: var(--border-radius);
-  background-color: var(--color-inline-code-bg, var(--color-bg));
+  background-color: var(--color-surface);
 }
 
 .astro-code {
@@ -71,13 +72,13 @@ th:last-child, td:last-child {
 th {
   font-family: var(--font-display, sans-serif);
   font-weight: normal;
-  color: var(--color-accent-2)
+  color: var(--color-accent)
 }
 
 tr + tr {
   border-block-start: var(--border-width, 1px) solid var(--color-border);
 }
 thead tr {
-  border-block-end: var(--border-width, 1px) solid var(--color-border-strong, var(--color-accent-2));
+  border-block-end: var(--border-width, 1px) solid var(--color-accent);
 }
 

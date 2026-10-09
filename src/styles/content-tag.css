@@ -5,14 +5,14 @@
     border-radius: var(--border-radius);
     font-family: var(--font-display);
     text-decoration: none;
-    color: var(--color-link-muted);
-    background: color-mix(in srgb, var(--color-ink-muted) 12%, transparent);
+    color: var(--color-link-visited);
+    background: color-mix(in srgb, var(--color-text-muted) 12%, transparent);
     transition-property: color, background;
     transition-duration: 0.15s;
   }
   .content-tag::before {
     content: '#';
-    color: var(--color-ink-muted);
+    color: var(--color-text-muted);
   }
 
   .content-tag:hover,

@@ -54,16 +54,16 @@ const current = `/${firstSegment}/`;
     text-transform: lowercase;
     text-decoration: none;
     letter-spacing: 0.05em;
-    color: var(--color-ink);
+    color: var(--color-text);
   }
 
   a:hover,
   a:focus-visible {
-    color: var(--color-link-strong);
+    color: var(--color-accent);
   }
 
   .current a {
-    border-bottom: 0.1em solid var(--color-link-strong);
+    border-bottom: 0.1em solid var(--color-accent);
     /* little hack to make border bottom stick bit on the left - otherwise it looked bad */
     margin-inline-start: -0.1em;
     padding-inline-start: 0.1em;

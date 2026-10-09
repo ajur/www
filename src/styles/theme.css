@@ -5,15 +5,29 @@
   --font-body: var(--font-baskervville);
   --font-mono: var(--font-anonymous-pro);
 
-  --color-bg: #141529;
-  --color-ink: #fffdeb;
-  --color-ink-muted: #5e748d;
-  --color-link: #00a2ff;
-  --color-link-muted: #006ba8;
-  --color-link-strong: #ff4d76;
-  --color-accent: #CBA96B;
-  --color-accent-2: #2FAF9F;
-  --color-inline-code-bg: #262335;
+  --navy: #141529;
+  --navy-raised: #262335;
+  --cream: #fffdeb;
+  --cream-shade: #f9f5d7;
+  --slate: #5e748d;
+  --blue: #00a2ff;
+  --blue-soft: #6399be;
+  --blue-deep: #42789c;
+  --rose: #ff4d76;
+  --gold: #edb345;
+  --gold-deep: #cb8501;
+
+  --color-bg: var(--navy);
+  --color-surface: var(--navy-raised);
+  --color-text: var(--cream);
+  --color-text-muted: var(--slate);
+  --color-border: var(--slate);
+  --color-link: var(--blue);
+  --color-link-visited: var(--blue-soft);
+  --color-focus: var(--blue);
+  --color-accent: var(--rose);
+  --color-emphasis: var(--gold);
+  --color-highlight: color-mix(in srgb, var(--gold) 20%, transparent);
 
   --measure: 66ch;
 
@@ -22,22 +36,24 @@
   --spacing-ratio: 1.4;
 
   --border-radius: var(--s-5);
-  --color-border: var(--color-ink-muted);
-  
+
   --callout-border-width: var(--s-5);
   --callout-padding: var(--s-2);
 
   --callout-note-color: var(--color-link);
-  --callout-info-color: var(--color-accent);
-  --callout-tldr-color: var(--color-accent-2);
-  --callout-warning-color: var(--color-link-strong);
-  --callout-tip-color: var(--color-link-strong);
-  --callout-todo-color: var(--color-link-strong);
+  --callout-info-color: var(--color-emphasis);
+  --callout-tldr-color: var(--color-accent);
+  --callout-warning-color: var(--color-accent);
+  --callout-tip-color: var(--color-accent);
+  --callout-todo-color: var(--color-accent);
 }
 
 [data-theme="light"] {
   color-scheme: light;
-  --color-bg: #fffdeb;
-  --color-ink: #141529;
-  --color-inline-code-bg: #f9f5d7;
+  --color-bg: var(--cream);
+  --color-surface: var(--cream-shade);
+  --color-text: var(--navy);
+  --color-link-visited: var(--blue-deep);
+  --color-emphasis: var(--gold-deep);
+  --color-highlight: color-mix(in srgb, var(--gold) 25%, transparent);
 }

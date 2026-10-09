@@ -199,9 +199,9 @@ export class BackgroundAnimatorManager {
     const styles = getComputedStyle(document.documentElement);
     this.animation?.setColors?.({
       bg: styles.getPropertyValue("--color-bg").trim(),
-      ink: styles.getPropertyValue("--color-ink").trim(),
-      acc1: styles.getPropertyValue("--color-link").trim(),
-      acc2: styles.getPropertyValue("--color-link-strong").trim(),
+      ink: styles.getPropertyValue("--color-text").trim(),
+      acc1: styles.getPropertyValue("--blue").trim(),
+      acc2: styles.getPropertyValue("--rose").trim(),
     });
   }
 }

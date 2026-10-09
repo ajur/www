@@ -34,7 +34,7 @@ const { animate = false } = Astro.props;
     display: block;
     width: auto;
     height: 12rem;
-    color: var(--color-ink);
+    color: var(--color-text);
   }
 
   svg[data-animate] {
@@ -44,10 +44,10 @@ const { animate = false } = Astro.props;
   @keyframes logo-neon {
     0%,
     100% {
-      filter: drop-shadow(0 0 0 var(--color-ink));
+      filter: drop-shadow(0 0 0 var(--color-text));
     }
     50% {
-      filter: drop-shadow(0 0 0.2rem var(--color-ink));
+      filter: drop-shadow(0 0 0.2rem var(--color-text));
     }
   }
 
