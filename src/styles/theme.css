@@ -31,7 +31,7 @@
 
   --measure: 66ch;
 
-  --calculated-font-size: calc(1rem + 0.6vw);
+  --calculated-font-size: clamp(1.125rem, 1rem + 0.5vw, 1.75rem);
 
   --spacing-ratio: 1.4;
 

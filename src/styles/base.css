@@ -65,14 +65,15 @@ a {
   text-decoration-color: var(--color-link);
 }
 
+a:visited {
+  color: var(--color-text);
+  text-decoration-color: var(--color-link-visited);
+}
+
 a:hover,
 a:focus-visible {
   color: var(--color-link);
   text-decoration-color: var(--color-link);
-}
-a:visited {
-  color: var(--color-text);
-  text-decoration-color: var(--color-link-visited);
 }
 
 strong {

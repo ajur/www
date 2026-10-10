@@ -49,7 +49,7 @@ export default defineConfig({
     }),
     shikiConfig: {
       themes: {
-        light: 'gruvbox-light-hard',
+        light: 'snazzy-light',
         dark: 'synthwave-84',
       },
       defaultColor: 'light-dark()',

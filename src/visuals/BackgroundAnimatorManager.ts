@@ -17,6 +17,8 @@ export class BackgroundAnimatorManager {
   private quietZoneDirty = false;
   private quietTargetElement: Element | null = null;
   private quietTargetResizeObserver: ResizeObserver | null = null;
+  private reducedMotion: MediaQueryList | null = null;
+  private loop: FrameRequestCallback = () => {};
   readonly mode;
   readonly quietTarget;
 
@@ -47,6 +49,7 @@ export class BackgroundAnimatorManager {
       if (this.mode === "quiet") {
         this.markQuietZoneDirty();
       }
+      this.requestFrame();
     };
     window.addEventListener("resize", this.resizeHandler, { passive: true });
     window.addEventListener("themechanged", this.updateThemeColors, { passive: true });
@@ -68,8 +71,12 @@ export class BackgroundAnimatorManager {
       this.updateQuietZone();
     }
 
+    this.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    this.reducedMotion.addEventListener("change", this.requestFrame);
+
     let lastTime = performance.now();
-    const loop = (time: number) => {
+    this.loop = (time: number) => {
+      this.rafId = null;
       const dt = Math.max(0, (time - lastTime) / 1000);
       lastTime = time;
       if (!this.animation) {
@@ -84,10 +91,18 @@ export class BackgroundAnimatorManager {
         time: time / 1000,
         dt,
       });
-      this.rafId = window.requestAnimationFrame(loop);
+      if (!this.reducedMotion?.matches) {
+        this.requestFrame();
+      }
     };
-    this.rafId = window.requestAnimationFrame(loop);
+    this.requestFrame();
   }
+
+  private requestFrame = () => {
+    if (this.rafId === null) {
+      this.rafId = window.requestAnimationFrame((time) => this.loop(time));
+    }
+  };
 
   destroy() {
     if (this.rafId !== null) {
@@ -106,6 +121,8 @@ export class BackgroundAnimatorManager {
     this.visualViewport?.removeEventListener("scroll", this.scrollHandler);
     window.removeEventListener("mousemove", this.mouseMoveHandler);
     window.removeEventListener("themechanged", this.updateThemeColors);
+    this.reducedMotion?.removeEventListener("change", this.requestFrame);
+    this.reducedMotion = null;
     this.quietTargetResizeObserver?.disconnect();
 
     this.animation = null;
@@ -132,6 +149,7 @@ export class BackgroundAnimatorManager {
 
   private markQuietZoneDirty() {
     this.quietZoneDirty = true;
+    this.requestFrame();
   }
 
   private resolveQuietTarget() {
@@ -203,5 +221,6 @@ export class BackgroundAnimatorManager {
       acc1: styles.getPropertyValue("--blue").trim(),
       acc2: styles.getPropertyValue("--rose").trim(),
     });
+    this.requestFrame();
   }
 }

@@ -34,6 +34,7 @@ code:not(pre code) {
   padding: var(--s-5) var(--s-4);
   border-radius: var(--border-radius);
   overflow: auto;
+  background-color: var(--color-surface) !important;
 }
 
 article {
