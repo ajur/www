@@ -56,3 +56,6 @@ Icon?
 assets_raw/
 # symlink to the above, which is used in dev
 public/_art_bucket
+
+# Claude Code personal settings
+.claude/settings.local.json
