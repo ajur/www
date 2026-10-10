@@ -8,11 +8,14 @@ import "~/styles/utilities.css";
 
 import BackgroundAnimator from "~/components/BackgroundAnimator.astro";
 
+const siteName = "ajur.pl";
 const {
-  title = "Astro",
+  title,
+  description = "Personal site of Adam Jurczyk: writing, code, art and other things.",
   bkgMode = "full",
   bkgQuietTarget = "main",
 } = Astro.props;
+const canonical = Astro.url.pathname.startsWith("/404") ? null : new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en">
@@ -33,7 +36,9 @@ const {
       })();
     </script>
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title ? `${title} · ${siteName}` : siteName}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
   </head>
   <body>
     {

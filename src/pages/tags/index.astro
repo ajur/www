@@ -17,7 +17,7 @@ const tagsMap = await getTagsContent();
 const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
 
 ---
-<PageLayout title="Miscellaneous" bkgQuietTarget="#items-listing">
+<PageLayout title="Tags" description="Listing all available tags." bkgQuietTarget="#items-listing">
   <main id="content" class="the-center">
     <SubpageHeader title="Tags" description="Listing all available tags." />
 

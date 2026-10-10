@@ -16,7 +16,7 @@ const { project } = Astro.props;
 const { Content } = await render(project);
 ---
 
-<PageLayout title={project.data.title}>
+<PageLayout title={project.data.title} description={project.data.description}>
   <main id="content" class="the-center">
     <article class="flow">
       <header class="stack">

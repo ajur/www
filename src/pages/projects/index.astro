@@ -9,7 +9,7 @@ const projects = (await getCollection("projects")).sort((a, b) => {
 });
 ---
 
-<PageLayout title="Code" bkgQuietTarget="#projects-listing">
+<PageLayout title="Code" description="Coding endeavors and side projects." bkgQuietTarget="#projects-listing">
   <main id="content" class="padded the-center">
     <SubpageHeader title="Code" description="Coding endeavors and side projects." />
     
@@ -70,7 +70,7 @@ const projects = (await getCollection("projects")).sort((a, b) => {
     font-size: var(--s0);
   }
   .status em {
-    color: var(--color-link-visited);
+    color: var(--color-emphasis);
   }
   
   .thumbnail {

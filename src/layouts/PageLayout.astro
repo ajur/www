@@ -12,13 +12,14 @@ import MainMenu from "~/components/MainMenu.astro";
 import Logo from "~/components/Logo.astro";
 
 const {
-  title = "Astro",
+  title,
+  description,
   bkgMode = "quiet",
   bkgQuietTarget = "article",
 } = Astro.props;
 ---
 
-<BaseLayout title={title} bkgMode={bkgMode} bkgQuietTarget={bkgQuietTarget}>
+<BaseLayout title={title} description={description} bkgMode={bkgMode} bkgQuietTarget={bkgQuietTarget}>
   <Font cssVariable="--font-baskervville" />
   <Font cssVariable="--font-smooch-sans" />
   <a class="skip-link" href="#content">Skip to content</a>
