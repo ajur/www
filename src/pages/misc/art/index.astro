@@ -9,7 +9,7 @@ const entries = (await getCollection("art")).sort((a, b) =>
 ---
 
 <PageLayout title="Art" bkgMode="none">
-  <main>
+  <main id="content">
     <GalleryGrid entries={entries} />
   </main>
 </PageLayout>

@@ -21,6 +21,7 @@ const {
 <BaseLayout title={title} bkgMode={bkgMode} bkgQuietTarget={bkgQuietTarget}>
   <Font cssVariable="--font-baskervville" />
   <Font cssVariable="--font-smooch-sans" />
+  <a class="skip-link" href="#content">Skip to content</a>
   <TopNavBar />
   <slot />
   <Footer class="footer-main-menu">
@@ -37,6 +38,24 @@ const {
   </Footer>
 </BaseLayout>
 <style>
+  .skip-link {
+    position: fixed;
+    top: var(--s-2);
+    left: var(--s-2);
+    z-index: 100;
+    padding: var(--s-3) var(--s-1);
+    font-family: var(--font-mono);
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transform: translateY(calc(-100% - var(--s0)));
+  }
+  .skip-link:focus-visible {
+    transform: none;
+  }
+
   .footer-main-menu {
     font-size: var(--s-1);
     display: flex;

@@ -10,7 +10,7 @@ const projects = (await getCollection("projects")).sort((a, b) => {
 ---
 
 <PageLayout title="Code" bkgQuietTarget="#projects-listing">
-  <main class="padded the-center">
+  <main id="content" class="padded the-center">
     <SubpageHeader title="Code" description="Coding endeavors and side projects." />
     
     <div class="stack" id="projects-listing">
@@ -82,5 +82,6 @@ const projects = (await getCollection("projects")).sort((a, b) => {
     object-fit: cover;
     aspect-ratio: 3 / 2;
     max-width: 720px;
+    background-color: var(--color-surface);
   }
 </style>

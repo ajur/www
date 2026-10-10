@@ -71,6 +71,17 @@ const { placement = "below" } = Astro.props;
     all: unset;
     cursor: pointer;
     vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 2.5em;
+    block-size: 2.5em;
+    margin: -0.75em -0.4em -0.75em -0.75em;
+    line-height: 1;
+  }
+  theme-switcher button:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
   }
 
   @media (hover: hover) {
