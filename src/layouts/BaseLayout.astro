@@ -24,8 +24,8 @@ const {
     <Font cssVariable="--font-anonymous-pro" />
     <script type="module" is:inline>
       (() => {
-        let theme = localStorage.getItem("theme-preference") ?? "auto";
-        if (theme === "auto") {
+        let theme = localStorage.getItem("theme-preference");
+        if (theme !== "light" && theme !== "dark") {
           const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
           theme = darkQuery.matches ? "dark" : "light";
         }

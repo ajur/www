@@ -7,42 +7,57 @@ const { placement = "below" } = Astro.props;
 </theme-switcher>
 
 <script>
+  const storageKey = "theme-preference";
+  const icons: Record<string, string> = {
+    light: "☀︎",
+    dark: "☾",
+  };
+  const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  const systemTheme = () => (systemDark.matches ? "dark" : "light");
+  const currentTheme = () => document.documentElement.getAttribute("data-theme") ?? systemTheme();
+  const hasStoredTheme = () => ["light", "dark"].includes(localStorage.getItem(storageKey) ?? "");
+
+  function applyTheme(theme: string) {
+    document.documentElement.setAttribute("data-theme", theme);
+    window.dispatchEvent(new CustomEvent("themechanged", { detail: { theme } }));
+  }
+
+  function toggleTheme() {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    if (next === systemTheme()) {
+      localStorage.removeItem(storageKey);
+    } else {
+      localStorage.setItem(storageKey, next);
+    }
+    applyTheme(next);
+  }
+
+  systemDark.addEventListener("change", () => {
+    if (!hasStoredTheme()) {
+      applyTheme(systemTheme());
+    }
+  });
+
   class ThemeSwitcher extends HTMLElement {
-    #storageKey = "theme-preference";
-    #themes: Record<string, string> = {
-      light: "☀︎",
-      dark: "☾",
+    button = this.querySelector("button")!;
+
+    connectedCallback() {
+      this.update();
+      this.button.addEventListener("click", toggleTheme);
+      window.addEventListener("themechanged", this.update);
+    }
+
+    disconnectedCallback() {
+      this.button.removeEventListener("click", toggleTheme);
+      window.removeEventListener("themechanged", this.update);
+    }
+
+    update = () => {
+      const theme = currentTheme();
+      this.button.textContent = icons[theme] ?? "◐";
+      this.button.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
     };
-
-    button: HTMLButtonElement;
-    currentTheme: string;
-    
-    constructor() {
-      super();
-      this.button = this.querySelector("button")!;
-      this.currentTheme = document.documentElement.getAttribute("data-theme") ?? "dark";
-      this.updateButton();
-      this.button.addEventListener("click", () => this.toggleTheme());
-    }
-
-    updateButton() {
-      this.button.textContent = this.#themes[this.currentTheme] ?? "?";
-    }
-
-    toggleTheme() {
-      const themes = Object.keys(this.#themes);
-      const currentIndex = themes.indexOf(this.currentTheme);
-      const nextIndex = (currentIndex + 1) % themes.length;
-      this.setTheme(themes[nextIndex]!);
-    }
-
-    setTheme(theme: string) {
-      this.currentTheme = theme;
-      localStorage.setItem(this.#storageKey, theme);
-      this.updateButton();
-      document.documentElement.setAttribute("data-theme", theme);
-      window.dispatchEvent(new CustomEvent("themechanged", { detail: { theme } }));
-    }
   }
 
   customElements.define("theme-switcher", ThemeSwitcher);
