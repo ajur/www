@@ -5,6 +5,7 @@ import type {
   BackgroundQuietZone,
 } from "./types";
 import fragmentSource from "./shaders/noiseBkg.glsl";
+import { getBackgroundSession } from "./session";
 
 type ShaderState = {
   program: WebGLProgram;
@@ -175,11 +176,8 @@ export class ShaderAnimation implements BackgroundAnimation<WebGLRenderingContex
     ctx.vertexAttribPointer(positionLocation, 2, ctx.FLOAT, false, 0, 0);
 
     if (noiseOffsetLocation) {
-      ctx.uniform2f(
-        noiseOffsetLocation,
-        (Math.random() * 2 - 1) * NOISE_OFFSET_RANGE,
-        (Math.random() * 2 - 1) * NOISE_OFFSET_RANGE
-      );
+      const [x, y] = getBackgroundSession().seed;
+      ctx.uniform2f(noiseOffsetLocation, x * NOISE_OFFSET_RANGE, y * NOISE_OFFSET_RANGE);
     }
 
     return {

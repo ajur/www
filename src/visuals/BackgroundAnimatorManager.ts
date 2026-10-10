@@ -1,4 +1,5 @@
 import { ShaderAnimation } from "./ShaderAnimation";
+import { getBackgroundSession } from "./session";
 import type {
   BackgroundAnimation,
   BackgroundAnimatorOptions,
@@ -74,6 +75,7 @@ export class BackgroundAnimatorManager {
     this.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     this.reducedMotion.addEventListener("change", this.requestFrame);
 
+    const sessionStart = getBackgroundSession().start;
     let lastTime = performance.now();
     this.loop = (time: number) => {
       this.rafId = null;
@@ -88,7 +90,7 @@ export class BackgroundAnimatorManager {
       this.animation.loop({
         width: canvas.width,
         height: canvas.height,
-        time: time / 1000,
+        time: (performance.timeOrigin + time - sessionStart) / 1000,
         dt,
       });
       if (!this.reducedMotion?.matches) {
