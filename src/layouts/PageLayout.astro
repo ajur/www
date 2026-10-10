@@ -20,8 +20,10 @@ const {
 ---
 
 <BaseLayout title={title} description={description} bkgMode={bkgMode} bkgQuietTarget={bkgQuietTarget}>
-  <Font cssVariable="--font-baskervville" />
-  <Font cssVariable="--font-smooch-sans" />
+  <Fragment slot="head">
+    <Font cssVariable="--font-baskervville" preload={[{ weight: 400, style: "normal", subset: "latin" }]} />
+    <Font cssVariable="--font-smooch-sans" preload={[{ weight: 500, style: "normal", subset: "latin" }]} />
+  </Fragment>
   <a class="skip-link" href="#content">Skip to content</a>
   <TopNavBar />
   <slot />
@@ -32,8 +34,8 @@ const {
     <div class="bg-drop-shadow">
       &copy; {new Date().getFullYear()} Adam Jurczyk.
       <br />
-      Site content and artwork licensed under 
-      <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>.
+      Site content and artwork licensed under
+      &nbsp;<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>.
     </div>
     <Logo />
   </Footer>

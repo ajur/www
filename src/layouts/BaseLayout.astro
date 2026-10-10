@@ -24,7 +24,8 @@ const canonical = Astro.url.pathname.startsWith("/404") ? null : new URL(Astro.u
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <!-- <link rel="icon" href="/favicon.ico" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <Font cssVariable="--font-anonymous-pro" />
+    <Font cssVariable="--font-anonymous-pro" preload={[{ weight: 400, style: "normal", subset: "latin" }]} />
+    <slot name="head" />
     <script type="module" is:inline>
       (() => {
         let theme = localStorage.getItem("theme-preference");
