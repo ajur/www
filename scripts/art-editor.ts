@@ -3,7 +3,7 @@ import { createServer } from "node:http";
 import { resolve, join, extname } from "node:path";
 import { exec, execFile } from "node:child_process";
 
-import yaml from "js-yaml";
+import * as yaml from "js-yaml";
 
 // --- Paths ---
 
@@ -45,7 +45,7 @@ function saveEntries(entries: ArtEntry[]): void {
   const out = yaml.dump(entries, {
     lineWidth: -1,
     noRefs: true,
-    quotingType: '"',
+    quoteStyle: "double",
     forceQuotes: false,
   });
   writeFileSync(ART_YAML, out, "utf-8");

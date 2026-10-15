@@ -10,8 +10,11 @@
       width: 600
   thumbnailRatio: "3:4"
   tags:
-    - misc
     - "2000"
+    - ink
+    - creatures
+    - fantasy
+    - portrait
   created: "2000"
   published: "2026-04-03T17:57:38"
   description: One of my older works. It's a redrawing I did as a study back in high school. It was an illustration from either some magazine or an RPG rulebook.
@@ -28,8 +31,12 @@
       width: 600
   thumbnailRatio: "3:2"
   tags:
-    - misc
     - "2017"
+    - books
+    - icandraw50
+    - ink
+    - watercolor
+    - still-life
   created: "2017-02-18"
   published: "2026-04-03T17:57:38"
   description: |-
@@ -49,8 +56,10 @@
       width: 200
   thumbnailRatio: "1:1"
   tags:
-    - misc
     - "2017"
+    - watercolor
+    - landscape
+    - nature
   created: "2017-03-28"
   published: "2026-04-03T17:57:39"
   description: First full watercolor painting.
@@ -67,8 +76,12 @@
       width: 600
   thumbnailRatio: "3:4"
   tags:
-    - misc
+    - icandraw50
     - "2017"
+    - watercolor
+    - flowers
+    - plants
+    - still-life
   created: "2017-05-05"
   published: "2026-04-03T17:57:39"
   description: |-
@@ -88,8 +101,15 @@
       width: 400
   thumbnailRatio: "2:2"
   tags:
-    - misc
     - "2017"
+    - pencils
+    - guardians-of-the-galaxy
+    - marvel
+    - gift
+    - animals
+    - character
+    - portrait
+    - sci-fi
   created: "2017-05-20"
   published: "2026-04-03T17:57:41"
   description: |-
@@ -109,8 +129,14 @@
       width: 400
   thumbnailRatio: "2:3"
   tags:
-    - misc
     - "2017"
+    - books
+    - gift
+    - cartoon
+    - watercolor
+    - animals
+    - character
+    - ink
   created: "2017-06-09"
   published: "2026-04-03T17:57:42"
   description: |-
@@ -132,6 +158,10 @@
   tags:
     - notebook
     - "2017"
+    - ink
+    - flowers
+    - plants
+    - study
   created: "2017-09-09"
   published: "2026-04-03T17:57:42"
   description: Sketching in my in-laws' garden. Although I had to finish the plant at home, as it was pretty time-consuming.
@@ -150,6 +180,11 @@
   tags:
     - notebook
     - "2017"
+    - cartoon
+    - ink
+    - architecture
+    - creatures
+    - fantasy
   created: "2017-09-27"
   published: "2026-04-03T17:57:42"
   description: Redraw of an illustration from [Bestiariusz Słowiański](https://pl.wikipedia.org/wiki/Bestiariusz_s%C5%82owia%C5%84ski) - a great book with Slavic tales and monsters.
@@ -169,6 +204,8 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - brushpen
   created: "2017-10-12"
   published: "2026-04-03T17:57:43"
   description: And as I was probably having a hard time catching up with all the previous topics, I somehow tried to combine them - thus, "shattered swift". Based on great [street art](https://www.instagram.com/pejac_art/p/BMoTPoyljtC/) by [@pejac_art](https://www.instagram.com/pejac_art/)
@@ -188,6 +225,9 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - brushpen
+    - abstract
   created: "2017-10-13"
   published: "2026-04-03T17:57:43"
   description: It really is a teeming event on the 13th day ;)
@@ -207,6 +247,11 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - cartoon
+    - character
+    - fantasy
+    - people
   created: "2017-10-14"
   published: "2026-04-03T17:57:43"
   description: |-
@@ -230,6 +275,10 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - brushpen
+    - character
+    - people
   created: "2017-10-15"
   published: "2026-04-03T17:57:44"
   description: Yet another _mysterious_ case on the 15th day of _Inktober2017_
@@ -249,6 +298,8 @@
     - inktober
     - "2017"
     - inktober2017
+    - brushpen
+    - ink
   created: "2017-10-15"
   published: "2026-04-03T17:57:44"
   description: To catch up with previous topics - a fast and simple take on _underwater+poison_
@@ -266,6 +317,9 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - food
+    - still-life
   created: "2017-10-16"
   published: "2026-04-03T17:57:44"
   description: Fat it! It's Monday...
@@ -285,6 +339,9 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - brushpen
+    - people
   created: "2017-10-19"
   published: "2026-04-03T17:57:44"
   description: |-
@@ -306,6 +363,9 @@
     - inktober
     - "2017"
     - inktober2017
+    - brushpen
+    - architecture
+    - ink
   created: "2017-10-19"
   published: "2026-04-03T17:57:44"
   description: Call it professional bias, but when I hear _cloud_ I see this ;)
@@ -325,6 +385,10 @@
     - inktober
     - "2017"
     - inktober2017
+    - whiteink
+    - blackpaper
+    - space
+    - sci-fi
   created: "2017-10-20"
   published: "2026-04-03T17:57:46"
   description: Deep space station.
@@ -344,6 +408,9 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - cars
+    - vehicles
   created: "2017-10-21"
   published: "2026-04-03T17:57:46"
   description: and fast ;)
@@ -363,6 +430,11 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - landscape
+    - italy
+    - nature
+    - people
   created: "2017-10-23"
   published: "2026-04-03T17:57:46"
   description: |-
@@ -385,6 +457,10 @@
     - inktober
     - "2017"
     - inktober2017
+    - brushpen
+    - food
+    - ink
+    - still-life
   created: "2017-10-23"
   published: "2026-04-03T17:57:47"
   description: Attempt at negative space.
@@ -404,6 +480,9 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - markers
+    - still-life
   created: "2017-10-24"
   published: "2026-04-03T17:57:47"
   description: |-
@@ -426,6 +505,10 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - steampunk
+    - fantasy
+    - vehicles
   created: "2017-10-25"
   published: "2026-04-03T17:57:47"
   description: Is it an airship or still only a flying boat? I only know that I'm two days behind, but it won't stop me!
@@ -445,6 +528,8 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - animals
   created: "2017-10-26"
   published: "2026-04-03T17:57:48"
   description: It looks kinda scared... maybe because I'm holding a shovel :P
@@ -464,6 +549,10 @@
     - inktober
     - "2017"
     - inktober2017
+    - brushpen
+    - ink
+    - landscape
+    - people
   created: "2017-10-27"
   published: "2026-04-03T17:57:48"
   description: Yeah, I should use a better black marker.
@@ -483,6 +572,12 @@
     - inktober
     - "2017"
     - inktober2017
+    - whiteink
+    - blackpaper
+    - space
+    - ink
+    - people
+    - sci-fi
   created: "2017-10-29"
   published: "2026-04-03T17:57:50"
   description: Based on fantastic [vector art by Nathan Owens](https://www.instagram.com/zprep/p/2ANqfMRcwU/)
@@ -502,6 +597,9 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - nature
+    - plants
   created: "2017-10-30"
   published: "2026-04-03T17:57:50"
   description: |-
@@ -524,6 +622,11 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - lotr
+    - books
+    - character
+    - fantasy
   created: "2017-10-30"
   published: "2026-04-03T17:57:50"
   description: When Isildur found the [One Ring](https://en.wikipedia.org/wiki/One_Ring)
@@ -543,6 +646,10 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - cartoon
+    - creatures
+    - fantasy
   created: "2017-10-30"
   published: "2026-04-03T17:57:51"
   description: |-
@@ -564,6 +671,8 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - character
   created: "2017-10-31"
   published: "2026-04-03T17:57:51"
   description: |-
@@ -588,6 +697,10 @@
     - inktober
     - "2017"
     - inktober2017
+    - ink
+    - people
+    - character
+    - fantasy
   created: "2017-10-31"
   published: "2026-04-03T17:57:51"
   description: |-
@@ -608,6 +721,11 @@
   tags:
     - notebook
     - "2018"
+    - study
+    - landscape
+    - ink
+    - architecture
+    - nature
   created: "2018-11-15"
   published: "2026-04-03T17:57:52"
   description: Small-scale drawings made from random photos.
@@ -624,6 +742,9 @@
   tags:
     - notebook
     - "2018"
+    - ink
+    - people
+    - portrait
   created: "2018-11-16"
   published: "2026-04-03T17:57:52"
   description: Trying to convince myself to draw more faces. People are hard.
@@ -642,6 +763,9 @@
   tags:
     - notebook
     - "2019"
+    - doodle
+    - ink
+    - cartoon
   created: "2019-04-29"
   published: "2026-04-03T17:57:52"
   description: This was when I explored the idea of not-that-random doodling, by drawing random stuff but with cleaner lines and somehow joining it together.
@@ -660,6 +784,10 @@
   tags:
     - notebook
     - "2019"
+    - ink
+    - castle
+    - architecture
+    - landscape
   created: "2019-07-07"
   published: "2026-04-03T17:57:52"
   description: "[Dobczyce Castle](https://pl.wikipedia.org/wiki/Zamek_w_Dobczycach)"
@@ -678,6 +806,8 @@
   tags:
     - notebook
     - "2019"
+    - ink
+    - architecture
   created: "2019-07-15"
   published: "2026-04-03T17:57:52"
   description: We were on vacation in the mountains, and the building manager was making those birdhouses and other garden decorations from wood.
@@ -696,6 +826,9 @@
   tags:
     - notebook
     - "2019"
+    - acrylics
+    - nature
+    - plants
   created: "2019-08-04"
   published: "2026-04-03T17:57:53"
   description: Watercolors. Painted during a workshop at a family picnic with the kids.
@@ -715,6 +848,9 @@
     - inktober
     - "2020"
     - inktober2020
+    - ink
+    - people
+    - character
   created: "2020-10-02"
   published: "2026-04-03T17:57:54"
   description: |-
@@ -737,6 +873,9 @@
     - inktober
     - "2020"
     - inktober2020
+    - ink
+    - people
+    - sci-fi
   created: "2020-10-07"
   published: "2026-04-03T17:57:55"
   description: |-
@@ -756,8 +895,11 @@
       width: 200
   thumbnailRatio: "1:1"
   tags:
-    - misc
     - "2021"
+    - ink
+    - pencils
+    - animals
+    - nature
   created: "2021-05-26"
   published: "2026-04-03T17:57:55"
   description: Trying a _loose_ drawing style, with ink and pencils.
@@ -774,8 +916,10 @@
       width: 200
   thumbnailRatio: "1:1"
   tags:
-    - misc
     - "2021"
+    - ink
+    - pencils
+    - animals
   created: "2021-05-26"
   published: "2026-04-03T17:57:55"
   description: Inspired probably by some drawings I found on Pinterest.
@@ -795,6 +939,9 @@
     - inktober
     - "2022"
     - inktober2022
+    - ink
+    - creatures
+    - fantasy
   created: "2022-10-01"
   published: "2026-04-03T17:57:56"
   description: First day, I started ambitiously, and I'm quite happy with the result... it's just that I didn't want to add a darker background at first.
@@ -814,6 +961,9 @@
     - inktober
     - "2022"
     - inktober2022
+    - ink
+    - animals
+    - nature
   created: "2022-10-02"
   published: "2026-04-03T17:57:56"
   description: Just scurry away…
@@ -833,6 +983,9 @@
     - inktober
     - "2022"
     - inktober2022
+    - ink
+    - animals
+    - nature
   created: "2022-10-04"
   published: "2026-04-03T17:57:56"
   description: Covered in wings like some vampire
@@ -852,6 +1005,10 @@
     - inktober
     - "2022"
     - inktober2022
+    - ink
+    - comic
+    - cartoon
+    - food
   created: "2022-10-04"
   published: "2026-04-03T17:57:56"
   description: Sometimes you just need to go minimal to stay on pace. Besides, it's fun to do some cartoony stuff from time to time :)
@@ -871,6 +1028,9 @@
     - inktober
     - "2022"
     - inktober2022
+    - cartoon
+    - character
+    - ink
   created: "2022-10-06"
   published: "2026-04-03T17:57:57"
   description: |-
@@ -892,6 +1052,10 @@
   tags:
     - notebook
     - "2023"
+    - character
+    - markers
+    - portrait
+    - doodle
   created: "2023"
   published: "2026-04-03T17:57:57"
   description: Sometimes when I just randomly make marks on paper, I end up with something kinda interesting. And then I might even color it. Rarely.
@@ -911,6 +1075,9 @@
     - marchofrobots
     - "2018"
     - marchofrobots2018
+    - ink
+    - robots
+    - sci-fi
   created: "2018-03-02"
   published: "2026-04-03T21:00:28"
   description: |-
@@ -933,6 +1100,9 @@
     - marchofrobots
     - "2018"
     - marchofrobots2018
+    - ink
+    - landscape
+    - robots
   created: "2018-03-03"
   published: "2026-04-03T21:00:28"
   description: Trying to do some “drawing around” - hard stuff, better to get some masking fluid for this one.
@@ -952,6 +1122,10 @@
     - marchofrobots
     - "2018"
     - marchofrobots2018
+    - cartoon
+    - ink
+    - pencils
+    - robots
   created: "2018-03-06"
   published: "2026-04-03T21:00:28"
   description: _ThinkBot3000, able to conceive up to three ideas simultaneously, expressing progress and results through an advanced facial expression system_
@@ -971,6 +1145,9 @@
     - marchofrobots
     - "2018"
     - marchofrobots2018
+    - ink
+    - people
+    - sci-fi
   created: "2018-03-09"
   published: "2026-04-03T21:00:29"
   description: |-
@@ -993,6 +1170,9 @@
     - marchofrobots
     - "2018"
     - marchofrobots2018
+    - ink
+    - robots
+    - space
   created: "2018-03-14"
   published: "2026-04-03T21:00:29"
   description: Curiosity Mars rover selfie.
@@ -1012,6 +1192,9 @@
     - marchofrobots
     - "2018"
     - marchofrobots2018
+    - abstract
+    - robots
+    - watercolor
   created: "2018-03-15"
   published: "2026-04-03T21:00:29"
   description: |-
@@ -1033,6 +1216,9 @@
     - marchofrobots
     - "2018"
     - marchofrobots2018
+    - flowers
+    - pencils
+    - robots
   created: "2018-03-26"
   published: "2026-04-03T21:00:30"
   description: This aesthetic kinda suits me :)
@@ -1052,6 +1238,9 @@
     - marchofrobots
     - "2018"
     - marchofrobots2018
+    - nature
+    - pencils
+    - robots
   created: "2018-03-29"
   published: "2026-04-03T21:00:32"
   description: _Lumberjack robot_ with some play on perspective and the far plane. Bird is a bit rushed, but I'm happy with the overall result :)
@@ -1071,6 +1260,11 @@
     - marchofrobots
     - "2018"
     - marchofrobots2018
+    - ink
+    - landscape
+    - robots
+    - sci-fi
+    - space
   created: "2018-03-16"
   published: "2026-04-03T21:03:33"
   description: |-
@@ -1093,6 +1287,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - landscape
+    - nature
   created: "2021-10-01"
   published: "2026-04-07T15:54:05"
   description: |-
@@ -1115,6 +1312,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - character
+    - ink
+    - steampunk
   created: "2021-10-02"
   published: "2026-04-07T15:54:05"
   description: |-
@@ -1137,6 +1337,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - steampunk
+    - cartoon
   created: "2021-10-03"
   published: "2026-04-07T15:54:05"
   description: Working on yesterday's prompt, I thought about reversing the roles a bit. Just right for today's prompt :)
@@ -1156,6 +1359,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - people
+    - portrait
   created: "2021-10-04"
   published: "2026-04-07T15:54:06"
   description: Posting a bit late, but hey, who knew FB would be down for almost 6h :O
@@ -1175,6 +1381,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - brushpen
+    - ink
+    - nature
   created: "2021-10-05"
   published: "2026-04-07T15:54:06"
   description: The idea behind Inktober is to draw daily. Even when time is limited. Even something rough and hasty.
@@ -1194,6 +1403,10 @@
     - "2021"
     - inktober
     - inktober2021
+    - cartoon
+    - creatures
+    - ink
+    - plants
   created: "2021-10-07"
   published: "2026-04-07T15:54:06"
   description: |-
@@ -1216,6 +1429,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - fantasy
+    - ink
+    - landscape
   created: "2021-10-08"
   published: "2026-04-07T15:54:07"
   description: |-
@@ -1238,6 +1454,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - people
+    - portrait
   created: "2021-10-09"
   published: "2026-04-07T15:54:07"
   description: |-
@@ -1260,6 +1479,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - brushpen
+    - cars
+    - cartoon
   created: "2021-10-10"
   published: "2026-04-07T15:54:07"
   description: |-
@@ -1283,6 +1505,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - food
+    - ink
+    - still-life
   created: "2021-10-11"
   published: "2026-04-07T15:54:07"
   description: Whiskey sour
@@ -1302,6 +1527,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - cartoon
+    - character
+    - markers
   created: "2021-10-13"
   published: "2026-04-07T21:24:27"
   description: |-
@@ -1326,6 +1554,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - animals
+    - ink
+    - fantasy
   created: "2021-10-13"
   published: "2026-04-07T21:24:27"
   description: |-
@@ -1349,6 +1580,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - cartoon
+    - character
+    - markers
   created: "2021-10-14"
   published: "2026-04-07T21:24:27"
   description: |-
@@ -1372,6 +1606,10 @@
     - "2021"
     - inktober
     - inktober2021
+    - animals
+    - brushpen
+    - cartoon
+    - comic
   created: "2021-10-15"
   published: "2026-04-07T21:24:27"
   description: |-
@@ -1395,6 +1633,8 @@
     - "2021"
     - inktober
     - inktober2021
+    - brushpen
+    - landscape
   created: "2021-10-16"
   published: "2026-04-07T21:24:28"
   description: |-
@@ -1417,6 +1657,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - abstract
+    - ink
+    - space
   created: "2021-10-17"
   published: "2026-04-07T21:24:28"
   description: |-
@@ -1441,6 +1684,8 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - landscape
   created: "2021-10-19"
   published: "2026-04-07T21:24:28"
   description: Feeling moony today 😄
@@ -1460,6 +1705,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - animals
+    - creatures
+    - ink
   created: "2021-10-19"
   published: "2026-04-07T21:24:28"
   description: Oὐροβόρος
@@ -1479,6 +1727,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - nature
+    - plants
   created: "2021-10-21"
   published: "2026-04-07T21:24:28"
   description: Fern
@@ -1498,6 +1749,10 @@
     - "2021"
     - inktober
     - inktober2021
+    - animals
+    - markers
+    - whiteink
+    - ink
   created: "2021-10-21"
   published: "2026-04-07T21:24:29"
   description: Some fuzzy chick... or should it be fluffy? Those words are all blurred to me 😅
@@ -1517,6 +1772,10 @@
     - "2021"
     - inktober
     - inktober2021
+    - fantasy
+    - lotr
+    - markers
+    - whiteink
   created: "2021-10-22"
   published: "2026-04-07T21:24:29"
   description: |-
@@ -1539,6 +1798,7 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
   created: "2021-10-23"
   published: "2026-04-07T21:24:29"
   description: |-
@@ -1561,6 +1821,10 @@
     - "2021"
     - inktober
     - inktober2021
+    - creatures
+    - ink
+    - robots
+    - sci-fi
   created: "2021-10-26"
   published: "2026-04-07T21:24:29"
   description: |-
@@ -1584,6 +1848,8 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - still-life
   created: "2021-10-26"
   published: "2026-04-07T21:24:30"
   description: |-
@@ -1619,6 +1885,8 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - people
   created: "2021-10-27"
   published: "2026-04-07T21:24:30"
   description: |-
@@ -1641,6 +1909,8 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - still-life
   created: "2021-10-28"
   published: "2026-04-07T21:24:30"
   description: Couldn't make a spark, my flint is just not good enough.
@@ -1660,6 +1930,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - food
+    - ink
+    - still-life
   created: "2021-10-29"
   published: "2026-04-07T21:24:30"
   description: Crème brûlée
@@ -1679,6 +1952,8 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - sci-fi
   created: "2021-10-29"
   published: "2026-04-07T21:24:31"
   description: Frame from [Legendy Polskie - Twardowsky](https://youtu.be/hRdYz8cnOW4) - one of the shorts taking old Polish legends and putting them in a modern sci-fi setting.
@@ -1698,6 +1973,10 @@
     - "2021"
     - inktober
     - inktober2021
+    - animals
+    - brushpen
+    - creatures
+    - fantasy
   created: "2021-10-30"
   published: "2026-04-07T21:24:31"
   description: This snail went for a rustic style.
@@ -1717,6 +1996,9 @@
     - "2021"
     - inktober
     - inktober2021
+    - ink
+    - landscape
+    - people
   created: "2021-11-01"
   published: "2026-04-07T21:24:31"
   description: |-
@@ -1737,7 +2019,9 @@
   thumbnailRatio: "1:1"
   tags:
     - "2021"
-    - misc
+    - abstract
+    - markers
+    - people
   created: "2021-11-10"
   published: "2026-04-07T21:24:31"
   description: |-
@@ -1760,6 +2044,9 @@
     - "2018"
     - inktober
     - inktober2018
+    - blackpaper
+    - lettering
+    - whiteink
   created: "2018-11-01"
   published: "2026-04-07T23:14:01"
   description: |-
@@ -1781,6 +2068,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-01"
   published: "2026-04-07T23:14:02"
   description: |-
@@ -1804,6 +2093,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-02"
   published: "2026-04-07T23:14:03"
   description: |-
@@ -1826,6 +2117,9 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - cartoon
+    - ink
   created: "2018-10-03"
   published: "2026-04-07T23:14:03"
   description: |-
@@ -1848,6 +2142,9 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - blackpaper
+    - whiteink
   created: "2018-10-04"
   published: "2026-04-07T23:14:04"
   description: |-
@@ -1870,6 +2167,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-06"
   published: "2026-04-07T23:14:04"
   description: |-
@@ -1892,6 +2191,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-07"
   published: "2026-04-07T23:14:05"
   description: |-
@@ -1914,6 +2215,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-07"
   published: "2026-04-07T23:14:05"
   description: |-
@@ -1936,6 +2239,10 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
+    - markers
+    - sea-life
   created: "2018-10-08"
   published: "2026-04-07T23:14:06"
   description: |-
@@ -1958,6 +2265,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-09"
   published: "2026-04-07T23:14:06"
   description: |-
@@ -1982,6 +2291,9 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
+    - sea-life
   created: "2018-10-11"
   published: "2026-04-07T23:14:07"
   description: |-
@@ -2004,6 +2316,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-12"
   published: "2026-04-07T23:14:07"
   description: |-
@@ -2028,6 +2342,9 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
+    - sea-life
   created: "2018-10-12"
   published: "2026-04-07T23:14:08"
   description: Humpback Whale
@@ -2047,6 +2364,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-14"
   published: "2026-04-07T23:14:09"
   description: |-
@@ -2069,6 +2388,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-14"
   published: "2026-04-07T23:14:10"
   description: |-
@@ -2091,6 +2412,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-15"
   published: "2026-04-07T23:14:10"
   description: |-
@@ -2113,6 +2436,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-16"
   published: "2026-04-07T23:14:11"
   description: |-
@@ -2135,6 +2460,9 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
+    - sea-life
   created: "2018-10-16"
   published: "2026-04-07T23:14:11"
   description: |-
@@ -2157,6 +2485,9 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
+    - sea-life
   created: "2018-10-18"
   published: "2026-04-07T23:14:12"
   description: |-
@@ -2179,6 +2510,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-20"
   published: "2026-04-07T23:14:12"
   description: |-
@@ -2201,6 +2534,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-20"
   published: "2026-04-07T23:14:13"
   description: |-
@@ -2223,6 +2558,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-21"
   published: "2026-04-07T23:14:13"
   description: Rat
@@ -2242,6 +2579,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-22"
   published: "2026-04-07T23:14:14"
   description: |-
@@ -2264,6 +2603,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-24"
   published: "2026-04-07T23:14:14"
   description: |-
@@ -2286,6 +2627,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-24"
   published: "2026-04-07T23:14:15"
   description: |-
@@ -2308,6 +2651,9 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
+    - sea-life
   created: "2018-10-25"
   published: "2026-04-07T23:14:15"
   description: Stingray
@@ -2327,6 +2673,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-26"
   published: "2026-04-07T23:14:16"
   description: |-
@@ -2349,6 +2697,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-28"
   published: "2026-04-07T23:14:16"
   description: |-
@@ -2373,6 +2723,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-29"
   published: "2026-04-07T23:14:17"
   description: |-
@@ -2397,6 +2749,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-10-30"
   published: "2026-04-07T23:14:17"
   description: |-
@@ -2419,6 +2773,10 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - blackpaper
+    - sea-life
+    - whiteink
   created: "2018-10-31"
   published: "2026-04-07T23:14:18"
   description: |-
@@ -2441,6 +2799,8 @@
     - "2018"
     - inktober
     - inktober2018
+    - animals
+    - ink
   created: "2018-11-01"
   published: "2026-04-07T23:14:19"
   description: |-
@@ -2460,6 +2820,9 @@
   tags:
     - "2018"
     - zentangle
+    - abstract
+    - ink
+    - pattern
   created: "2018-08-15"
   published: "2026-04-08T21:29:25"
   description: |-
@@ -2479,6 +2842,9 @@
   tags:
     - "2018"
     - zentangle
+    - abstract
+    - ink
+    - pattern
   created: "2018-08-16"
   published: "2026-04-08T21:29:25"
   description: Mistakes happen, just embrace it and go on.
@@ -2497,6 +2863,9 @@
   tags:
     - "2018"
     - zentangle
+    - ink
+    - pattern
+    - abstract
   created: "2018-08-21"
   published: "2026-04-08T21:29:25"
   description: Coming up with new patterns is inspiring!
@@ -2513,6 +2882,9 @@
   tags:
     - "2018"
     - zentangle
+    - ink
+    - pattern
+    - abstract
   created: "2018-08-22"
   published: "2026-04-08T21:29:26"
   description: |
@@ -2533,6 +2905,9 @@
   tags:
     - "2018"
     - zentangle
+    - ink
+    - pattern
+    - abstract
   created: "2018-08-24"
   published: "2026-04-08T21:29:26"
   description: I think all patterns are official, but I only remember "zingle".
@@ -2551,6 +2926,9 @@
   tags:
     - "2018"
     - zentangle
+    - ink
+    - pattern
+    - abstract
   created: "2018-08-25"
   published: "2026-04-08T21:29:26"
   description: |
@@ -2570,6 +2948,9 @@
   tags:
     - "2018"
     - zentangle
+    - ink
+    - landscape
+    - pattern
   created: "2018-08-26"
   published: "2026-04-08T21:29:26"
   description: I'm not even sure this is still a "tangle" ^^
@@ -2587,7 +2968,9 @@
   thumbnailRatio: "1:1"
   tags:
     - "2020"
-    - misc
+    - doodle
+    - ink
+    - landscape
   created: "2020-10-08"
   published: "2026-04-08T21:29:26"
   description: When I have no idea what to draw, I tend to draw random curvy lines. _Sometimes_ I end up with _something_.
@@ -2605,7 +2988,9 @@
   thumbnailRatio: "1:1"
   tags:
     - "2021"
-    - misc
+    - ink
+    - lettering
+    - pattern
   created: "2021-03-16"
   published: "2026-04-08T21:29:26"
   description: I've created it for a particular reason when I was working at [Allegro](https://www.allegro.pl/).
@@ -2624,6 +3009,9 @@
   tags:
     - "2021"
     - zentangle
+    - ink
+    - pattern
+    - plants
   created: "2021-04-15"
   published: "2026-04-08T21:29:26"
   description: I believed it was the tenth pattern, and I wanted to be clever about the title.
@@ -2641,7 +3029,10 @@
   thumbnailRatio: "1:1"
   tags:
     - "2021"
-    - misc
+    - ink
+    - nature
+    - still-life
+    - doodle
   created: "2021-04-26"
   published: "2026-04-08T21:29:26"
   description: Because my wife loves coffee.
@@ -2661,6 +3052,8 @@
     - "2017"
     - notebook
     - icandraw50
+    - ink
+    - still-life
   created: "2017-02-16"
   published: "2026-04-10T12:54:49"
   description: Made with the I Can Draw 50 challenge in mind.
@@ -2680,6 +3073,10 @@
     - "2017"
     - notebook
     - icandraw50
+    - brushpen
+    - flowers
+    - landscape
+    - markers
   created: "2017-03-28"
   published: "2026-04-10T12:54:50"
   description: |-
@@ -2699,7 +3096,8 @@
   thumbnailRatio: "1:1"
   tags:
     - "2017"
-    - misc
+    - animals
+    - study
   created: "2017-12-07"
   published: "2026-04-10T12:54:50"
   description: |-
@@ -2720,7 +3118,9 @@
   thumbnailRatio: "1:1"
   tags:
     - "2019"
-    - misc
+    - markers
+    - still-life
+    - watercolor
   created: "2019-07-02"
   published: "2026-04-10T12:54:50"
   description: Simple first drawing, done with newly arrived art supplies from [Jazza's](https://www.youtube.com/@Jazza) Jazzy Art Box
@@ -2736,7 +3136,11 @@
   thumbnailRatio: "1:1"
   tags:
     - "2019"
-    - misc
+    - landscape
+    - markers
+    - pencils
+    - plants
+    - doodle
   created: "2019-07-03"
   published: "2026-04-10T12:54:50"
   description: Another small test drawing with pencils from [Jazza's](https://www.youtube.com/@Jazza) art box.
@@ -2754,7 +3158,11 @@
   thumbnailRatio: "2:2"
   tags:
     - "2025"
-    - misc
+    - animals
+    - doodle
+    - ink
+    - landscape
+    - study
   created: "2025"
   published: "2026-04-10T12:54:51"
   description: I've drawn this throughout 2025, with a whole bunch of artists and styles taken as inspiration.
@@ -2773,6 +3181,9 @@
   tags:
     - "2017"
     - notebook
+    - architecture
+    - ink
+    - landscape
   created: "2017-02-19"
   published: "2026-04-22T10:22:29"
   description: Quick sketch of _Agios Ioannis sto Kastri_, after watching [Mamma Mia](https://www.imdb.com/title/tt0795421/).
@@ -2792,6 +3203,8 @@
     - "2017"
     - notebook
     - icandraw50
+    - architecture
+    - ink
   created: "2017-03-04"
   published: "2026-04-22T10:22:29"
   description: |-
@@ -2815,6 +3228,9 @@
     - "2017"
     - notebook
     - icandraw50
+    - ink
+    - robots
+    - sci-fi
   created: "2017-03-17"
   published: "2026-04-22T10:22:30"
   description: |-
@@ -2837,6 +3253,9 @@
   tags:
     - "2017"
     - notebook
+    - fantasy
+    - ink
+    - landscape
   created: "2017-09-17"
   published: "2026-04-22T10:22:31"
   description: Some mountain drawing, probably a redraw of an image found somewhere while browsing Pinterest.
@@ -2855,6 +3274,10 @@
   tags:
     - "2017"
     - notebook
+    - animals
+    - doodle
+    - ink
+    - landscape
   created: "2017-09-20"
   published: "2026-04-22T10:22:31"
   description: Dunno where I found those, either on Pinterest or Instagram, but at the time I really liked this simplistic style.
@@ -2873,6 +3296,9 @@
   tags:
     - "2018"
     - notebook
+    - pencils
+    - people
+    - study
   created: "2018-06-03"
   published: "2026-04-22T10:22:31"
   description: Sketched from photos - I was supposed to ink it, but I haven't ^^
@@ -2891,6 +3317,10 @@
   tags:
     - "2018"
     - notebook
+    - ink
+    - people
+    - study
+    - ink
   created: "2018-06-03"
   published: "2026-04-22T10:22:31"
   description: Drawn from an awesome photo my wife took while we were watching airplanes landing.
@@ -2908,6 +3338,11 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - sci-fi
+    - space
+    - watercolor
+    - books
   created: "2019-10-01"
   published: "2026-04-22T10:22:31"
   description: |-
@@ -2928,6 +3363,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - people
+    - watercolor
   created: "2019-10-02"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -2948,6 +3386,11 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - landscape
+    - watercolor
+    - sci-fi
+    - books
   created: "2019-10-03"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -2968,6 +3411,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - pencils
+    - watercolor
   created: "2019-10-04"
   published: "2026-04-22T10:22:32"
   description: It's a nose... and icicles... just so you know :D
@@ -2985,6 +3431,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - cartoon
+    - character
+    - ink
   created: "2019-10-05"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3007,6 +3456,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - animals
+    - ink
+    - portrait
   created: "2019-10-06"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3027,6 +3479,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - books
+    - ink
+    - watercolor
   created: "2019-10-07"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3047,6 +3502,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - character
+    - fantasy
+    - ink
+    - watercolor
   created: "2019-10-08"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3067,6 +3526,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - landscape
+    - nature
+    - pencils
   created: "2019-10-09"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3087,6 +3550,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - landscape
+    - nature
+    - pencils
   created: "2019-10-09"
   published: "2026-04-22T10:22:32"
   description: I've picked one color, but I'm not sure if it was the right one... a third attempt would most probably be yet another thing.
@@ -3104,6 +3571,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - pattern
+    - zentangle
   created: "2019-10-10"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3124,6 +3594,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - cartoon
+    - character
+    - ink
   created: "2019-10-11"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3143,6 +3616,11 @@
     - "2019"
     - inktober
     - inktober2019
+    - animals
+    - comic
+    - fantasy
+    - ink
+    - pencils
   created: "2019-10-12"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3164,6 +3642,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - comic
+    - fantasy
+    - ink
+    - pencils
   created: "2019-10-13"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3185,6 +3667,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - nature
+    - plants
+    - pencils
   created: "2019-10-14"
   published: "2026-04-22T10:22:32"
   description: There is some epic castle in this pic, it's just a bit overgrown, so you have to take my word for it :D
@@ -3202,6 +3688,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - fantasy
+    - ink
+    - watercolor
   created: "2019-10-15"
   published: "2026-04-22T10:22:32"
   description: Everyone knows this one, right?
@@ -3219,6 +3708,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - fantasy
+    - ink
+    - watercolor
   created: "2019-10-15"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3239,6 +3731,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - landscape
+    - vehicles
+    - watercolor
   created: "2019-10-16"
   published: "2026-04-22T10:22:32"
   description: |-
@@ -3259,6 +3755,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - flowers
+    - ink
+    - pattern
+    - watercolor
   created: "2019-10-17"
   published: "2026-04-22T10:22:32"
   description: Kinda "ornamenty", no?
@@ -3276,6 +3776,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - character
+    - ink
+    - watercolor
   created: "2019-10-18"
   published: "2026-04-22T10:22:33"
   description: |-
@@ -3296,6 +3799,8 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - pencils
   created: "2019-10-19"
   published: "2026-04-22T10:22:33"
   description: |-
@@ -3316,6 +3821,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - space
+    - watercolor
   created: "2019-10-20"
   published: "2026-04-22T10:22:33"
   description: "[Curiosity Rover](https://en.wikipedia.org/wiki/Curiosity_rover) wheel with [JPL in Morse code](https://www.arrl.org/news/new-mars-rover-to-feature-morse-code)"
@@ -3333,6 +3841,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - still-life
+    - watercolor
   created: "2019-10-21"
   published: "2026-04-22T10:22:33"
   description: Treasure for the kid. And for parents tired of the crying. But for sure, the biggest treasure is the one crying.
@@ -3350,6 +3861,7 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
   created: "2019-10-22"
   published: "2026-04-22T10:22:33"
   description: |-
@@ -3370,6 +3882,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - architecture
+    - ink
+    - watercolor
   created: "2019-10-23"
   published: "2026-04-22T10:22:33"
   description: "[Stonehenge](https://en.wikipedia.org/wiki/Stonehenge)"
@@ -3389,6 +3904,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - people
+    - portrait
+    - pencils
   created: "2019-10-24"
   published: "2026-04-22T10:22:33"
   description: |-
@@ -3409,6 +3928,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - food
+    - ink
+    - still-life
+    - watercolor
   created: "2019-10-25"
   published: "2026-04-22T10:22:33"
   description: There was something really tasty on this plate, but I couldn't capture it - it was eaten too fast!
@@ -3428,6 +3951,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - creatures
+    - fantasy
+    - ink
+    - watercolor
   created: "2019-10-26"
   published: "2026-04-22T10:22:33"
   description: Cover art from Iron Maiden album [Fear of the Dark](https://www.ironmaiden.com/studio-album/fear-of-the-dark/)
@@ -3447,6 +3974,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - people
+    - portrait
   created: "2019-10-27"
   published: "2026-04-22T10:22:33"
   description: |-
@@ -3467,6 +3997,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - architecture
+    - ink
+    - watercolor
   created: "2019-10-28"
   published: "2026-04-22T10:22:33"
   description: |-
@@ -3487,6 +4020,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - still-life
+    - watercolor
   created: "2019-10-29"
   published: "2026-04-22T10:22:33"
   description: |-
@@ -3507,6 +4043,8 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - watercolor
   created: "2019-10-30"
   published: "2026-04-22T10:22:33"
   description: Not much of a catch...
@@ -3524,6 +4062,9 @@
     - "2019"
     - inktober
     - inktober2019
+    - ink
+    - landscape
+    - watercolor
   created: "2019-10-30"
   published: "2026-04-22T10:22:33"
   description: Hitchhiking may be tough, especially when you're trying to catch a ride in the middle of the desert.
@@ -3541,6 +4082,10 @@
     - "2019"
     - inktober
     - inktober2019
+    - food
+    - ink
+    - still-life
+    - watercolor
   created: "2019-10-31"
   published: "2026-04-22T10:22:34"
   description: |-

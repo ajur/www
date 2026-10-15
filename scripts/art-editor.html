@@ -248,6 +248,39 @@
     outline: none;
     border-color: var(--accent);
   }
+  .tag-field {
+    flex: 1;
+    display: flex;
+    position: relative;
+  }
+  .tag-suggest {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 4px;
+    list-style: none;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    max-height: 240px;
+    overflow-y: auto;
+    z-index: 10;
+  }
+  .tag-suggest li {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 4px 10px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .tag-suggest li.active { background: var(--bg-card); }
+  .tag-suggest .tag-count {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
   .form-row .readonly {
     color: var(--text-muted);
     padding-top: 5px;
@@ -513,7 +546,7 @@
         '<div class="form-row"><label>Created</label><span class="readonly">' + escapeHtml(entry.created) + '</span></div>' +
         '<div class="form-row"><label>Title</label><input type="text" id="f-title" value="' + escapeAttr(entry.title) + '"></div>' +
         '<div class="form-row"><label>Description</label><textarea id="f-desc" rows="6">' + escapeHtml(entry.description || "") + '</textarea></div>' +
-        '<div class="form-row"><label>Tags</label><input type="text" id="f-tags" value="' + escapeAttr(entry.tags.join(", ")) + '"></div>' +
+        '<div class="form-row"><label>Tags</label><div class="tag-field"><input type="text" id="f-tags" autocomplete="off" value="' + escapeAttr(entry.tags.join(", ")) + '"></div></div>' +
         '<div class="form-actions">' +
           '<button class="btn-save" id="btn-save">Save (Ctrl+S)</button>' +
           '<span class="save-status" id="save-status"></span>' +
@@ -535,6 +568,106 @@
     document.getElementById("f-title").addEventListener("input", markDirty);
     document.getElementById("f-desc").addEventListener("input", markDirty);
     document.getElementById("f-tags").addEventListener("input", markDirty);
+    setupTagAutocomplete(document.getElementById("f-tags"), markDirty);
+  }
+
+  // --- Tag autocomplete ---
+  function knownTags() {
+    const counts = new Map();
+    for (const e of entries) for (const t of e.tags) counts.set(t, (counts.get(t) || 0) + 1);
+    return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  }
+
+  function setupTagAutocomplete(input, onChange) {
+    const list = document.createElement("ul");
+    list.className = "tag-suggest";
+    list.id = "tag-suggest";
+    list.setAttribute("role", "listbox");
+    list.hidden = true;
+    input.after(list);
+    input.setAttribute("role", "combobox");
+    input.setAttribute("aria-autocomplete", "list");
+    input.setAttribute("aria-controls", list.id);
+    input.setAttribute("aria-expanded", "false");
+
+    let items = [];
+    let active = 0;
+
+    function currentToken() {
+      const v = input.value;
+      const pos = input.selectionStart;
+      const start = v.lastIndexOf(",", pos - 1) + 1;
+      const comma = v.indexOf(",", pos);
+      const end = comma === -1 ? v.length : comma;
+      return { start, end, text: v.slice(start, end).trim().toLowerCase() };
+    }
+
+    function hide() {
+      list.hidden = true;
+      input.setAttribute("aria-expanded", "false");
+    }
+
+    function render() {
+      list.innerHTML = "";
+      items.forEach(([tag, count], i) => {
+        const li = document.createElement("li");
+        li.setAttribute("role", "option");
+        li.setAttribute("aria-selected", String(i === active));
+        if (i === active) li.className = "active";
+        li.innerHTML = '<span>' + escapeHtml(tag) + '</span><span class="tag-count">' + count + '</span>';
+        li.addEventListener("mousedown", (e) => {
+          e.preventDefault();
+          accept(tag);
+        });
+        list.appendChild(li);
+      });
+      list.hidden = items.length === 0;
+      input.setAttribute("aria-expanded", String(!list.hidden));
+      list.querySelector(".active")?.scrollIntoView({ block: "nearest" });
+    }
+
+    function update() {
+      const { text } = currentToken();
+      const used = new Set(input.value.split(",").map(t => t.trim()));
+      items = knownTags()
+        .filter(([t]) => !used.has(t) && t.toLowerCase().includes(text))
+        .sort((a, b) => Number(!a[0].toLowerCase().startsWith(text)) - Number(!b[0].toLowerCase().startsWith(text)));
+      active = 0;
+      render();
+    }
+
+    function accept(tag) {
+      const { start, end } = currentToken();
+      const v = input.value;
+      const head = v.slice(0, start) + (start ? " " : "") + tag;
+      const tail = v.slice(end) || ", ";
+      input.value = head + tail;
+      const caret = head.length + (v.slice(end) ? 0 : 2);
+      input.setSelectionRange(caret, caret);
+      onChange();
+      update();
+    }
+
+    input.addEventListener("input", update);
+    input.addEventListener("focus", update);
+    input.addEventListener("click", update);
+    input.addEventListener("blur", hide);
+    input.addEventListener("keydown", (e) => {
+      if (list.hidden) {
+        if (e.key === "ArrowDown") { e.preventDefault(); update(); }
+        return;
+      }
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        active = (active + (e.key === "ArrowDown" ? 1 : -1) + items.length) % items.length;
+        render();
+      } else if (e.key === "Enter" || (e.key === "Tab" && currentToken().text)) {
+        e.preventDefault();
+        accept(items[active][0]);
+      } else if (e.key === "Escape") {
+        hide();
+      }
+    });
   }
 
   // --- Save ---

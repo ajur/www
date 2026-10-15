@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { execSync } from "node:child_process";
 import { resolve, join } from "node:path";
 
-import yaml from "js-yaml";
+import * as yaml from "js-yaml";
 
 // --- Paths ---
 
@@ -216,7 +216,7 @@ function main() {
   if (yamlDirty) {
     const out = yaml.dump(entries, {
       lineWidth: -1,
-      quotingType: '"',
+      quoteStyle: "double",
       forceQuotes: false,
     });
     writeFileSync(ART_YAML, out, "utf-8");
