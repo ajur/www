@@ -6,6 +6,7 @@ published: 2026-03-26
 kind: devlog
 tags:
   - site
+  - ajur-pl-v2
   - ai
   - astro
   - css

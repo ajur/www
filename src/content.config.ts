@@ -1,6 +1,21 @@
 import { defineCollection } from "astro:content";
 import { file, glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import { defaultTagGroup, tagGroupIds, tagId } from './tags';
+
+const tagsField = z.array(z.coerce.string())
+  .transform((tags) => [...new Set(tags)].filter((tag) => tagId.safeParse(tag).success))
+  .default([]);
+
+const tags = defineCollection({
+  loader: file("./src/content/tags.yaml"),
+  schema: z.object({
+    id: tagId,
+    label: z.string().optional(),
+    description: z.string().optional(),
+    group: z.enum(tagGroupIds).default(defaultTagGroup),
+  })
+});
 
 const articles = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/articles" }),
@@ -12,7 +27,7 @@ const articles = defineCollection({
     image: image().optional(),
     imageCaption: z.string().optional(),
     kind: z.string(),
-    tags: z.array(z.string()).default([]),
+    tags: tagsField,
   })
 });
 
@@ -27,8 +42,7 @@ const projects = defineCollection({
     image: image(),
     url: z.url().optional(),
     links: z.url().array().default([]),
-    articles: z.string().array().default([]),
-    tags: z.array(z.string()).default([]),
+    tags: tagsField,
   })
 });
 
@@ -38,7 +52,7 @@ const misc = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.date().optional(),
-    tags: z.array(z.string()).default([]),
+    tags: tagsField,
   })
 });
 
@@ -56,11 +70,11 @@ const art = defineCollection({
     created: z.string().regex(/^\d{4}(-\d{2}(-\d{2})?)?$/),
     published: z.iso.datetime({ local: true }),
     thumbnailRatio: z.string().regex(/^\d+:\d+$/),
-    tags: z.array(z.string()).default([]),
+    tags: tagsField,
     maxCssWidth: z.number().optional(),
     images: z.array(artImageRef),
     thumbnails: z.array(artImageRef),
   })
 });
 
-export const collections = { articles, projects, art, misc };
+export const collections = { tags, articles, projects, art, misc };

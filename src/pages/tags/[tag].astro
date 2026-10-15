@@ -1,28 +1,24 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
 import GalleryGrid from "~/components/GalleryGrid.astro";
-import { getTagsContent } from "~/utils";
+import { getTags } from "~/utils";
 
 export async function getStaticPaths() {
-  const tagsMap = await getTagsContent();
+  const tagsMap = await getTags();
   return Array.from(tagsMap.keys()).map((tag) => ({
     params: { tag },
-    props: { tagName: tag, collections: tagsMap.get(tag) }
+    props: tagsMap.get(tag)!
   }));
 }
 
-const { tagName, collections } = Astro.props;
-
-const { articles, projects, art, misc } = {
-  articles: [], projects: [], art: [], misc: [],
-  ...collections
-};
+const { tag, articles, projects, art, misc } = Astro.props;
 
 ---
-<PageLayout title={`Tag: ${tagName}`} description={`Everything tagged #${tagName}.`}>
+<PageLayout title={`Tag: ${tag.label ?? tag.id}`} description={tag.description ?? `Everything tagged #${tag.id}.`}>
   <main id="content" class="the-center bg-drop-shadow">
     <header>
-      <h1><span>tag:</span>{tagName}</h1>
+      <h1><span>tag:</span>{tag.label ?? tag.id}</h1>
+      {tag.description && <p>{tag.description}</p>}
     </header>
 
     { articles.length > 0 && (

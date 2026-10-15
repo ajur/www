@@ -6,6 +6,7 @@ published: 2026-04-28
 kind: devlog
 tags:
   - site
+  - ajur-pl-v2
   - markdown
   - shiki
 ---

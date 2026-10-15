@@ -7,6 +7,7 @@ import glsl from 'vite-plugin-glsl';
 
 import mdx from '@astrojs/mdx';
 import { shikiClassMeta } from './src/plugins/shikiClassMeta.ts';
+import tagsSync from './src/integrations/tags-sync.ts';
 
 
 import cloudflare from '@astrojs/cloudflare';
@@ -40,7 +41,14 @@ export default defineConfig({
     }))],
   },
 
-  integrations: [mdx()],
+  integrations: [
+    mdx(),
+    tagsSync({
+      file: "src/content/tags.yaml",
+      frontmatter: ["src/content/{articles,projects,misc}/**/*.{md,mdx}"],
+      lists: ["src/content/art.yaml"],
+    }),
+  ],
   output: 'static',
 
   markdown: {

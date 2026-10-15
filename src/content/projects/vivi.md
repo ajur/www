@@ -10,7 +10,7 @@ links:
   - https://github.com/ajur/pico-8-carts
 tags:
   - gamedev
-  - PICO-8
+  - pico-8
 ---
 
 A clone of the old DOS game *Vivi Vicious Viper*, recreated from memory on the PICO-8 fantasy console. This was the first PICO-8 project — after a few days of tinkering, it became something playable and satisfying.

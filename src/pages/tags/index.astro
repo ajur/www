@@ -2,7 +2,8 @@
 import PageLayout from "~/layouts/PageLayout.astro";
 import ContentTag from "~/components/ContentTag.astro";
 import SubpageHeader from "~/components/SubpageHeader.astro";
-import { getTagsContent } from "~/utils";
+import { getTags } from "~/utils";
+import { tagGroups, type TagGroup } from "~/tags";
 
 const collectionNamesMap = {
   articles: "text",
@@ -13,36 +14,42 @@ const collectionNamesMap = {
 
 const collections = Object.keys(collectionNamesMap) as (keyof typeof collectionNamesMap)[];
 
-const tagsMap = await getTagsContent();
-const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
+const tagsMap = await getTags();
+const tagsByGroup = Map.groupBy(tagsMap.values(), ({ tag }) => tag.group);
+
+const columns = (Object.keys(tagGroups) as TagGroup[])
+  .map((group) => {
+    const direction = tagGroups[group].sort === "desc" ? -1 : 1;
+    const items = (tagsByGroup.get(group) ?? [])
+      .sort((a, b) => direction * a.tag.id.localeCompare(b.tag.id, undefined, { numeric: true }));
+    return { group, label: tagGroups[group].label, items };
+  })
+  .filter(({ items }) => items.length > 0);
 
 ---
 <PageLayout title="Tags" description="Listing all available tags." bkgQuietTarget="#items-listing">
   <main id="content" class="the-center">
     <SubpageHeader title="Tags" description="Listing all available tags." />
 
-    <ul id="items-listing">
-      {tagsList.map((tag) => (
-        <li>
-          <div class="tag-row">
-            <ContentTag tag={tag} />
-
-            
-              {collections.map((collection) => {
-                const collectionItems = tagsMap.get(tag)?.[collection] || [];
-                if (collectionItems.length === 0) return null;
-
-                return (
-                  <span class="tag-count">
-                    {collectionNamesMap[collection]}: {collectionItems.length}
-                  </span>
-                );
-              })}
-            
-          </div>
-        </li>
+    <div id="items-listing" class="tag-groups">
+      {columns.map(({ group, label, items }) => (
+        <section aria-labelledby={`tag-group-${group}`}>
+          <h2 id={`tag-group-${group}`}>{label}</h2>
+          <ul>
+            {items.map((item) => (
+              <li class="tag-row">
+                <ContentTag tag={item.tag.id} />
+                <span class="tag-counts">
+                  {collections.map((collection) => item[collection].length > 0 && (
+                    <span>{collectionNamesMap[collection]}: {item[collection].length}</span>
+                  ))}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
       ))}
-    </ul>
+    </div>
   </main>
 </PageLayout>
 
@@ -51,26 +58,45 @@ const tagsList = Array.from(tagsMap.keys()).sort((a, b) => a.localeCompare(b));
     padding-inline: var(--s0);
   }
 
+  .tag-groups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--s1) var(--s3);
+  }
+
+  h2 {
+    margin: 0;
+    padding-block-end: var(--s-3);
+    border-block-end: 1px solid var(--color-border);
+    text-align: center;
+  }
+
   ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: var(--s-2);
     list-style: none;
     padding: 0;
     margin: 0;
-    max-inline-size: var(--measure);
   }
 
   .tag-row {
-    display: flex;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
     align-items: center;
-    gap: var(--s-2);
     padding-block: var(--s-4);
   }
 
-  .tag-count {
-    color: var(--color-text-muted);
+  .tag-row > :global(.content-tag) {
+    justify-self: end;
   }
 
-  p {
-    margin: 0;
-    margin-top: var(--s-3);
+  .tag-counts {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--s-2);
+    color: var(--color-text-muted);
   }
 </style>

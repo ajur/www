@@ -6,6 +6,7 @@ published: 2026-03-27
 kind: devlog
 tags:
   - site
+  - ajur-pl-v2
   - ai
   - animation
   - webgl

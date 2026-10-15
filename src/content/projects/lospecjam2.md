@@ -13,7 +13,7 @@ links:
 tags:
   - gamedev
   - gamejam
-  - LoSpec
+  - lospec
 ---
 
 A small reinterpretation of the classic River Raid, built to fit the specs of an imaginary 8-bit home console. Fly through a scrolling corridor, shoot enemies, collect fuel, and try to survive as long as possible — solo or with a friend in local co-op.

@@ -7,6 +7,7 @@ imageCaption: Photo by Faruk Tokluoğlu from [Pexels](https://www.pexels.com/pho
 kind: devlog
 tags:
   - site
+  - ajur-pl-v2
 ---
 # Starting from structure, not content
 

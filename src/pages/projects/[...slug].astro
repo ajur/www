@@ -29,11 +29,6 @@ const { Content } = await render(project);
         {project.data.url && (
           <a class="go-to-project" href={project.data.url} rel="noopener noreferrer">Go to project</a>
         )}
-        {project.data.articles.length > 0 && (
-          <p>
-            <a href={`/articles/${project.data.articles[0]}/`}>Read the article</a>
-          </p>
-        )}
         {project.data.links.length > 0 && (
         <nav class="badges" aria-label="Project links">
           {project.data.links.map((link) => (
