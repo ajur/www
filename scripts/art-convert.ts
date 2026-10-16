@@ -7,7 +7,10 @@ import * as yaml from "js-yaml";
 // --- Paths ---
 
 const ROOT = resolve(import.meta.dirname, "..");
-const SCANS_DIR = join(ROOT, "assets_raw", "scans");
+const SOURCE_DIRS = [
+  join(ROOT, "assets_raw", "scans"),
+  join(ROOT, "assets_raw", "digital"),
+];
 const BUCKET_DIR = join(ROOT, "assets_raw", "bucket");
 const ART_YAML = join(ROOT, "src", "content", "art.yaml");
 
@@ -41,7 +44,7 @@ const WEBP_QUALITY = 82;
 // --- Helpers ---
 
 function getImageDimensions(filepath: string): { w: number; h: number } {
-  const output = execSync(`identify -format "%w %h" "${filepath}"`, {
+  const output = execSync(`identify -format "%w %h" "${filepath}[0]"`, {
     encoding: "utf-8",
   }).trim();
   const [w, h] = output.split(" ").map(Number);
@@ -57,7 +60,7 @@ function getImageInfo(filepath: string): {
   density: number | null;
 } {
   const output = execSync(
-    `identify -format "%w %h %x %U" "${filepath}"`,
+    `identify -format "%w %h %x %U" "${filepath}[0]"`,
     { encoding: "utf-8" }
   ).trim();
   const parts = output.split(" ");
@@ -74,6 +77,16 @@ function getImageInfo(filepath: string): {
   }
 
   return { w, h, density };
+}
+
+function findScan(base: string): string | null {
+  for (const dir of SOURCE_DIRS) {
+    for (const ext of [".tif", ".tiff"]) {
+      const p = join(dir, base + ext);
+      if (existsSync(p)) return p;
+    }
+  }
+  return null;
 }
 
 // --- Main ---
@@ -96,15 +109,15 @@ function main() {
   let yamlDirty = false;
 
   for (const entry of entries) {
-    const mainTif = join(SCANS_DIR, `${entry.id}.tif`);
-    if (!existsSync(mainTif)) {
-      console.error(`  ERROR: Source file not found: ${entry.id}.tif`);
+    const mainTif = findScan(entry.id);
+    if (!mainTif) {
+      console.error(`  ERROR: Source file not found: ${entry.id}.tif(f)`);
       errors++;
       continue;
     }
 
-    const thumbTif = join(SCANS_DIR, `${entry.id}_thumb.tif`);
-    const hasThumbTif = existsSync(thumbTif);
+    const thumbTif = findScan(`${entry.id}_thumb`);
+    const hasThumbTif = thumbTif !== null;
     let anyCreated = false;
 
     // --- _full ---
@@ -119,16 +132,16 @@ function main() {
 
       if (is1200dpi) {
         execSync(
-          `magick "${mainTif}" -filter LanczosSharp -distort Resize 50% -quality ${WEBP_QUALITY} "${fullPath}"`
+          `magick "${mainTif}[0]" -filter LanczosSharp -distort Resize 50% -quality ${WEBP_QUALITY} "${fullPath}"`
         );
       } else if (maxDim > FULL_RESAMPLE_DIM) {
         const pct = ((FULL_RESAMPLE_DIM / maxDim) * 100).toFixed(2);
         execSync(
-          `magick "${mainTif}" -filter LanczosSharp -distort Resize ${pct}% -quality ${WEBP_QUALITY} "${fullPath}"`
+          `magick "${mainTif}[0]" -filter LanczosSharp -distort Resize ${pct}% -quality ${WEBP_QUALITY} "${fullPath}"`
         );
       } else {
         execSync(
-          `magick "${mainTif}" -quality ${WEBP_QUALITY} "${fullPath}"`
+          `magick "${mainTif}[0]" -quality ${WEBP_QUALITY} "${fullPath}"`
         );
       }
       console.log(`Created ${fullName}`);
@@ -145,7 +158,7 @@ function main() {
     if (Math.max(fullDims.w, fullDims.h) > MID_THRESHOLD) {
       if (!existsSync(midPath)) {
         execSync(
-          `magick "${mainTif}" -filter LanczosSharp -resize ${MID_THRESHOLD}x${MID_THRESHOLD} -quality ${WEBP_QUALITY} "${midPath}"`
+          `magick "${mainTif}[0]" -filter LanczosSharp -resize ${MID_THRESHOLD}x${MID_THRESHOLD} -quality ${WEBP_QUALITY} "${midPath}"`
         );
         console.log(`Created ${midName}`);
         anyCreated = true;
@@ -174,7 +187,7 @@ function main() {
       if (!existsSync(thumbPath)) {
         const source = hasThumbTif ? thumbTif : mainTif;
         execSync(
-          `magick "${source}" -filter LanczosSharp -resize ${tw}x${th}! -unsharp 0x0.5+1.0+0.05 -quality ${WEBP_QUALITY} "${thumbPath}"`
+          `magick "${source}[0]" -filter LanczosSharp -resize ${tw}x${th}! -unsharp 0x0.5+1.0+0.05 -quality ${WEBP_QUALITY} "${thumbPath}"`
         );
         console.log(`Created ${thumbName}`);
         anyCreated = true;

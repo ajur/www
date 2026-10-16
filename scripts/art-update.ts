@@ -1,13 +1,16 @@
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { execSync } from "node:child_process";
-import { resolve, join } from "node:path";
+import { resolve, join, relative } from "node:path";
 
 import * as yaml from "js-yaml";
 
 // --- Paths ---
 
 const ROOT = resolve(import.meta.dirname, "..");
-const SCANS_DIR = join(ROOT, "assets_raw", "scans");
+const SOURCE_DIRS = [
+  join(ROOT, "assets_raw", "scans"),
+  join(ROOT, "assets_raw", "digital"),
+];
 const ART_YAML = join(ROOT, "src", "content", "art.yaml");
 
 // --- Types ---
@@ -54,11 +57,12 @@ const RATIO_TOLERANCE = 0.01;
 // --- Constants ---
 
 const TAGS_WITH_YEAR = new Set(["inktober", "marchofrobots"]);
+const DRY_RUN = process.argv.includes("--dry-run");
 
 // --- Helpers ---
 
 function getImageDimensions(filepath: string): { w: number; h: number } {
-  const output = execSync(`identify -format "%w %h" "${filepath}"`, {
+  const output = execSync(`identify -format "%w %h" "${filepath}[0]"`, {
     encoding: "utf-8",
   }).trim();
   const [w, h] = output.split(" ").map(Number);
@@ -157,30 +161,38 @@ function main() {
 
   const existingIds = new Set(existing.map((e) => e.id));
 
-  // 2. Read scans directory and group files
-  const files = readdirSync(SCANS_DIR).filter((f) => f.endsWith(".tif"));
+  // 2. Read source directories and group files
   const groups = new Map<string, ScanGroup>();
+  let errors = 0;
 
-  for (const file of files) {
-    const base = file.replace(/\.tif$/, "");
-    const isThumb = base.endsWith("_thumb");
-    const id = isThumb ? base.replace(/_thumb$/, "") : base;
+  for (const dir of SOURCE_DIRS) {
+    const files = readdirSync(dir).filter((f) => /\.tiff?$/i.test(f));
 
-    if (!groups.has(id)) {
-      groups.set(id, {});
-    }
-    const group = groups.get(id)!;
-    if (isThumb) {
-      group.thumb = join(SCANS_DIR, file);
-    } else {
-      group.main = join(SCANS_DIR, file);
+    for (const file of files) {
+      const base = file.replace(/\.tiff?$/i, "");
+      const isThumb = base.endsWith("_thumb");
+      const id = isThumb ? base.replace(/_thumb$/, "") : base;
+      const path = join(dir, file);
+
+      if (!groups.has(id)) {
+        groups.set(id, {});
+      }
+      const group = groups.get(id)!;
+      const key = isThumb ? "thumb" : "main";
+      if (group[key]) {
+        console.error(
+          `ERROR: Duplicate source for "${base}": ${relative(ROOT, group[key])} and ${relative(ROOT, path)} — using the first`
+        );
+        errors++;
+        continue;
+      }
+      group[key] = path;
     }
   }
 
   // 3. Process each group
   const newEntries: ArtEntry[] = [];
   let skipped = 0;
-  let errors = 0;
 
   for (const [id, group] of groups) {
     // Thumb-only: error
@@ -198,7 +210,7 @@ function main() {
 
     // Parse filename
     const { year, date, tag, name } = parseId(id);
-    const title = capitalize(name.replace(/-/g, " "));
+    const title = capitalize(name.replace(/[-_]/g, " "));
 
     // Compute thumbnail ratio
     const dimSource = group.thumb ?? group.main;
@@ -242,10 +254,20 @@ function main() {
       description: "",
       maxCssWidth: 0,
     });
+
+    if (DRY_RUN) {
+      console.log(`[new] ${id}`);
+      console.log(`  file:  ${relative(ROOT, group.main)}`);
+      if (group.thumb) console.log(`  thumb: ${relative(ROOT, group.thumb)}`);
+      console.log(`  date:  ${date}`);
+      console.log(`  tag:   ${tag}`);
+      console.log(`  name:  ${name}`);
+      console.log(`  ratio: ${thumbnailRatio}`);
+    }
   }
 
   // 4. Append and write
-  if (newEntries.length > 0) {
+  if (newEntries.length > 0 && !DRY_RUN) {
     const all = [...existing, ...newEntries];
     const out = yaml.dump(all, {
       lineWidth: -1,
@@ -257,7 +279,7 @@ function main() {
 
   // 5. Summary
   console.log(
-    `Added ${newEntries.length} new entries. ${skipped} skipped (existing). ${errors} errors.`
+    `${DRY_RUN ? "[dry-run] Would add" : "Added"} ${newEntries.length} new entries. ${skipped} skipped (existing). ${errors} errors.`
   );
 }
 

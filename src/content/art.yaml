@@ -4092,3 +4092,295 @@
     -
     So, it's done. Last one. And (with some rushing) I've done all of them still in October, yeah!
   maxCssWidth: 439
+- id: 2018-06-10-procreate-kwiatek-zuzi
+  title: Flower pot
+  images:
+    - src: 2018-06-10-procreate-kwiatek-zuzi_full.webp
+      width: 1536
+    - src: 2018-06-10-procreate-kwiatek-zuzi_mid.webp
+      width: 1200
+  thumbnails:
+    - src: 2018-06-10-procreate-kwiatek-zuzi_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - procreate
+    - digital
+    - flowers
+    - still-life
+  created: "2018-06-10"
+  published: "2026-10-16T16:03:17"
+  description: |-
+    My first iPad painting, done in Procreate.
+    I'd been thinking about buying a tablet for some time, and when a new iPad came out with a reasonable price and Pencil support, I had a good excuse.
+    And it's fantastic (not only for creating art ;)
+  maxCssWidth: 1536
+- id: 2018-06-12-procreate-surviving-mars
+  title: Surviving Mars
+  images:
+    - src: 2018-06-12-procreate-surviving-mars_full.webp
+      width: 2043
+    - src: 2018-06-12-procreate-surviving-mars_mid.webp
+      width: 1200
+  thumbnails:
+    - src: 2018-06-12-procreate-surviving-mars_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - procreate
+    - inktober
+    - sci-fi
+    - landscape
+    - robots
+    - space
+    - digital
+  created: "2018-06-12"
+  published: "2026-10-16T16:03:17"
+  description: Digitally colored version of [Inktober 2018 entry](https://ajur.pl/misc/art/#2018-03-16-marchofrobots-16-new-home)
+  maxCssWidth: 2043
+- id: 2018-08-14-procreate-zentangle-1
+  title: Zentangle
+  images:
+    - src: 2018-08-14-procreate-zentangle-1_full.webp
+      width: 494
+  thumbnails:
+    - src: 2018-08-14-procreate-zentangle-1_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - procreate
+    - digital
+    - zentangle
+    - character
+    - pattern
+  created: "2018-08-14"
+  published: "2026-10-16T16:03:17"
+  description: I've read that in Zentangle method, you shouldn't draw anything _specific_. But this guy kinda came out from it on it's own...
+  maxCssWidth: 494
+- id: 2018-08-14-procreate-zentangle-2
+  title: Zentangle
+  images:
+    - src: 2018-08-14-procreate-zentangle-2_full.webp
+      width: 519
+  thumbnails:
+    - src: 2018-08-14-procreate-zentangle-2_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - procreate
+    - digital
+    - zentangle
+    - abstract
+    - pattern
+  created: "2018-08-14"
+  published: "2026-10-16T16:03:17"
+  description: Doodly zentangle on iPad
+  maxCssWidth: 519
+- id: 2018-08-14-procreate-zentangle-3
+  title: Zentangle
+  images:
+    - src: 2018-08-14-procreate-zentangle-3_full.webp
+      width: 560
+  thumbnails:
+    - src: 2018-08-14-procreate-zentangle-3_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - procreate
+    - digital
+    - zentangle
+    - abstract
+    - pattern
+  created: "2018-08-14"
+  published: "2026-10-16T16:03:17"
+  description: It was zentagle-time for me for sure.
+  maxCssWidth: 560
+- id: 2018-08-14-procreate-zentangle-4
+  title: Zentangle
+  images:
+    - src: 2018-08-14-procreate-zentangle-4_full.webp
+      width: 560
+  thumbnails:
+    - src: 2018-08-14-procreate-zentangle-4_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - procreate
+    - zentangle
+    - digital
+    - pattern
+    - abstract
+  created: "2018-08-14"
+  published: "2026-10-16T16:03:17"
+  description: Like some muscle fibers ^^
+  maxCssWidth: 560
+- id: 2018-09-19-procreate-small-forms
+  title: Small Forms - Windmill
+  images:
+    - src: 2018-09-19-procreate-small-forms_full.webp
+      width: 1188
+  thumbnails:
+    - src: 2018-09-19-procreate-small-forms_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - procreate
+    - doodle
+    - landscape
+    - digital
+  created: "2018-09-19"
+  published: "2026-10-16T16:03:17"
+  description: This came out nice, for its small factor... maybe someday I will expand this landscape even more.
+  maxCssWidth: 1188
+- id: 2018-09-20-procreate-small-forms-2
+  title: Small Forms Doodles
+  images:
+    - src: 2018-09-20-procreate-small-forms-2_full.webp
+      width: 1085
+  thumbnails:
+    - src: 2018-09-20-procreate-small-forms-2_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - procreate
+    - doodle
+    - abstract
+    - digital
+  created: "2018-09-20"
+  published: "2026-10-16T16:03:17"
+  description: Trying sketching digitally, with highlights and dim background.
+  maxCssWidth: 1085
+- id: 2018-12-07-procreate-white-horse
+  title: White Horse
+  images:
+    - src: 2018-12-07-procreate-white-horse_full.webp
+      width: 2048
+    - src: 2018-12-07-procreate-white-horse_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2018-12-07-procreate-white-horse_thumb_4x3.webp
+      width: 800
+  thumbnailRatio: "4:3"
+  tags:
+    - "2018"
+    - procreate
+    - gift
+    - animals
+    - digital
+  created: "2018-12-07"
+  published: "2026-10-16T16:03:17"
+  description: |-
+    A few months earlier I'd bought myself an iPad (6th gen) with an Apple Pencil, "for drawing".
+    Well, tbh back then I mostly just watched Netflix on it ^^ but I tried, doodled, and finally gave something as scary as digital painting a go – at the special request of my daughter to paint a horse...
+    So here it is, my first proper digital painting, and I'm even satisfied with the result :)
+  maxCssWidth: 2048
+- id: 2018-12-25-procreate-bog-sie-rodzi
+  title: Bóg się rodzi
+  images:
+    - src: 2018-12-25-procreate-bog-sie-rodzi_full.webp
+      width: 1536
+  thumbnails:
+    - src: 2018-12-25-procreate-bog-sie-rodzi_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2018"
+    - procreate
+    - digital
+  created: "2018-12-25"
+  published: "2026-10-16T16:03:17"
+  description: Merry Christmas!
+  maxCssWidth: 1536
+- id: 2021-08-16-procreate-mummy
+  title: Pink Mummy
+  images:
+    - src: 2021-08-16-procreate-mummy_full.webp
+      width: 1600
+    - src: 2021-08-16-procreate-mummy_mid.webp
+      width: 800
+  thumbnails:
+    - src: 2021-08-16-procreate-mummy_thumb_1x2.webp
+      width: 200
+  thumbnailRatio: "1:2"
+  tags:
+    - "2021"
+    - procreate
+    - doodle
+    - character
+  created: "2021-08-16"
+  published: "2026-10-16T16:03:17"
+  description: "Just some doodles... definitely didn't felt like drawing anything refined :/ "
+  maxCssWidth: 1600
+- id: 2021-08-22-procreate-toothless
+  title: Toothless
+  images:
+    - src: 2021-08-22-procreate-toothless_full.webp
+      width: 1520
+  thumbnails:
+    - src: 2021-08-22-procreate-toothless_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2021"
+    - procreate
+    - digital
+    - character
+    - fantasy
+  created: "2021-08-22"
+  published: "2026-10-16T16:03:17"
+  description: "\"Commission\" from my daughter, that _loves_ dragons, and this particular movie about them."
+  maxCssWidth: 1520
+- id: 2022-10-02-procreate-gargoyle
+  title: Gargoyle
+  images:
+    - src: 2022-10-02-procreate-gargoyle_full.webp
+      width: 3200
+    - src: 2022-10-02-procreate-gargoyle_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2022-10-02-procreate-gargoyle_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2022"
+    - procreate
+    - digital
+    - ink
+    - inktober
+    - creatures
+    - fantasy
+  created: "2022-10-02"
+  published: "2026-10-16T16:03:17"
+  description: "[Inktober 2022 day 1](https://ajur.pl/misc/art/#2022-10-01-inktober-1-gargoyle), colored digitally."
+  maxCssWidth: 3200
+- id: 2024-11-20-procreate-rusinowa-polana
+  title: Rusinowa Polana
+  images:
+    - src: 2024-11-20-procreate-rusinowa-polana_full.webp
+      width: 3200
+    - src: 2024-11-20-procreate-rusinowa-polana_mid.webp
+      width: 1600
+  thumbnails:
+    - src: 2024-11-20-procreate-rusinowa-polana_thumb_1x1.webp
+      width: 200
+  thumbnailRatio: "1:1"
+  tags:
+    - "2024"
+    - procreate
+    - landscape
+    - digital
+    - pencils
+  created: "2024-11-20"
+  published: "2026-10-16T16:03:17"
+  description: |-
+    [Rusinowa Polana](https://pl.wikipedia.org/wiki/Rusinowa_Polana), scenic mountain glade in Tatry.
+    "commissioned" by my wife. Drawn digitally for convenience, to put it into photo book from our vacation.
+  maxCssWidth: 3200

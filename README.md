@@ -46,7 +46,7 @@ Commands related to `art:*` may require additional tools and specific layout of 
 
 ## Tools and libraries used
 
-- I'm not shy to admit, that I used GH copilot with varuous models, to help with dev process.
+- I'm not shy to admit, that I used AI with varuous models, to help with dev process.
 - [Astro](https://astro.build) - as main static site builder. [Docs](https://docs.astro.build).
 - [vite-plugin-glsl](https://www.npmjs.com/package/vite-plugin-glsl) - to ease loading of shaders.
 - [psrdnoise](https://github.com/stegu/psrdnoise/) - Simplex noise implementation in GLSL

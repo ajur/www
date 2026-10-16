@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, createReadStream } from "node:fs";
 import { createServer } from "node:http";
 import { resolve, join, extname } from "node:path";
 import { exec, execFile } from "node:child_process";
@@ -11,6 +11,10 @@ const ROOT = resolve(import.meta.dirname, "..");
 const ART_YAML = join(ROOT, "src", "content", "art.yaml");
 const ART_BUCKET = join(ROOT, "public", "_art_bucket");
 const HTML_FILE = join(import.meta.dirname, "art-editor.html");
+const SOURCE_DIRS = [
+  join(ROOT, "assets_raw", "scans"),
+  join(ROOT, "assets_raw", "digital"),
+];
 
 // --- Types ---
 
@@ -49,6 +53,22 @@ function saveEntries(entries: ArtEntry[]): void {
     forceQuotes: false,
   });
   writeFileSync(ART_YAML, out, "utf-8");
+}
+
+// --- Source tiffs ---
+
+function findScan(base: string): string | null {
+  for (const dir of SOURCE_DIRS) {
+    for (const ext of [".tif", ".tiff"]) {
+      const p = join(dir, base + ext);
+      if (existsSync(p)) return p;
+    }
+  }
+  return null;
+}
+
+function findSource(id: string, kind: "main" | "thumb"): string | null {
+  return (kind === "thumb" && findScan(`${id}_thumb`)) || findScan(id);
 }
 
 // --- MIME types ---
@@ -176,6 +196,26 @@ const server = createServer((req, res) => {
       "Cache-Control": "public, max-age=3600",
     });
     res.end(data);
+    return;
+  }
+
+  // --- Serve source tiffs (unconverted entries, Safari only) ---
+  if (req.method === "GET" && path.startsWith("/preview/")) {
+    const id = decodeURIComponent(path.slice("/preview/".length));
+    if (id.includes("..") || id.includes("/")) {
+      res.writeHead(400);
+      res.end("Bad request");
+      return;
+    }
+    const kind = url.searchParams.get("kind") === "thumb" ? "thumb" : "main";
+    const source = findSource(id, kind);
+    if (!source) {
+      res.writeHead(404);
+      res.end("Not found");
+      return;
+    }
+    res.writeHead(200, { "Content-Type": "image/tiff", "Cache-Control": "no-cache" });
+    createReadStream(source).pipe(res);
     return;
   }
 

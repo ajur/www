@@ -14,6 +14,7 @@
   group: year
 - id: '2023'
   group: year
+- id: '2024'
 - id: '2025'
   group: year
 - id: abstract
@@ -50,6 +51,7 @@
 - id: css
   label: CSS
   group: tech
+- id: digital
 - id: doodle
 - id: fantasy
 - id: flowers
@@ -126,6 +128,7 @@
   group: tech
 - id: plants
 - id: portrait
+- id: procreate
 - id: robots
 - id: sci-fi
 - id: sea-life
